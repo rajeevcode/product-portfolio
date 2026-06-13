@@ -1,0 +1,42 @@
+{
+  "capturedAt": "2026-06-13T19:26:19.427Z",
+  "baseUrl": "http://localhost:3000",
+  "screenshots": [
+    "01-executive-overview.png",
+    "02-signal-inbox.png",
+    "03-noise-reduction.png",
+    "04-priority-queue.png",
+    "05-competitor-intelligence.png",
+    "06-market-trends.png",
+    "07-customer-signals.png",
+    "08-internal-product.png",
+    "09-opportunity-scoring.png",
+    "10-roadmap-input.png",
+    "11-human-review.png",
+    "12-action-routing.png",
+    "13-leadership-briefing.png",
+    "14-decision-memory.png",
+    "15-alerts.png",
+    "16-impact-dashboard.png"
+  ],
+  "videos": [
+    "action-routing.webm",
+    "competitor-intelligence-demo.webm",
+    "decision-memory.webm",
+    "full-dashboard-walkthrough.mp4",
+    "full-dashboard-walkthrough.webm",
+    "human-review-demo.webm",
+    "human-review.webm",
+    "leadership-briefing-demo.webm",
+    "leadership-briefing.webm",
+    "noise-filtering.webm",
+    "noise-reduction-demo.webm",
+    "opportunity-scoring-demo.webm",
+    "opportunity-scoring.webm",
+    "pattern-detection.webm",
+    "roadmap-input-demo.webm",
+    "roadmap-input.webm",
+    "signal-inbox-demo.webm",
+    "signal-ingestion.webm"
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "cleanUrls": false,
+  "directoryListing": false,
+  "rewrites": [
+    { "source": "/Pulsara-Portfolio", "destination": "/Pulsara-Portfolio/index.html" },
+    { "source": "/Pulsara-Portfolio/", "destination": "/Pulsara-Portfolio/index.html" }
+  ]
+}
