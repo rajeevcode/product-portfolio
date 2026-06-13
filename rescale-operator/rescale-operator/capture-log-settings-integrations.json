@@ -1,0 +1,13 @@
+{
+  "capturedAt": "2026-06-13T18:03:23.137Z",
+  "baseUrl": "http://localhost:3100",
+  "focus": "integrations + api-keys",
+  "screenshots": [
+    "19-settings-integrations.png",
+    "19-settings-integrations-meta-ads.png",
+    "20-settings-api-keys.png"
+  ],
+  "skipped": [],
+  "video": "video/integrations-walkthrough.webm",
+  "videoMp4": "video/integrations-walkthrough.mp4"
+}

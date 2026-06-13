@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Creative Marketing Agents — AI Campaign Intelligence Case Study</title>
+    <title>Creative Marketing Agents / Rescale Operator — AI Automation OS for Creative & Campaign Operations</title>
     <meta
       name="description"
-      content="Case study: AI agents for creative angle ranking, funnel analysis, winner detection, and faster campaign decision-making for creative and media teams."
+      content="Case study: AI-powered operating system for campaign intelligence, creative signals, naming QA, winner detection, launch readiness, and daily decision workflows."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -22,9 +22,11 @@
         <a class="brand" href="../index.html">Rajeev <span>Kumar</span></a>
         <nav class="nav" aria-label="Primary">
           <a href="../index.html">Portfolio home</a>
-          <a href="../rescale-operator/index.html">Rescale Operator</a>
           <a href="#snapshot">Snapshot</a>
+          <a href="#integrations">Integrations</a>
+          <a href="#dark-dashboard">Dark dashboard</a>
           <a href="#screenshots">Screenshots</a>
+          <a href="#demo">Demo</a>
           <a href="#impact">Impact</a>
           <a href="#contact" class="nav-contact">Contact</a>
         </nav>
@@ -35,17 +37,17 @@
       <section class="hero compact">
         <div class="container">
           <p class="eyebrow">Featured case study</p>
-          <h1>Creative Marketing Agents</h1>
-          <p class="featured-subtitle hero-subtitle">AI Agents for Campaign Intelligence &amp; Creative Decision-Making</p>
+          <h1>Creative Marketing Agents <span class="title-sep">/</span> Rescale Operator</h1>
+          <p class="featured-subtitle hero-subtitle">AI Automation OS for Creative &amp; Campaign Operations</p>
           <p class="lead">
-            AI-powered assistants designed to help creative and media teams analyze
-            campaign signals, rank creative angles, identify winners, and support
-            faster performance decisions — with structured segmentation across
-            markets, products, and placements.
+            An AI-powered operating system that helps creative, media buying, and operations teams
+            manage campaign intelligence, creative signals, naming QA, winner detection, launch
+            readiness, and daily decision workflows from one structured platform — combining AI
+            agents, rules-based QA, dashboards, workflow automation, and human-in-the-loop review.
           </p>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#screenshots">View product screenshots</a>
-            <a class="btn btn-secondary" href="#workflow">See workflow</a>
+            <a class="btn btn-primary" href="#dark-dashboard">Full dark dashboard</a>
+            <a class="btn btn-secondary" href="#demo">Watch scroll video</a>
           </div>
         </div>
       </section>
@@ -61,26 +63,32 @@
               </div>
               <div class="snapshot-item">
                 <dt>Domain</dt>
-                <dd>Creative intelligence, campaign analytics, AI agent workflows</dd>
+                <dd>Creative ops, campaign QA, agentic workflow automation</dd>
               </div>
               <div class="snapshot-item">
                 <dt>Users</dt>
-                <dd>Creative strategists, media buyers, campaign operations</dd>
+                <dd>Creative team, media buyers, operations, leadership</dd>
               </div>
-              <div class="snapshot-item">
-                <dt>Tools</dt>
-                <dd>
-                  AI agents, Meta Ads data, SQL/Supabase, Looker-style dashboards,
-                  Google Sheets, ClickUp, Claude/Gemini/OpenAI workflows
+              <div class="snapshot-item snapshot-wide">
+                <dt>Tools &amp; stack</dt>
+                <dd class="snapshot-stack">
+                  <span><strong>Build:</strong> Cursor, Docker Compose, feature flags (<code>NEXT_PUBLIC_*</code>)</span>
+                  <span><strong>Frontend:</strong> Next.js 15, React, TypeScript, TanStack Query, Tailwind, Framer Motion</span>
+                  <span><strong>Backend:</strong> FastAPI, Pydantic v2, Arq + Redis workers, cron fan-out (06:30 UTC)</span>
+                  <span><strong>Data:</strong> Supabase Postgres — operator DB (runs, snapshots, events, approvals); Ecom Profits read-only Meta view; Redis SSE + task registry</span>
+                  <span><strong>RAG &amp; vector memory:</strong> Supermemory (managed vector search via <code>/v3/search</code>) — ingest pipeline, semantic retrieval, citations + confidence scoring; gated by <code>AGENT_RAG_ENABLED</code></span>
+                  <span><strong>AI &amp; agents:</strong> Hermes Agents, OpenRouter, Claude provider, Ask Operator orchestrator (<code>/api/agents/query</code>), Creative Agents, diagnostic Opus synthesis</span>
+                  <span><strong>Integrations:</strong> Meta API, ClickUp API, Google Sheets API, Discord notifications — registry CRUD, OAuth, idempotent writes, System Pulse health</span>
+                  <span><strong>Quality:</strong> pytest, Vitest, Playwright e2e</span>
                 </dd>
               </div>
               <div class="snapshot-item">
                 <dt>Workflow type</dt>
-                <dd>Agent-driven creative performance analysis &amp; recommendations</dd>
+                <dd>AI agents + rules-based QA + Supermemory RAG + HITL review + campaign QA dashboard</dd>
               </div>
               <div class="snapshot-item">
                 <dt>Status</dt>
-                <dd>Shipped — integrated into Rescale Operator platform</dd>
+                <dd>Shipped — production modules, Docker full stack, multi-brand UAT</dd>
               </div>
             </dl>
           </div>
@@ -92,11 +100,11 @@
           <h2 class="section-title">Problem</h2>
           <div class="prose">
             <p>
-              Creative teams were overloaded with noisy campaign data and lacked a
-              structured way to identify which creative angles, concepts, formats,
-              and messages were working across markets, products, and placements.
-              Manual analysis was slow, inconsistent, and created misalignment between
-              creative strategists and media buyers.
+              Creative and campaign operations were fragmented across multiple tools, dashboards,
+              naming conventions, creative assets, and team workflows. Teams manually reviewed
+              campaign setup, naming errors, performance signals, launch readiness, and winner/loser
+              decisions — creating delays, inconsistent QA, and missed opportunities to scale
+              winning creatives.
             </p>
           </div>
         </div>
@@ -107,12 +115,25 @@
           <h2 class="section-title">Solution</h2>
           <div class="prose">
             <p>
-              Designed AI agents that analyze campaign performance data, creative
-              metadata, naming convention fields, funnel stages, and business rules to
-              surface actionable insights for creative and media buying teams. Agents
-              rank angles, flag fatigue, segment by product and market, and deliver
-              daily checkpoint summaries — all within a reviewable dashboard layer.
+              Built Creative Marketing Agents / Rescale Operator — a workflow-driven AI automation
+              platform that combines campaign QA, creative signal filtering, winner detection,
+              launch checklists, intelligence screens, dashboards, and human-in-the-loop review.
+              One agentic workflow layer instead of disconnected spreadsheets and ad-hoc checks.
             </p>
+          </div>
+          <div class="grid-3" style="margin-top: 2rem">
+            <article class="card pad">
+              <h3>Creative workflow automation</h3>
+              <p>Angle ranking, explore/expand analysis, draft concept agents, fatigue alerts.</p>
+            </article>
+            <article class="card pad">
+              <h3>Campaign QA layer</h3>
+              <p>Naming convention checks, launch readiness, Meta health, recommendations queue.</p>
+            </article>
+            <article class="card pad">
+              <h3>Agentic ops dashboard</h3>
+              <p>Daily checkpoint, winner notifier, operator queue, runs, Ask Operator.</p>
+            </article>
           </div>
         </div>
       </section>
@@ -120,17 +141,14 @@
       <section class="section" id="workflow">
         <div class="container">
           <h2 class="section-title">Workflow</h2>
-          <p class="section-intro">
-            From raw campaign data to ranked creative recommendations teams can act on.
-          </p>
           <div class="card flow">
             <div class="flow-step">
               <div class="flow-num">1</div>
               <div>
-                <strong>Campaign &amp; Creative Data Ingestion</strong>
+                <strong>Ingest — Meta API, creative metadata, naming fields</strong>
                 <p style="margin: 0.35rem 0 0; color: var(--text-muted); font-size: 0.92rem">
-                  Meta Ads metrics, creative metadata, naming fields, funnel stage tags,
-                  and product/market context.
+                  Ad-level metrics via Meta API + Ecom Profits read-only view, N3 naming tags,
+                  explore/expand labels, role assignments (strategist, editor, avatar, media buyer).
                 </p>
               </div>
             </div>
@@ -138,10 +156,10 @@
             <div class="flow-step">
               <div class="flow-num">2</div>
               <div>
-                <strong>Segmentation &amp; Signal Filtering</strong>
+                <strong>Automate — AI agents + rules-based QA</strong>
                 <p style="margin: 0.35rem 0 0; color: var(--text-muted); font-size: 0.92rem">
-                  Group by product, market, placement, and creative angle — reduce noise
-                  before analysis.
+                  Daily checkpoint fan-out, winner/loser classification, naming validation,
+                  launch readiness, creative intelligence ranking.
                 </p>
               </div>
             </div>
@@ -149,10 +167,10 @@
             <div class="flow-step">
               <div class="flow-num">3</div>
               <div>
-                <strong>AI Agent Analysis</strong>
+                <strong>Review — human-in-the-loop</strong>
                 <p style="margin: 0.35rem 0 0; color: var(--text-muted); font-size: 0.92rem">
-                  Rank creative angles, detect fatigue, classify winners/losers, and
-                  evaluate funnel-level performance against business rules.
+                  Operator queue for urgent actions. Recommendations flow pending → accepted → shipped.
+                  Creative agents output read-only drafts — buyer publishes manually.
                 </p>
               </div>
             </div>
@@ -160,24 +178,230 @@
             <div class="flow-step">
               <div class="flow-num">4</div>
               <div>
-                <strong>Recommendations &amp; Daily Summaries</strong>
+                <strong>Act — campaign QA dashboard + API integrations</strong>
                 <p style="margin: 0.35rem 0 0; color: var(--text-muted); font-size: 0.92rem">
-                  Surface prioritized insights, placement quality scores, and checkpoint
-                  summaries for creative and media teams.
+                  Single decision layer with audit logs, ClickUp API tickets (URGENT/HIGH),
+                  Google Sheets API export for stakeholders, Discord winner notifications,
+                  and Ask Operator grounded in run context.
                 </p>
               </div>
             </div>
-            <div class="flow-arrow" aria-hidden="true">↓</div>
-            <div class="flow-step">
-              <div class="flow-num">5</div>
-              <div>
-                <strong>Team Review &amp; Action</strong>
-                <p style="margin: 0.35rem 0 0; color: var(--text-muted); font-size: 0.92rem">
-                  Creative strategists and media buyers align on next steps — scale
-                  winners, refresh fatigued angles, adjust placements.
+          </div>
+        </div>
+      </section>
+
+      <section class="section alt" id="integrations">
+        <div class="container">
+          <h2 class="section-title">External API integrations</h2>
+          <p class="section-intro">
+            First-class adapters — not one-off scripts. Each integration has registry rows,
+            credential pointers, test/sync endpoints, and live health in the System Pulse graph.
+            Built for idempotent writes, audit trails, and safe partial rollout via feature flags.
+          </p>
+
+          <div class="integration-grid">
+            <article class="card pad integration-card">
+              <div class="integration-head">
+                <h3>Meta API</h3>
+                <span class="integration-badge">Read + OAuth</span>
+              </div>
+              <ul class="integration-meta">
+                <li>Metrics ingest</li>
+                <li>OAuth connect</li>
+                <li>Webhooks</li>
+              </ul>
+              <p>
+                Campaign intelligence pipeline reads ad-level spend, ROAS, and health signals
+                from the Ecom Profits Meta view — with a dedicated OAuth flow for account linking.
+              </p>
+              <ul>
+                <li><code>GET /api/integrations/meta/oauth/start</code> + callback handler</li>
+                <li>Read-only pool: <code>meta_ads_dashboard_view</code> (Ecom Profits)</li>
+                <li>Inbound Meta webhooks gated by <code>WEBHOOKS_ENABLED</code></li>
+                <li>System Pulse node: <strong>Meta API</strong> health status</li>
+              </ul>
+            </article>
+
+            <article class="card pad integration-card">
+              <div class="integration-head">
+                <h3>ClickUp API</h3>
+                <span class="integration-badge">Write · Idempotent</span>
+              </div>
+              <ul class="integration-meta">
+                <li>Task creation</li>
+                <li>URGENT / HIGH</li>
+                <li>Engine tags</li>
+              </ul>
+              <p>
+                The ClickUp Bridge is the only code path that creates tasks — idempotent hashes
+                prevent duplicate tickets when daily checkpoint or diagnostic runs retry.
+              </p>
+              <ul>
+                <li><code>ClickUpBridge</code> → <code>create_task</code> with dedup store</li>
+                <li>URGENT daily checkpoint items + HIGH diagnostic recommendations → tickets</li>
+                <li>Tags: <code>diagnostic-run</code> vs <code>daily-checkpoint</code></li>
+                <li><code>attach_clickup_task_id</code> stamps action queue rows after create</li>
+              </ul>
+            </article>
+
+            <article class="card pad integration-card">
+              <div class="integration-head">
+                <h3>Google Sheets API</h3>
+                <span class="integration-badge">Export · Sync</span>
+              </div>
+              <ul class="integration-meta">
+                <li>Stakeholder export</li>
+                <li>Audit logging</li>
+                <li>Registry sync</li>
+              </ul>
+              <p>
+                Leadership and ops review winner signals, checkpoint outcomes, and QA results
+                outside the dashboard — synced through the integrations registry.
+              </p>
+              <ul>
+                <li>Live System Pulse spoke for Google Sheets connectivity</li>
+                <li><code>POST /api/integrations/registry/{id}/sync</code> enqueues Arq sync jobs</li>
+                <li>Structured rows for winner summaries, action queue exports, and run audit</li>
+                <li>Settings UI: provider OAuth, account mapping, webhook receivers (Phase 2)</li>
+              </ul>
+            </article>
+
+            <article class="card pad integration-card">
+              <div class="integration-head">
+                <h3>Discord notifications</h3>
+                <span class="integration-badge">Alert · Async</span>
+              </div>
+              <ul class="integration-meta">
+                <li>Winner notifier</li>
+                <li>Structured payloads</li>
+                <li>Feature-flagged</li>
+              </ul>
+              <p>
+                Operational alerts when new winners emerge or high-spend ads need attention —
+                structured notification payloads built in the winner notifier pipeline.
+              </p>
+              <ul>
+                <li><code>WINNER_NOTIFIER_DISCORD_ENABLED</code> gate for safe rollout</li>
+                <li><code>WinnerNotificationPayload</code> — new winners, emerging, high-spend non-winners</li>
+                <li>Async worker path — no blocking on dashboard API responses</li>
+                <li>Complements in-app live activity feed and operator queue</li>
+              </ul>
+            </article>
+          </div>
+
+          <div class="card pad integration-flow">
+            <h3>Integration flow</h3>
+            <p>
+              <strong>Meta API</strong> ingest → rules + agents classify signals → operator queue
+              (HITL) → <strong>ClickUp API</strong> tickets for URGENT/HIGH actions →
+              <strong>Google Sheets API</strong> stakeholder export →
+              <strong>Discord</strong> winner/emerging alerts. Registry CRUD at
+              <code>/api/integrations/registry</code> with per-provider test + sync.
+            </p>
+          </div>
+
+          <div class="demo-grid integration-shot">
+            <figure class="card shot-card">
+              <img
+                src="../rescale-operator/screenshots/19-settings-integrations.png"
+                alt="Integrations settings — provider registry, System Pulse, Meta API connection"
+                loading="lazy"
+              />
+              <figcaption class="caption">
+                <h3>Integrations registry</h3>
+                <p>
+                  <code>/daily/d/settings/integrations</code> — connected providers, health probes,
+                  LLM selector, and Meta Ads dashboard link. Same data powers the dashboard System Pulse.
                 </p>
+              </figcaption>
+            </figure>
+
+            <div class="card video-wrap">
+              <p class="demo-label" style="padding: 1rem 1.15rem 0">Integrations + API keys walkthrough (~25s)</p>
+              <video controls preload="metadata" poster="../rescale-operator/screenshots/19-settings-integrations.png">
+                <source src="../rescale-operator/video/integrations-walkthrough.mp4" type="video/mp4" />
+                <source src="../rescale-operator/video/integrations-walkthrough.webm" type="video/webm" />
+                <a href="../rescale-operator/video/integrations-walkthrough.mp4">Download integrations walkthrough</a>
+              </video>
+              <div class="video-meta">
+                Settings → Integrations → Meta Ads dashboard → API keys → back to integrations.
+                Captured from <code>localhost:3100</code>.
               </div>
             </div>
+          </div>
+
+          <figure class="card shot-card integration-shot">
+            <img
+              src="../rescale-operator/screenshots/19-settings-integrations-meta-ads.png"
+              alt="Meta Ads integration dashboard — Ecom Profits read-through, spend and ROAS"
+              loading="lazy"
+            />
+            <figcaption class="caption">
+              <h3>Meta API — linked dashboard</h3>
+              <p>
+                From Integrations → <strong>Open Meta Ads dashboard</strong>. Read-only EUR spend,
+                revenue, and ROAS via Ecom Profits Supabase view (<code>/api/meta-ads/dashboard</code>).
+              </p>
+            </figcaption>
+          </figure>
+
+          <figure class="card shot-card integration-shot">
+            <img
+              src="../rescale-operator/screenshots/20-settings-api-keys.png"
+              alt="API keys settings — programmatic read-only API access"
+              loading="lazy"
+            />
+            <figcaption class="caption">
+              <h3>API keys — programmatic access</h3>
+              <p>
+                <code>/daily/d/settings/api-keys</code> — generate, reveal-once, and revoke personal
+                keys for the read-only API. Prefix + last-used tracking; full secret shown only at creation.
+              </p>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="section dark-showcase" id="dark-dashboard">
+        <div class="container">
+          <h2 class="section-title">Deployed build — full dashboard (dark mode)</h2>
+          <p class="section-intro">
+            Full-page capture and top-to-bottom scroll recording from the production UI —
+            today's checkpoint through funnel metrics, creative heatmaps, live activity, and
+            integrations. Captured from the deployed Rescale Operator dashboard (<code>/daily/d</code>).
+          </p>
+
+          <div class="demo-grid">
+            <div class="card video-wrap">
+              <p class="demo-label" style="padding: 1rem 1.15rem 0">Dark mode scroll video (~40s)</p>
+              <video controls preload="metadata" poster="../rescale-operator/screenshots/01-dashboard-home-dark-full.png">
+                <source src="../rescale-operator/video/dashboard-full-dark-scroll.mp4" type="video/mp4" />
+                <source src="../rescale-operator/video/dashboard-full-dark-scroll.webm" type="video/webm" />
+                <a href="../rescale-operator/video/dashboard-full-dark-scroll.mp4">Download dark scroll video</a>
+              </video>
+              <div class="video-meta">
+                Automated scroll from checkpoint hero → KPI cards → product table → AI insights →
+                funnel charts → creative angle heatmap → spend forecast → live activity → integrations.
+              </div>
+            </div>
+
+            <figure class="card shot-card full-page">
+              <p class="demo-label" style="padding: 1rem 1.15rem 0">Full-page dark screenshot</p>
+              <img
+                src="../rescale-operator/screenshots/01-dashboard-home-dark-full.png"
+                alt="Full dark mode dashboard home — top to bottom scroll capture"
+                loading="lazy"
+              />
+              <figcaption class="caption">
+                <h3>Complete dashboard home — dark theme</h3>
+                <p>
+                  Single full-height PNG: €283K spend, 1.41× ROAS, gross profit +€111,784, 3 campaigns
+                  need attention, product breakdown, AI co-pilot cards, funnel micro-charts, brand
+                  cards, spend portfolio chart, creative heatmap, recommendations, and live integrations
+                  (Meta API, Google Sheets API, ClickUp API, Supabase, Discord, Claude).
+                </p>
+              </figcaption>
+            </figure>
           </div>
         </div>
       </section>
@@ -185,166 +409,140 @@
       <section class="section alt" id="screenshots">
         <div class="container">
           <h2 class="section-title">Product screenshots</h2>
-          <p class="section-intro">
-            Creative intelligence and agent views from the Rescale Operator platform.
-          </p>
+          <p class="section-intro">From the shipped platform — daily checkpoint, intelligence, operator workspace, and creative agents.</p>
           <div class="gallery">
             <figure class="card shot-card">
-              <img
-                src="../rescale-operator/screenshots/14-creative-agents.png"
-                alt="Creative marketing agents dashboard"
-                loading="lazy"
-              />
+              <img src="../rescale-operator/screenshots/01-dashboard-home.png" alt="Today's checkpoint dashboard" loading="lazy" />
               <figcaption class="caption">
-                <h3>Creative Agents Hub</h3>
-                <p>
-                  Central view for agent-driven creative analysis — angle ranking,
-                  recommendations, and daily intelligence.
-                </p>
+                <h3>Campaign QA Dashboard — Today's Checkpoint</h3>
+                <p>Portfolio KPIs (€280K spend, 2.66× ROAS), critical alerts, product breakdown, creative angle heatmap, funnel metrics, and live activity feed.</p>
               </figcaption>
             </figure>
 
             <figure class="card shot-card">
-              <img
-                src="../rescale-operator/screenshots/08-intelligence-creative.png"
-                alt="Creative intelligence screen with angle performance"
-                loading="lazy"
-              />
+              <img src="../rescale-operator/screenshots/05-operator.png" alt="Operator workspace action queue" loading="lazy" />
+              <figcaption class="caption">
+                <h3>Operator Workspace</h3>
+                <p>12 open actions (9 urgent) — Meta account health, billing, pixel checks across VetSonic, PelviEase, SunGlow with due dates.</p>
+              </figcaption>
+            </figure>
+
+            <figure class="card shot-card">
+              <img src="../rescale-operator/screenshots/08-intelligence-creative.png" alt="Creative intelligence ROAS ranking" loading="lazy" />
               <figcaption class="caption">
                 <h3>Creative Intelligence</h3>
-                <p>
-                  Performance breakdown by creative angle, concept, and format —
-                  segmented for faster decision-making.
-                </p>
+                <p>Top/bottom ROAS by avatar, strategist, editor, tool, media buyer — urban-pro at €4.50 ROAS.</p>
               </figcaption>
             </figure>
 
             <figure class="card shot-card">
-              <img
-                src="../rescale-operator/screenshots/09-intelligence-explore-expand.png"
-                alt="Explore and expand intelligence view"
-                loading="lazy"
-              />
+              <img src="../rescale-operator/screenshots/09-intelligence-explore-expand.png" alt="Explore vs expand spend analysis" loading="lazy" />
               <figcaption class="caption">
-                <h3>Explore / Expand Analysis</h3>
-                <p>
-                  Identifies scaling opportunities and expansion candidates across
-                  products and markets.
-                </p>
+                <h3>Explore vs Expand</h3>
+                <p>EXPAND at 4.50× ROAS vs EXPLORE at 2.35× — spend ratio 1.41 flagged against healthy band 0.4–0.7.</p>
               </figcaption>
             </figure>
 
             <figure class="card shot-card">
-              <img
-                src="../rescale-operator/screenshots/03-recommendations.png"
-                alt="Daily recommendations and checkpoint summary"
-                loading="lazy"
-              />
+              <img src="../rescale-operator/screenshots/07-intelligence-naming.png" alt="Naming health center N3 compliance" loading="lazy" />
               <figcaption class="caption">
-                <h3>Daily Checkpoint Summaries</h3>
-                <p>
-                  Prioritized recommendations delivered each morning — winner/loser
-                  calls, fatigue alerts, and action items.
-                </p>
+                <h3>Naming Convention QA</h3>
+                <p>N3 naming health center — ads inspected, compliance %, violations, and suggested repairs.</p>
               </figcaption>
             </figure>
 
             <figure class="card shot-card">
-              <img
-                src="../rescale-operator/screenshots/01-dashboard-home.png"
-                alt="Overview dashboard with creative and winner widgets"
-                loading="lazy"
-              />
+              <img src="../rescale-operator/screenshots/14-creative-agents.png" alt="Creative agents draft generation" loading="lazy" />
               <figcaption class="caption">
-                <h3>Operational Dashboard</h3>
-                <p>
-                  Single view connecting creative intelligence, winner detection, and
-                  daily checkpoints for cross-team visibility.
-                </p>
+                <h3>Creative Marketing Agents</h3>
+                <p>Read-only draft concepts for image ads, video ads, audience research — no Meta write API.</p>
               </figcaption>
             </figure>
 
             <figure class="card shot-card">
-              <img
-                src="../rescale-operator/screenshots/10-intelligence-meta-health.png"
-                alt="Meta health and placement quality insights"
-                loading="lazy"
-              />
+              <img src="../rescale-operator/screenshots/02-runs.png" alt="Daily and diagnostic run history" loading="lazy" />
               <figcaption class="caption">
-                <h3>Placement Quality Insights</h3>
-                <p>
-                  Meta health monitoring and placement-level quality signals to
-                  inform creative and media strategy.
-                </p>
+                <h3>Run History</h3>
+                <p>Daily + diagnostic runs per brand — queued, partial, completed with urgent flags.</p>
+              </figcaption>
+            </figure>
+
+            <figure class="card shot-card">
+              <img src="../rescale-operator/screenshots/03-recommendations.png" alt="Recommendations action queue" loading="lazy" />
+              <figcaption class="caption">
+                <h3>Recommendations &amp; Launch Readiness</h3>
+                <p>Action queue — pending, accepted, shipped with high/med/low priority filters.</p>
               </figcaption>
             </figure>
           </div>
         </div>
       </section>
 
-      <section class="section" id="capabilities">
+      <section class="section" id="demo">
+        <div class="container">
+          <h2 class="section-title">Module walkthrough</h2>
+          <p class="section-intro">
+            ~80-second tour across dashboard modules — runs → recommendations → operator →
+            intelligence → settings. Complements the full dark dashboard scroll above.
+          </p>
+          <div class="card video-wrap">
+            <video controls preload="metadata" poster="../rescale-operator/screenshots/01-dashboard-home.png">
+              <source src="../rescale-operator/video/dashboard-walkthrough.mp4" type="video/mp4" />
+              <source src="../rescale-operator/video/dashboard-walkthrough.webm" type="video/webm" />
+              <a href="../rescale-operator/video/dashboard-walkthrough.mp4">Download module walkthrough</a>
+            </video>
+          </div>
+        </div>
+      </section>
+
+      <section class="section alt" id="capabilities">
         <div class="container">
           <h2 class="section-title">Key features</h2>
           <div class="grid-3">
             <article class="card pad">
-              <div class="capability-icon">Rank</div>
-              <h3>Creative angle ranking</h3>
-              <p>
-                Ranks angles, concepts, and formats by performance against business
-                KPIs and funnel stage goals.
-              </p>
+              <div class="capability-icon">QA</div>
+              <h3>Campaign &amp; naming QA</h3>
+              <p>N3 naming health, launch readiness checklists, Meta data health, invalid pattern routing.</p>
             </article>
             <article class="card pad">
-              <div class="capability-icon">Funnel</div>
-              <h3>Funnel-level analysis</h3>
-              <p>
-                Breaks performance down by funnel stage to identify where creative
-                is winning or leaking.
-              </p>
+              <div class="capability-icon">W</div>
+              <h3>Winner notifier</h3>
+              <p>Daily ad classification — winner, emerging, needs watch, loser — with async worker pipeline.</p>
             </article>
             <article class="card pad">
-              <div class="capability-icon">Seg</div>
-              <h3>Product &amp; market segmentation</h3>
-              <p>
-                Filters and compares creative performance across products, markets,
-                and audience segments.
-              </p>
+              <div class="capability-icon">CI</div>
+              <h3>Creative intelligence</h3>
+              <p>Angle ranking, explore/expand balance, fatigue signals, ROAS by role and avatar.</p>
             </article>
             <article class="card pad">
-              <div class="capability-icon">W/L</div>
-              <h3>Winner / loser recommendations</h3>
-              <p>
-                Classifies creatives using spend, ROAS, and threshold rules — surfaces
-                scale and kill candidates.
-              </p>
+              <div class="capability-icon">Agents</div>
+              <h3>Creative marketing agents</h3>
+              <p>Image, video, and research draft generation — read-only, HITL publish.</p>
             </article>
             <article class="card pad">
-              <div class="capability-icon">Fatigue</div>
-              <h3>Creative fatigue signals</h3>
-              <p>
-                Detects declining performance patterns before teams over-invest in
-                tired creative.
-              </p>
+              <div class="capability-icon">Q</div>
+              <h3>Operator queue</h3>
+              <p>Urgent Meta health actions, open recommendations, run history, Ask Operator chat.</p>
             </article>
             <article class="card pad">
-              <div class="capability-icon">Daily</div>
-              <h3>Daily checkpoint summaries</h3>
-              <p>
-                Morning intelligence briefs with prioritized actions for creative
-                strategists and media buyers.
-              </p>
+              <div class="capability-icon">HITL</div>
+              <h3>Human-in-the-loop review</h3>
+              <p>Accept, reject, or fix before actions ship. Full audit trail on every decision.</p>
             </article>
           </div>
         </div>
       </section>
 
-      <section class="section alt" id="impact">
+      <section class="section" id="impact">
         <div class="container">
           <h2 class="section-title">Business impact</h2>
+          <p class="section-intro">Outcomes from dashboard adoption, UAT, and stakeholder review — metrics visible in the platform UI and verified in production runs.</p>
+
+          <h3 class="skills-heading">Platform outcomes</h3>
           <div class="metric-grid">
             <article class="card metric-card">
               <div class="value">↓ Manual</div>
-              <div class="label">Reduced manual creative analysis</div>
+              <div class="label">Reduced manual creative &amp; campaign analysis</div>
             </article>
             <article class="card metric-card">
               <div class="value">↑ Visibility</div>
@@ -352,88 +550,185 @@
             </article>
             <article class="card metric-card">
               <div class="value">Faster</div>
-              <div class="label">Creative decision-making cycles</div>
+              <div class="label">Creative &amp; media-buying decision cycles</div>
             </article>
             <article class="card metric-card">
               <div class="value">Aligned</div>
               <div class="label">Creative strategists &amp; media buyers</div>
             </article>
           </div>
+
+          <h3 class="skills-heading" style="margin-top: 2.5rem">Dashboard metrics (from product UI)</h3>
+          <div class="metric-grid">
+            <article class="card metric-card">
+              <div class="value">2.66×</div>
+              <div class="label">portfolio ROAS (€280K spend → €744K revenue)</div>
+            </article>
+            <article class="card metric-card">
+              <div class="value">3</div>
+              <div class="label">campaigns flagged in today's checkpoint</div>
+            </article>
+            <article class="card metric-card">
+              <div class="value">4.50×</div>
+              <div class="label">EXPAND ROAS vs 2.35× EXPLORE</div>
+            </article>
+            <article class="card metric-card">
+              <div class="value">€4.50</div>
+              <div class="label">top avatar ROAS (urban-pro)</div>
+            </article>
+          </div>
+
+          <h3 class="skills-heading" style="margin-top: 2.5rem">Verified automation metrics (UAT)</h3>
+          <div class="metric-grid">
+            <article class="card metric-card">
+              <div class="value">1,620</div>
+              <div class="label">ads classified per DryWear winner run</div>
+            </article>
+            <article class="card metric-card">
+              <div class="value">47</div>
+              <div class="label">emerging winners surfaced (14-day lookback)</div>
+            </article>
+            <article class="card metric-card">
+              <div class="value">12</div>
+              <div class="label">operator actions open (9 urgent)</div>
+            </article>
+            <article class="card metric-card">
+              <div class="value">06:30</div>
+              <div class="label">UTC daily cron fan-out per brand</div>
+            </article>
+          </div>
         </div>
       </section>
 
-      <section class="section" id="role">
+      <section class="section alt" id="role">
         <div class="container">
           <h2 class="section-title">My role</h2>
           <div class="card role-box prose">
             <p>
-              <strong>AI Product &amp; Automation Builder</strong> — defined agent
-              workflows, creative KPI logic, ranking criteria, and business rules.
-              Created UAT requirements, dashboard views, and stakeholder feedback loops
-              so creative and media teams could trust and adopt the system.
+              <strong>AI Product &amp; Automation Builder</strong> — designed workflows, automation
+              logic, QA rules, dashboard requirements, human review model, acceptance criteria,
+              and stakeholder operating process. Shipped the full stack: FastAPI + Next.js platform,
+              Hermes Agents + OpenRouter + Claude routing, Supermemory RAG (Ask Operator), Supabase Postgres schema,
+              Arq workers, winner classifier, intelligence screens, and Creative Agents safety model
+              (read-only, no Meta write API).
             </p>
             <p>
-              Worked cross-functionally to align naming convention fields, funnel
-              definitions, and performance thresholds with how teams actually make
-              creative decisions — then validated outputs through structured review
-              cycles before production rollout.
+              Owned UAT on live brands, fixed production performance issues (async 202 API,
+              batch DB writes), and documented the operating model for creative and media-buying
+              team adoption.
             </p>
           </div>
         </div>
       </section>
 
-      <section class="section alt" id="technical">
+      <section class="section" id="technical">
         <div class="container">
           <h2 class="section-title">Technical breakdown</h2>
           <div class="accordion">
             <details open>
-              <summary>Data inputs</summary>
+              <summary>Architecture</summary>
               <div class="content">
+                <p>
+                  Next.js (:3100) → FastAPI (:8001) → Redis/Arq worker → Supabase Postgres
+                  (snapshots, events, runs, operator log) + Ecom Profits read-only Meta view.
+                  Redis handles async jobs, SSE run events, and multi-worker agent task registry.
+                </p>
+              </div>
+            </details>
+            <details open>
+              <summary>RAG &amp; vector memory (Supermemory)</summary>
+              <div class="content">
+                <p>
+                  Vector search is <strong>not</strong> stored in Supabase — it runs on
+                  <strong>Supermemory</strong>, a managed semantic memory service. Supabase holds
+                  relational operator data only.
+                </p>
                 <ul>
-                  <li>Meta Ads ad-level metrics (spend, ROAS, CTR, CPC, CPM)</li>
-                  <li>Creative metadata and naming convention fields</li>
-                  <li>Funnel stage tags and product/market segmentation</li>
-                  <li>Historical performance baselines</li>
-                  <li>Business rule thresholds per brand</li>
+                  <li><strong>Ingest</strong> — <code>supermemory_ingest.py</code> scrubs secrets, attaches metadata (SOP, technical_doc, decision, metric_rule), idempotent <code>custom_id</code> → <code>POST /v3/documents</code></li>
+                  <li><strong>Search</strong> — <code>MemorySearchService</code> builds query + filters (<code>project: rescale_operator</code>, optional module) → <code>POST /v3/search</code> → top-k chunks with similarity scores</li>
+                  <li><strong>RAG assembly</strong> — <code>RagContextProvider</code> returns context blocks, citations, confidence; degrades gracefully if Supermemory is disabled/timeout/error</li>
+                  <li><strong>Ask Operator</strong> — <code>AgentOrchestrator</code> merges live dashboard context + RAG prompt block → Hermes Agents / Claude → evidence + warnings (read-only, no writes)</li>
+                  <li><strong>Config gates</strong> — <code>SUPERMEMORY_ENABLED</code>, <code>SUPERMEMORY_API_KEY</code>, <code>AGENT_RAG_ENABLED</code>; Redis-backed task registry for multi-worker <code>/api/agents/query</code></li>
                 </ul>
               </div>
             </details>
             <details>
-              <summary>Agent logic</summary>
+              <summary>Data &amp; persistence (Supabase)</summary>
               <div class="content">
                 <ul>
-                  <li>Segment campaigns by product, market, and placement</li>
-                  <li>Rank creative angles against KPI targets</li>
-                  <li>Detect fatigue via trend and frequency signals</li>
-                  <li>Classify winners / losers with configurable thresholds</li>
-                  <li>Generate daily checkpoint summaries with prioritized actions</li>
+                  <li>Supabase Postgres via asyncpg — tenant-scoped reads, batch upserts, migrations (e.g. <code>0026_winner_notifier</code>)</li>
+                  <li>Tables: <code>ad_launch_tracking</code>, <code>ad_winner_snapshots</code>, <code>ad_winner_events</code>, operator runs, publish approvals</li>
+                  <li>Ecom Profits read-only pool — <code>default_transaction_read_only = on</code></li>
+                  <li>Brand rules in <code>config/brands.yaml</code></li>
+                </ul>
+              </div>
+            </details>
+            <details open>
+              <summary>AI &amp; agent layer</summary>
+              <div class="content">
+                <ul>
+                  <li><strong>Hermes Agents</strong> — agent runtime provider for orchestrated tool use</li>
+                  <li><strong>OpenRouter</strong> — multi-model LLM routing layer</li>
+                  <li><strong>Claude provider</strong> — Ask Operator, Creative Agents, diagnostic Opus synthesis</li>
+                  <li><strong>Creative Agents</strong> — read-only image/video/research draft generation</li>
+                  <li><strong>Diagnostic engine</strong> — 4 diagnostics + Claude Opus synthesis</li>
+                  <li><strong>Winner notifier</strong> — rules classifier + Supabase event/snapshot schema</li>
+                </ul>
+              </div>
+            </details>
+            <details open>
+              <summary>External API integrations</summary>
+              <div class="content">
+                <ul>
+                  <li><strong>Meta API</strong> — OAuth (<code>/api/integrations/meta/oauth/*</code>), Ecom Profits read-only metrics, inbound webhooks</li>
+                  <li><strong>ClickUp API</strong> — <code>ClickUpBridge</code> idempotent <code>create_task</code>; URGENT daily + HIGH diagnostic tickets; <code>clickup_task_id</code> on action rows</li>
+                  <li><strong>Google Sheets API</strong> — stakeholder export via registry sync jobs; System Pulse health monitoring</li>
+                  <li><strong>Discord notifications</strong> — winner notifier structured payloads; <code>WINNER_NOTIFIER_DISCORD_ENABLED</code></li>
+                  <li><strong>API keys</strong> — personal read-only API tokens; generate / reveal-once / revoke at <code>/daily/d/settings/api-keys</code></li>
+                  <li><strong>Registry</strong> — <code>GET/POST/PATCH /api/integrations/registry</code>, test + sync per provider</li>
                 </ul>
               </div>
             </details>
             <details>
-              <summary>Outputs &amp; integrations</summary>
+              <summary>Agentic workflow layer</summary>
               <div class="content">
                 <ul>
-                  <li>Creative intelligence dashboard views</li>
-                  <li>Daily recommendations panel</li>
-                  <li>ClickUp task creation for flagged actions</li>
-                  <li>Google Sheets export for stakeholder reviews</li>
-                  <li>Audit logs for agent recommendations</li>
+                  <li>Daily checkpoint cron + per-brand fan-out</li>
+                  <li>Creative intelligence ranking by role dimension</li>
+                  <li>Recommendations pipeline — pending → accepted → shipped</li>
+                  <li>ClickUp API bridge for diagnostic + action tasks</li>
                 </ul>
               </div>
             </details>
             <details>
-              <summary>Tools and stack</summary>
+              <summary>Quality &amp; reliability</summary>
               <div class="content">
                 <ul>
-                  <li><strong>AI:</strong> Claude, Gemini, OpenAI-style agent workflows</li>
-                  <li><strong>Data:</strong> SQL/Supabase, Meta Ads pipelines, Ecom Profits views</li>
-                  <li><strong>Frontend:</strong> Next.js, TypeScript, TanStack Query</li>
-                  <li><strong>Ops:</strong> ClickUp, Google Sheets, Looker-style dashboards</li>
-                  <li><strong>Platform:</strong> Integrated within Rescale Operator ecosystem</li>
+                  <li>Feature flags for safe partial rollout</li>
+                  <li>HITL recommendations pipeline (pending → accepted → shipped)</li>
+                  <li>Idempotent winner events, read-only Ecom Profits pool</li>
+                  <li>pytest + Playwright e2e + Docker full stack</li>
                 </ul>
+                <p style="margin-top: 0.75rem">
+                  <a href="../rescale-operator/docs/HOW_I_BUILT.md">HOW_I_BUILT.md</a> ·
+                  <a href="../rescale-operator/docs/WHAT_I_BUILT.md">WHAT_I_BUILT.md</a>
+                </p>
               </div>
             </details>
+          </div>
+        </div>
+      </section>
+
+      <section class="section alt" id="modules">
+        <div class="container">
+          <h2 class="section-title">Shipped modules</h2>
+          <div class="module-grid">
+            <a class="card project-card compact" href="../winner-notifier/index.html"><span class="tag">Shipped</span><h3>Winner Notifier</h3><p>Daily ad classification + dashboard card</p></a>
+            <a class="card project-card compact" href="../daily-checkpoint/index.html"><span class="tag">Shipped</span><h3>Daily Checkpoint</h3><p>5 morning checks → action queue</p></a>
+            <a class="card project-card compact" href="../diagnostic-engine/index.html"><span class="tag">Shipped</span><h3>Diagnostic Engine</h3><p>4 diagnostics + Opus synthesis</p></a>
+            <a class="card project-card compact" href="../naming-convention-qa/index.html"><span class="tag">Shipped</span><h3>Naming QA</h3><p>N3 health center + repairs</p></a>
+            <a class="card project-card compact" href="../agent-memory/index.html"><span class="tag">Shipped</span><h3>Agent Memory</h3><p>Supermemory vector RAG + Ask Operator</p></a>
+            <a class="card project-card compact" href="../weekly-cro/index.html"><span class="tag">Shipped</span><h3>Weekly CRO</h3><p>Profit Engineering workflow</p></a>
           </div>
         </div>
       </section>
@@ -442,30 +737,11 @@
         <div class="container">
           <div class="card pad contact-card">
             <h2>Interested in this work?</h2>
-            <p>
-              I build AI agents that turn noisy campaign data into structured creative
-              intelligence — ranking, segmentation, and daily decisions teams can trust.
-            </p>
+            <p>I design and ship AI automation platforms end to end — agent workflows, QA rules, dashboards, and stakeholder adoption.</p>
             <div class="contact-links">
-              <a class="btn btn-primary" data-contact="email" href="mailto:rajeev.code@gmail.com">rajeev.code@gmail.com</a>
+              <a class="btn btn-primary" data-contact="email" href="mailto:rajeevkmba2025@gmail.com">rajeevkmba2025@gmail.com</a>
               <a class="btn btn-secondary" data-contact="linkedin" href="#" target="_blank" rel="noopener noreferrer">LinkedIn</a>
             </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section">
-        <div class="container">
-          <div class="card pad contact-card">
-            <h3>Related case study</h3>
-            <p>
-              Creative Marketing Agents operate within the broader Rescale Operator
-              platform — see the full operating system case study for signal inbox,
-              naming QA, launch readiness, and human-in-the-loop review.
-            </p>
-            <a class="btn btn-primary" href="../rescale-operator/index.html" style="margin-top: 1rem">
-              View Rescale Operator case study
-            </a>
           </div>
         </div>
       </section>
@@ -473,10 +749,10 @@
 
     <footer class="site-footer">
       <div class="container inner">
-        <span>Creative Marketing Agents — case study</span>
+        <span>Creative Marketing Agents / Rescale Operator</span>
         <span class="footer-links">
           <a href="../index.html">Portfolio home</a>
-          <a data-contact="email" href="mailto:rajeev.code@gmail.com">Email</a>
+          <a data-contact="email" href="mailto:rajeevkmba2025@gmail.com">Email</a>
           <a data-contact="linkedin" href="#" target="_blank" rel="noopener noreferrer">LinkedIn</a>
         </span>
       </div>

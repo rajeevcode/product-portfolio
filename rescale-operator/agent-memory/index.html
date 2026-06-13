@@ -13,64 +13,115 @@
     <header class="site-header">
       <div class="container inner">
         <a class="brand" href="../index.html">Rajeev <span>Kumar</span></a>
-        <nav class="nav"><a href="../index.html">Portfolio home</a><a href="../rescale-operator/index.html">Rescale Operator</a><a href="../creative-marketing-agents/index.html">Creative Agents</a></nav>
+        <nav class="nav"><a href="../index.html">Portfolio home</a><a href="../creative-marketing-agents/index.html">Case study</a></nav>
       </div>
     </header>
     <main>
       <section class="mini-page-hero">
         <div class="container">
-          <p class="eyebrow">Rescale Operator — shipped</p>
+          <p class="eyebrow">Creative Marketing Agents / Rescale Operator — shipped</p>
           <h1>Agent Memory &amp; RAG</h1>
           <p class="lead">
-            Read-only agent orchestrator with Supermemory retrieval, RAG context
-            provider, Claude/Hermes routing, and dashboard Agent Memory panel.
-            HITL publish-approval path for write actions (gated off by default).
+            Read-only Ask Operator layer — Supermemory vector search for semantic retrieval,
+            RagContextProvider for grounded prompt assembly, Hermes Agents + OpenRouter + Claude generation, and
+            citation-backed evidence. Supabase stores operator runs; vectors live in Supermemory.
           </p>
         </div>
       </section>
+
       <section class="section alt">
+        <div class="container">
+          <h2 class="section-title">Architecture</h2>
+          <div class="card flow">
+            <div class="flow-step">
+              <div class="flow-num">1</div>
+              <div>
+                <strong>Ingest → Supermemory vector store</strong>
+                <p style="margin: 0.35rem 0 0; color: var(--text-muted); font-size: 0.92rem">
+                  SOPs, technical docs, decisions, metric rules → scrubbed → <code>POST /v3/documents</code> with metadata (<code>project: rescale_operator</code>).
+                </p>
+              </div>
+            </div>
+            <div class="flow-arrow" aria-hidden="true">↓</div>
+            <div class="flow-step">
+              <div class="flow-num">2</div>
+              <div>
+                <strong>Query → semantic search</strong>
+                <p style="margin: 0.35rem 0 0; color: var(--text-muted); font-size: 0.92rem">
+                  <code>MemorySearchService</code> → <code>POST /v3/search</code> → top-k chunks + similarity scores + citations.
+                </p>
+              </div>
+            </div>
+            <div class="flow-arrow" aria-hidden="true">↓</div>
+            <div class="flow-step">
+              <div class="flow-num">3</div>
+              <div>
+                <strong>RAG context → orchestrator</strong>
+                <p style="margin: 0.35rem 0 0; color: var(--text-muted); font-size: 0.92rem">
+                  <code>RagContextProvider</code> merges live dashboard context + retrieved blocks → Hermes Agents / Claude → evidence + confidence warnings.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
         <div class="container grid-2">
+          <article class="card pad">
+            <h3>Vector database</h3>
+            <p>
+              <strong>Supermemory</strong> (managed service) — not pgvector in Supabase.
+              Embeddings and vector search are handled by Supermemory's API. Operator DB
+              (Supabase Postgres) stores runs, snapshots, and approvals separately.
+            </p>
+          </article>
           <article class="card pad">
             <h3>What shipped</h3>
             <p>
-              <code>/api/agents/query</code>, Supermemory ingest + search,
-              <code>agent_orchestrator.py</code>, Redis-backed task registry,
-              frontend <code>/daily/d/agents/memory</code>, and publish approvals
-              persistence for human-in-the-loop promotion.
+              <code>supermemory_client.py</code>, <code>supermemory_ingest.py</code>,
+              <code>supermemory_search.py</code>, <code>rag_context_provider.py</code>,
+              <code>agent_orchestrator.py</code>, <code>/api/agents/query</code>,
+              Redis task registry, Agent Memory UI (<code>NEXT_PUBLIC_AGENT_MEMORY</code>).
             </p>
           </article>
           <article class="card pad">
-            <h3>Grounding rules</h3>
+            <h3>Safety &amp; degradation</h3>
             <p>
-              System prompt enforces read-only recommendations — no claimed Meta
-              or DB writes. Every answer must cite live dashboard or retrieved
-              memory context.
+              Read-only Phase 1 — no Meta/DB writes. Supermemory outage returns empty RAG
+              context + warning (never 500s). Low confidence (&lt;0.4) flagged to user.
+              Secret scrubbing on ingest.
+            </p>
+          </article>
+          <article class="card pad">
+            <h3>Config gates</h3>
+            <p>
+              <code>SUPERMEMORY_ENABLED</code>, <code>SUPERMEMORY_API_KEY</code>,
+              <code>SUPERMEMORY_BASE_URL</code>, <code>AGENT_RAG_ENABLED</code>,
+              <code>HERMES_AGENT_ENABLED</code>, <code>AGENT_WRITE_ACTIONS_ENABLED=false</code>.
             </p>
           </article>
         </div>
       </section>
-      <section class="section">
+
+      <section class="section alt">
         <div class="container">
-          <h2 class="section-title">Screenshots</h2>
-          <p class="section-intro">
-            Agent Memory UI is feature-flagged (<code>NEXT_PUBLIC_AGENT_MEMORY</code>).
-            Creative agents workspace shown as related operator surface.
-          </p>
+          <h2 class="section-title">Related screenshots</h2>
           <div class="gallery">
             <figure class="card shot-card">
-              <img src="../rescale-operator/screenshots/14-creative-agents.png" alt="Creative agents workspace" loading="lazy" />
-              <figcaption class="caption"><h3>Creative agents</h3><p>Agent-assisted creative workflows in operator UI.</p></figcaption>
+              <img src="../rescale-operator/screenshots/05-operator.png" alt="Operator workspace with Ask Operator" loading="lazy" />
+              <figcaption class="caption"><h3>Ask Operator</h3><p>Grounded chat in operator workspace — live context + retrieved memory.</p></figcaption>
             </figure>
             <figure class="card shot-card">
-              <img src="../rescale-operator/screenshots/05-operator.png" alt="Operator workspace" loading="lazy" />
-              <figcaption class="caption"><h3>Operator</h3><p>Shared operator shell for agent-backed actions.</p></figcaption>
+              <img src="../rescale-operator/screenshots/14-creative-agents.png" alt="Creative agents workspace" loading="lazy" />
+              <figcaption class="caption"><h3>Creative Agents</h3><p>Separate read-only agent surface for concept generation.</p></figcaption>
             </figure>
           </div>
         </div>
       </section>
     </main>
     <footer class="site-footer">
-      <div class="container inner"><span><a href="../index.html">← Portfolio home</a></span></div>
+      <div class="container inner"><span><a href="../creative-marketing-agents/index.html">← Case study</a></span></div>
     </footer>
   </body>
 </html>

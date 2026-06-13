@@ -1,29 +1,38 @@
 # AI Automation Portfolio — project catalog
 
-Hiring-manager-ready case studies and shipped modules.
+## Featured case study
 
-## Featured case studies
+**[Creative Marketing Agents / Rescale Operator](creative-marketing-agents/index.html)**
 
-| Project | URL | Description |
-|---------|-----|-------------|
-| **Rescale Operator** | [rescale-operator/index.html](rescale-operator/index.html) | AI Automation OS — campaign QA, signal inbox, winner detection, launch readiness, HITL review |
-| **Creative Marketing Agents** | [creative-marketing-agents/index.html](creative-marketing-agents/index.html) | AI agents for creative angle ranking, funnel analysis, winner/loser recommendations |
+AI Automation OS for Creative & Campaign Operations — one platform, one case study.
 
-## Platform modules (Rescale Operator ecosystem)
+| Use for | Features |
+|---------|----------|
+| Creative workflow automation | Creative agents, angle ranking, explore/expand |
+| Campaign QA | Naming convention checks, launch readiness, Meta health |
+| Winner notifier | Daily ad classification, emerging winner detection |
+| Human-in-the-loop review | Operator queue, recommendations workflow, audit logs |
+| Campaign QA dashboard | Today's checkpoint, funnel KPIs, product breakdown |
+| Agentic workflow layer | Daily runs, diagnostics, Ask Operator (Supermemory vector RAG) |
 
-| Module | Status | Description |
-|--------|--------|-------------|
-| [daily-checkpoint](daily-checkpoint/) | Shipped | 5 daily checks + action queue |
-| [diagnostic-engine](diagnostic-engine/) | Shipped | 4 diagnostics + Opus synthesis + ClickUp |
-| [naming-convention-qa](naming-convention-qa/) | Shipped | NC v3 parsing, valid/partial/invalid QA |
-| [winner-notifier](winner-notifier/) | Shipped | Winner/emerging/loser classification |
-| [agent-memory](agent-memory/) | Shipped | Supermemory RAG, read-only agent query, HITL |
-| [weekly-cro](weekly-cro/) | Shipped | Weekly CRO / Profit Engineering |
-| [document-intelligence](document-intelligence/) | Pattern | OCR + LLM + HITL (publish approvals pattern) |
+Legacy URL `rescale-operator/index.html` redirects to the unified case study.
 
-## Impact metrics (portfolio-wide)
+## Shipped modules
 
-- **2,000+** signals processed per day
-- **~70%** noise reduction
-- **2–3×** creative throughput improvement
-- **~40%** coordination effort reduction
+| Module | Description |
+|--------|-------------|
+| [winner-notifier](winner-notifier/) | Daily ad classification |
+| [daily-checkpoint](daily-checkpoint/) | 5 morning checks → action queue |
+| [diagnostic-engine](diagnostic-engine/) | 4 diagnostics + Opus synthesis |
+| [naming-convention-qa](naming-convention-qa/) | N3 naming health center |
+| [agent-memory](agent-memory/) | Supermemory vector RAG + Ask Operator orchestrator |
+| [weekly-cro](weekly-cro/) | Profit Engineering workflow |
+| [document-intelligence](document-intelligence/) | OCR + LLM + HITL pattern |
+
+## Metrics (from dashboard UI + UAT)
+
+**Dashboard:** 2.66× portfolio ROAS · €280K spend · €744K revenue · 3 checkpoint alerts · EXPAND 4.50× vs EXPLORE 2.35× ROAS
+
+**UAT:** 1,620 ads/run · 47 emerging · 12 operator actions (9 urgent) · 06:30 UTC daily cron
+
+**Outcomes:** ↓ manual analysis · ↑ visibility · faster decisions · aligned teams

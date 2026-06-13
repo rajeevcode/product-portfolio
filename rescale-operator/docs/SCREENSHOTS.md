@@ -28,7 +28,27 @@ Output: `Portfolio/screenshots/*.png` and `Portfolio/screenshots/manifest.json`.
 | `10-intelligence-meta-health.png` | `/daily/d/intelligence/meta-health` |
 | `14-creative-agents.png` | `/daily/d/creative` |
 | `16-settings-overview.png` … `22-settings-audit.png` | Settings sub-pages |
+| `settings-integrations-walkthrough.mp4` / `.webm` | Legacy settings tour |
+| `integrations-walkthrough.mp4` / `.webm` | Integrations + API keys tour (~25s) |
+| `19-settings-integrations-meta-ads.png` | Meta Ads dashboard from integrations link |
 | `23-weekly-cro-home.png` | `/weekly-cro/d` |
-| `01-dashboard-home-dark-full.png` | Full-page dark scroll capture |
+| `01-dashboard-home-dark-full.png` | Full-page dark scroll capture (`/daily/d`) |
+| `dashboard-full-dark-scroll.mp4` / `.webm` | Top-to-bottom dark mode scroll video (~40s) |
+| `dashboard-walkthrough.mp4` / `.webm` | Module tour (~80s) |
+
+Regenerate settings integrations capture:
+
+```bash
+cd frontend-next
+PORTFOLIO_DIR=/path/to/ai-automation-portfolio/rescale-operator \
+  pnpm exec node scripts/record-settings-integrations.mjs
+```
+
+Regenerate dark captures:
+
+```bash
+cd frontend-next
+pnpm exec node scripts/record-dashboard-dark-scroll.mjs
+```
 
 Flag-gated routes (Launch QA, Scaling, Agent Memory, Approvals) are skipped when their `NEXT_PUBLIC_*` flags are off — see `manifest.json` for the latest run.
