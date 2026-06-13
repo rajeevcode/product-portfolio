@@ -1,0 +1,11 @@
+{
+  "capturedAt": "2026-06-13T16:14:35.884Z",
+  "theme": "dark",
+  "baseUrl": "http://localhost:3100",
+  "path": "/daily/d",
+  "screenshot": "screenshots/01-dashboard-home-dark-full.png",
+  "video": {
+    "webm": "video/dashboard-full-dark-scroll.webm",
+    "mp4": "video/dashboard-full-dark-scroll.mp4"
+  }
+}

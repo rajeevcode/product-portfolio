@@ -1,0 +1,154 @@
+{
+  "capturedAt": "2026-06-13T15:49:04.985Z",
+  "baseUrl": "http://localhost:3100",
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "screens": [
+    {
+      "file": "01-dashboard-home.png",
+      "path": "/daily/d",
+      "status": 200,
+      "title": "Rescale Operator"
+    },
+    {
+      "file": "02-runs.png",
+      "path": "/daily/d/runs",
+      "status": 200,
+      "title": "Rescale Operator"
+    },
+    {
+      "file": "03-recommendations.png",
+      "path": "/daily/d/recommendations",
+      "status": 200,
+      "title": "Rescale Operator"
+    },
+    {
+      "file": "04-trigger.png",
+      "path": "/daily/d/trigger",
+      "status": 200,
+      "title": "Rescale Operator"
+    },
+    {
+      "file": "05-operator.png",
+      "path": "/daily/d/operator",
+      "status": 200,
+      "title": "Rescale Operator"
+    },
+    {
+      "file": "06-brands.png",
+      "path": "/daily/d/brands",
+      "status": 200,
+      "title": "Rescale Operator"
+    },
+    {
+      "file": "07-intelligence-naming.png",
+      "path": "/daily/d/intelligence/naming",
+      "status": 200,
+      "title": "Rescale Operator"
+    },
+    {
+      "file": "08-intelligence-creative.png",
+      "path": "/daily/d/intelligence/creative",
+      "status": 200,
+      "title": "Rescale Operator"
+    },
+    {
+      "file": "09-intelligence-explore-expand.png",
+      "path": "/daily/d/intelligence/explore-expand",
+      "status": 200,
+      "title": "Rescale Operator"
+    },
+    {
+      "file": "10-intelligence-meta-health.png",
+      "path": "/daily/d/intelligence/meta-health",
+      "status": 200,
+      "title": "Rescale Operator"
+    },
+    {
+      "file": "14-creative-agents.png",
+      "path": "/daily/d/creative",
+      "status": 200,
+      "title": "Rescale Operator"
+    },
+    {
+      "file": "16-settings-overview.png",
+      "path": "/daily/d/settings",
+      "status": 200,
+      "title": "Rescale Operator"
+    },
+    {
+      "file": "17-settings-workspace.png",
+      "path": "/daily/d/settings/workspace",
+      "status": 200,
+      "title": "Rescale Operator"
+    },
+    {
+      "file": "18-settings-members.png",
+      "path": "/daily/d/settings/members",
+      "status": 200,
+      "title": "Rescale Operator"
+    },
+    {
+      "file": "19-settings-integrations.png",
+      "path": "/daily/d/settings/integrations",
+      "status": 200,
+      "title": "Rescale Operator"
+    },
+    {
+      "file": "20-settings-api-keys.png",
+      "path": "/daily/d/settings/api-keys",
+      "status": 200,
+      "title": "Rescale Operator"
+    },
+    {
+      "file": "21-settings-notifications.png",
+      "path": "/daily/d/settings/notifications",
+      "status": 200,
+      "title": "Rescale Operator"
+    },
+    {
+      "file": "22-settings-audit.png",
+      "path": "/daily/d/settings/audit",
+      "status": 200,
+      "title": "Rescale Operator"
+    },
+    {
+      "file": "23-weekly-cro-home.png",
+      "path": "/weekly-cro/d",
+      "status": 200,
+      "title": "Rescale Operator"
+    }
+  ],
+  "skipped": [
+    {
+      "file": "11-intelligence-launch-qa",
+      "path": "/daily/d/intelligence/launch-qa",
+      "optional": true,
+      "status": 404,
+      "title": "Rescale Operator"
+    },
+    {
+      "file": "12-intelligence-scaling",
+      "path": "/daily/d/intelligence/scaling",
+      "optional": true,
+      "status": 404,
+      "title": "Rescale Operator"
+    },
+    {
+      "file": "13-agents-memory",
+      "path": "/daily/d/agents/memory",
+      "optional": true,
+      "status": 404,
+      "title": "Rescale Operator"
+    },
+    {
+      "file": "15-approvals",
+      "path": "/daily/d/approvals",
+      "optional": true,
+      "status": 404,
+      "title": "Rescale Operator"
+    }
+  ]
+}
