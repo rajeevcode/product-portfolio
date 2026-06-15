@@ -6,6 +6,12 @@ Static portfolio for hiring managers.
 - [Creative Marketing Agents / Rescale Operator](rescale-operator/creative-marketing-agents/index.html) — AI Automation OS for Creative & Campaign Operations
 - [Pulsara](Pulsara-Portfolio/index.html) — AI Innovation Signal Intelligence System
 
+**Product Manager case studies:**
+- [HafH / Kabuk Style](hafh-kabuk-style/index.html) — AI Pricing & Travel Platform Growth
+- [Mumzworld / Tamer Group](mumzworld-tamer-group/index.html) — B2B Commerce, Payments & Automation Platform
+- [Jumia Group](jumia-marketplace-ops/index.html) — Marketplace Data Operations & Customer Workflow Automation
+- [Lazada / Alibaba Group](lazada-alibaba-growth/index.html) — Marketplace Payments, Checkout & Growth Platform
+
 ```bash
 cd /Users/rajeevkumar/Desktop/ai-automation-portfolio
 npx serve . -p 8092
