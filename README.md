@@ -1,6 +1,8 @@
-# AI Automation Portfolio
+# Product Portfolio
 
 Static portfolio for hiring managers. **Live:** https://rajeevcode.github.io/product-portfolio/
+
+Author: Rajeev Kumar · Last updated: June 2026 · License: [MIT](LICENSE)
 
 **Featured AI systems:**
 - [Rescale OS](Profile-rescale-os/index.html) — AI Creative & Campaign Operations Platform
