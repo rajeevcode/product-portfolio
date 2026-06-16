@@ -236,6 +236,11 @@ function checkDeployConfig() {
   if (existsSync(wf)) {
     const y = readFileSync(wf, "utf8");
     check(/path:\s*\.\s*$/m.test(y), "pages.yml must ship repo root (path: .)");
+    // security: GitHub Actions pinned to commit SHAs (not mutable tags)
+    const usesLines = y.match(/uses:\s*actions\/[^\n]+/g) || [];
+    for (const u of usesLines) {
+      check(/@[0-9a-f]{40}\b/.test(u), `action not pinned to a commit SHA: ${u.trim()}`);
+    }
   } else bad("missing .github/workflows/pages.yml");
   check(existsSync(join(ROOT, ".nojekyll")), "missing root .nojekyll");
   // root index.html IS the hub now; the old rescale-operator route redirects to it
@@ -243,6 +248,28 @@ function checkDeployConfig() {
   check(/id="featured"/.test(rootIdx) && /Work experience/.test(rootIdx), "root index.html should be the portfolio hub");
   const oldRoute = readPage("rescale-operator/index.html");
   check(/http-equiv="refresh"[^>]*url=\.\.\/index\.html/.test(oldRoute), "rescale-operator/index.html should redirect to root hub");
+}
+
+function checkSecurity() {
+  section("11. Security hardening");
+  // Every deployable page carries a Content-Security-Policy meta
+  for (const p of [...PAGES, ...MODULE_PAGES]) {
+    if (!existsSync(join(ROOT, p))) continue;
+    const html = readPage(p);
+    check(/http-equiv="Content-Security-Policy"/.test(html), `missing CSP meta in ${p}`);
+    check(/default-src 'self'/.test(html), `CSP missing default-src in ${p}`);
+  }
+  // No tracked file leaks a JWT-shaped token
+  for (const p of [...PAGES, ...MODULE_PAGES]) {
+    if (!existsSync(join(ROOT, p))) continue;
+    check(!/eyJ[A-Za-z0-9_-]{8,}\.eyJ[A-Za-z0-9_-]{8,}/.test(readPage(p)), `possible JWT in ${p}`);
+  }
+  // Capture script must not hardcode a PII email default
+  const cap = "Pulsara-Portfolio/scripts/capture-portfolio.mjs";
+  if (existsSync(join(ROOT, cap))) {
+    const js = readPage(cap);
+    check(!/PULSARA_EMAIL\s*\|\|\s*['"][^'"]*@/.test(js), "capture script hardcodes a PII email default");
+  }
 }
 
 // helper: text nodes only (strip tags so attributes/URLs/code don't count)
@@ -346,6 +373,7 @@ async function main() {
   checkDeployConfig();
   checkNoVisibleEmail();
   checkNoProseDashes();
+  checkSecurity();
   // http checks
   await checkHttp();
 

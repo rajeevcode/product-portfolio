@@ -4,7 +4,7 @@
  *
  * Usage:
  *   PULSARA_URL=http://localhost:3000 \
- *   PULSARA_EMAIL=raj.kumar@rescale.media \
+ *   PULSARA_EMAIL=your-email \
  *   PULSARA_PASSWORD=your-password \
  *   node scripts/capture-portfolio.mjs
  */
@@ -20,7 +20,7 @@ const SHOTS = path.join(ROOT, 'assets', 'screenshots');
 const VIDEO = path.join(ROOT, 'assets', 'video');
 
 const BASE_URL = process.env.PULSARA_URL || 'http://localhost:3000';
-const EMAIL = process.env.PULSARA_EMAIL || 'raj.kumar@rescale.media';
+const EMAIL = process.env.PULSARA_EMAIL || '';
 const PASSWORD = process.env.PULSARA_PASSWORD || '';
 
 const TAB = {
@@ -203,8 +203,8 @@ async function recordFullTour(browser) {
 }
 
 async function main() {
-  if (!PASSWORD) {
-    console.error('Set PULSARA_PASSWORD env var');
+  if (!EMAIL || !PASSWORD) {
+    console.error('Set PULSARA_EMAIL and PULSARA_PASSWORD env vars');
     process.exit(1);
   }
 
