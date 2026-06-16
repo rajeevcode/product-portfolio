@@ -3,408 +3,49 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Rajeev Kumar, AI Product, Platform & Marketplace Portfolio</title>
-    <meta
-      name="description"
-      content="Rajeev Kumar — Senior Product Manager across AI automation platforms, agentic workflows, enterprise SaaS, and marketplace & payments. AI systems, work-experience case studies, and MBA portfolio."
-    />
-    <meta property="og:title" content="Rajeev Kumar — AI Product, Platform & Marketplace Portfolio" />
-    <meta
-      property="og:description"
-      content="Senior Product Manager portfolio hub — featured AI systems, work-experience product case studies, and MBA portfolio."
-    />
-    <meta property="og:type" content="website" />
+    <title>Rajeev Kumar, Product Portfolio</title>
+    <!-- The portfolio hub now lives at the site root. This old route redirects there. -->
+    <meta http-equiv="refresh" content="0; url=../index.html" />
+    <link rel="canonical" href="../index.html" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="assets/theme.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet" />
+    <style>
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: radial-gradient(120% 90% at 15% -10%, rgba(194, 73, 29, 0.22), transparent 55%), #16130f;
+        color: #f5f3ee;
+        font-family: "Geist", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        text-align: center;
+        padding: 24px;
+      }
+      .wrap { max-width: 34rem; }
+      h1 { font-size: clamp(1.6rem, 4vw, 2.2rem); letter-spacing: -0.02em; font-weight: 600; margin: 0 0 12px; }
+      p { color: #b8b2aa; line-height: 1.6; margin: 0 0 24px; }
+      a.btn {
+        display: inline-flex;
+        align-items: center;
+        height: 48px;
+        padding: 0 24px;
+        border-radius: 10px;
+        background: #c2491d;
+        color: #fff;
+        text-decoration: none;
+        font-weight: 600;
+        box-shadow: 0 8px 24px -10px rgba(194, 73, 29, 0.7);
+      }
+    </style>
   </head>
   <body>
-    <header class="site-header">
-      <div class="container inner">
-        <a class="brand" href="index.html">Rajeev <span>Kumar</span></a>
-        <nav class="nav nav-compact" aria-label="Primary">
-          <a href="#featured">AI systems</a>
-          <a href="#work">Work experience</a>
-          <a href="#education">MBA</a>
-          <a href="#modules">Modules</a>
-          <a href="#skills">Skills</a>
-          <a href="#contact" class="nav-contact">Contact</a>
-        </nav>
-      </div>
-    </header>
-
-    <main>
-      <section class="hero">
-        <div class="container hero-grid">
-          <div class="hero-main">
-            <p class="eyebrow">AI Product · Platform · Marketplace</p>
-            <h1>Rajeev Kumar</h1>
-            <p class="hero-subtitle">Senior Product Manager · AI Automation Platforms · Agentic Workflows · Enterprise SaaS · Marketplace &amp; Payments · Digital Transformation · AI Engineer · Strategy</p>
-            <p class="lead">
-              Product-minded builder for <strong>AI Product Manager</strong>, <strong>Technical PM</strong>,
-              and <strong>AI Automation Engineer</strong> roles. I connect AI systems, marketplace platforms,
-              payments, and workflow automation to business impact, with a shipped AI operating system for
-              creative workflow automation, campaign QA, winner detection, and agentic decision support.
-            </p>
-            <div class="hero-actions">
-              <a class="btn btn-primary" href="#featured">View Featured AI Systems</a>
-              <a class="btn btn-secondary" href="#work">View Work Experience Case Studies</a>
-              <a class="btn btn-secondary" href="#education">View MBA Portfolio</a>
-              <a class="btn btn-secondary" href="#contact">Contact Rajeev</a>
-            </div>
-          </div>
-          <aside class="profile-card">
-            <img class="profile-photo" src="assets/Rajeev_Pic.jpg" alt="Rajeev Kumar" loading="lazy"
-                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
-            <div class="profile-photo-fallback" style="display:none">Profile photo coming soon</div>
-            <div class="profile-name">Rajeev Kumar</div>
-            <div class="role-tags" style="justify-content:center">
-              <span class="role-tag">AI Product</span>
-              <span class="role-tag">Strategy</span>
-            </div>
-            <div class="profile-links">
-              <a data-contact="email" href="mailto:rajeevkmba2025@gmail.com">Email</a>
-              <a data-contact="linkedin" href="#" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-              <a data-contact="github" href="#" target="_blank" rel="noopener noreferrer">GitHub</a>
-              <a data-contact="portfolio" href="#" target="_blank" rel="noopener noreferrer">Portfolio</a>
-            </div>
-          </aside>
-        </div>
-      </section>
-
-      <section class="section alt" id="profile">
-        <div class="container">
-          <div class="section-head">
-            <span class="section-num">·</span>
-            <h2 class="section-title">How I work, three lenses</h2>
-          </div>
-          <div class="grid-3">
-            <article class="card pad">
-              <div class="capability-icon">DX</div>
-              <h3>Digital Transformation</h3>
-              <p>Turning manual, fragmented operations into structured, governed, reviewable workflows across creative, commerce, payments, and marketplace teams.</p>
-            </article>
-            <article class="card pad">
-              <div class="capability-icon">AI</div>
-              <h3>AI Engineer</h3>
-              <p>Shipping production AI systems, agentic workflows, vector RAG, APIs, and dashboards, with human-in-the-loop review and cost guardrails.</p>
-            </article>
-            <article class="card pad">
-              <div class="capability-icon">ST</div>
-              <h3>Strategy</h3>
-              <p>Connecting product decisions to business impact through an MBA foundation in strategy and finance, plus marketplace and payments domain depth.</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section" id="featured">
-        <div class="container">
-          <div class="section-head">
-            <span class="section-num">01</span>
-            <h2 class="section-title">Featured AI systems</h2>
-          </div>
-
-          <div class="featured-row">
-            <a class="card featured-case" href="../Profile-rescale-os/index.html">
-              <span class="tag">AI product case study</span>
-              <h3>Rescale OS</h3>
-              <p class="cv-meta">AI Product &amp; Automation Builder · Rescale Media · Jan 2024 - Present</p>
-              <p class="featured-subtitle">AI Creative &amp; Campaign Operations Platform</p>
-              <p>
-                A creative task and ad-lifecycle operating system, parent/child creative state machine,
-                auto-promotion rules, an ad launcher, workspace RLS, and AI-assisted German translation and
-                creative analysis across a TypeScript monorepo.
-              </p>
-              <ul class="featured-highlights">
-                <li>Creative lifecycle state machine, parent/child tasks</li>
-                <li>Auto-promotion rules + ad launcher</li>
-                <li>Workspace RLS + AI-assisted translation &amp; creative analysis</li>
-              </ul>
-              <span class="featured-link">View Rescale OS case study →</span>
-            </a>
-
-            <a class="card featured-case" href="creative-marketing-agents/index.html">
-              <span class="tag">Shipped platform</span>
-              <h3>Creative Marketing Agents <span class="title-sep">/</span> Rescale Operator</h3>
-              <p class="featured-subtitle">AI Automation OS for Creative &amp; Campaign Operations</p>
-              <p>
-                An AI-powered operating system for campaign intelligence, creative signals, naming QA,
-                winner detection, launch readiness, and daily decision workflows, combining AI agents,
-                rules-based QA, dashboards, and human-in-the-loop review.
-              </p>
-              <ul class="featured-highlights">
-                <li>Full dark dashboard, scroll video + full-page screenshot</li>
-                <li>Winner notifier, daily ad classification at scale</li>
-                <li>Creative intelligence, angle ranking, explore/expand, concept agents</li>
-                <li>API integrations, Meta, ClickUp, Google Sheets, Discord</li>
-              </ul>
-              <span class="featured-link">Read full case study →</span>
-            </a>
-
-            <a class="card featured-case accent" href="../Pulsara-Portfolio/index.html">
-              <span class="tag">Production AI system</span>
-              <h3>Pulsara</h3>
-              <p class="featured-subtitle">AI Innovation Signal Intelligence System</p>
-              <p>
-                AI signal intelligence layer that ingests competitor, market, customer, and campaign signals;
-                filters noise; detects patterns; scores opportunities; and converts insights into roadmap
-                inputs, experiments, alerts, and team actions.
-              </p>
-              <ul class="featured-highlights">
-                <li>2,000+ signals/day · 70% noise reduction</li>
-                <li>16 dashboard surfaces, real screenshots + video library</li>
-                <li>AI Brief, Creative Intel, Innovation memory, Recommendations</li>
-                <li>$1/day AI budget guardrails with human-in-the-loop review</li>
-              </ul>
-              <span class="featured-link">View Pulsara portfolio →</span>
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <section class="section alt" id="work">
-        <div class="container">
-          <div class="section-head">
-            <span class="section-num">02</span>
-            <h2 class="section-title">Work experience</h2>
-          </div>
-          <p class="section-intro">Product roles across AI automation, travel, B2B commerce, marketplace operations, and payments, newest first. Each page separates public company references from internal/confidential product work.</p>
-
-          <div class="featured-row">
-            <a class="card featured-case" href="../Profile-rescale-os/index.html">
-              <span class="tag">Current role</span>
-              <h3>Rescale Media</h3>
-              <p class="cv-meta">AI Product &amp; Automation Builder · Jan 2024 - Present</p>
-              <p class="featured-subtitle">AI Creative &amp; Campaign Operations</p>
-              <p>
-                Building Rescale OS and Creative Marketing Agents: a creative lifecycle and ad-launch
-                operating system plus an AI automation layer for campaign QA, creative intelligence,
-                winner detection, and daily decision workflows.
-              </p>
-              <ul class="featured-highlights">
-                <li>Rescale OS · Creative Marketing Agents · Pulsara (see Featured AI systems above)</li>
-              </ul>
-              <span class="featured-link">View Rescale OS case study →</span>
-            </a>
-
-            <a class="card featured-case accent" href="../hafh-kabuk-style/index.html">
-              <span class="tag">Travel platform growth</span>
-              <h3>HafH <span class="title-sep">/</span> Kabuk Style</h3>
-              <p class="cv-meta">Senior Product Manager, Platform Growth &amp; Integrations · Sep 2023 - Jul 2024</p>
-              <p class="featured-subtitle">AI Pricing &amp; Travel Platform Growth</p>
-              <p>
-                Scaling a subscription travel platform through partner API integrations, supply expansion,
-                booking reliability, onboarding workflows, regional analytics, and ML-assisted pricing across APAC &amp; EMEA.
-              </p>
-              <ul class="featured-highlights">
-                <li>10K → 200K+ properties · 65+ countries · ~25% pricing accuracy improvement</li>
-              </ul>
-              <span class="featured-link">View case study →</span>
-            </a>
-
-            <a class="card featured-case accent" href="../mumzworld-tamer-group/index.html">
-              <span class="tag">B2B commerce platform</span>
-              <h3>Mumzworld <span class="title-sep">/</span> Tamer Group</h3>
-              <p class="cv-meta">Head of Product, Platform &amp; Automation · Aug 2021 - Aug 2023</p>
-              <p class="featured-subtitle">B2B Commerce, Payments &amp; Automation Platform</p>
-              <p>
-                A 0-to-1 B2B SaaS commerce and payments platform across partner onboarding, ERP/CRM integrations,
-                payment workflows, finance automation, reconciliation, dashboards, and governance in the GCC.
-              </p>
-              <ul class="featured-highlights">
-                <li>$2.1M ARR · 60% operating cost reduction · T+5 to T+1 processing</li>
-              </ul>
-              <span class="featured-link">View case study →</span>
-            </a>
-          </div>
-
-          <div class="featured-row">
-            <a class="card featured-case" href="../jumia-marketplace-ops/index.html">
-              <span class="tag">Marketplace data operations</span>
-              <h3>Jumia Group</h3>
-              <p class="cv-meta">Senior Product Owner, Marketplace &amp; Data Operations · Nov 2019 - Oct 2020</p>
-              <p class="featured-subtitle">Marketplace Data Operations &amp; Customer Workflow Automation</p>
-              <p>
-                Governed analytics dashboards, data lineage routines, refresh SLAs, executive reporting,
-                localized order tracking, proactive notifications, and support automation across African markets.
-              </p>
-              <ul class="featured-highlights">
-                <li>11 markets · $185K monthly savings · 60% support workload reduction</li>
-              </ul>
-              <span class="featured-link">View case study →</span>
-            </a>
-
-            <a class="card featured-case accent" href="../lazada-alibaba-growth/index.html">
-              <span class="tag">Marketplace payments &amp; growth</span>
-              <h3>Lazada <span class="title-sep">/</span> Alibaba Group</h3>
-              <p class="cv-meta">Technical Product Manager, Platform &amp; Payments · Jan 2017 - Nov 2019</p>
-              <p class="featured-subtitle">Marketplace Payments, Checkout &amp; Growth Platform</p>
-              <p>
-                Standardized payment APIs, wallet integrations, checkout controls, localized workflows,
-                discovery optimization, recommendations, and conversion growth across APAC markets.
-              </p>
-              <ul class="featured-highlights">
-                <li>7 APAC markets · 18% transaction success improvement · 5.3% to 12.2% conversion</li>
-              </ul>
-              <span class="featured-link">View case study →</span>
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <section class="section" id="education">
-        <div class="container">
-          <div class="section-head">
-            <span class="section-num">03</span>
-            <h2 class="section-title">Education, strategy &amp; MBA</h2>
-          </div>
-          <div class="featured-row">
-            <a class="card featured-case" href="../education-mba/index.html">
-              <span class="tag">MBA &amp; strategy</span>
-              <h3>International MBA Portfolio</h3>
-              <p class="featured-subtitle">Strategy, Finance, AI Product Leadership &amp; Business Impact</p>
-              <p>
-                International MBA at Porto Business School / University of Porto with a finance-focused
-                exchange at IE Business School, strategy, finance, and AI product leadership applied to
-                real business impact.
-              </p>
-              <ul class="featured-highlights">
-                <li>17/20 final grade · 60 ECTS · IE Business School finance exchange · AMBA-accredited MBA</li>
-              </ul>
-              <span class="featured-link">View MBA portfolio →</span>
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <section class="section alt dark-section" id="impact">
-        <div class="container">
-          <div class="section-head">
-            <span class="section-num">04</span>
-            <h2 class="section-title">Business impact</h2>
-          </div>
-          <div class="metric-grid">
-            <article class="card metric-card">
-              <div class="value">↓ Manual</div>
-              <div class="label">Reduced manual creative &amp; campaign analysis</div>
-            </article>
-            <article class="card metric-card">
-              <div class="value">↑ Visibility</div>
-              <div class="label">Improved campaign visibility across teams</div>
-            </article>
-            <article class="card metric-card">
-              <div class="value">Faster</div>
-              <div class="label">Creative &amp; media-buying decision cycles</div>
-            </article>
-            <article class="card metric-card">
-              <div class="value">Aligned</div>
-              <div class="label">Creative strategists &amp; media buyers</div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section" id="modules">
-        <div class="container">
-          <div class="section-head">
-            <span class="section-num">05</span>
-            <h2 class="section-title">Shipped platform modules</h2>
-          </div>
-          <p class="section-intro">Production modules within Creative Marketing Agents / Rescale Operator.</p>
-          <div class="module-grid">
-            <a class="card project-card compact" href="winner-notifier/index.html"><span class="tag">Shipped</span><h3>Winner Notifier</h3><p>Daily ad classification, winner, emerging, loser</p></a>
-            <a class="card project-card compact" href="daily-checkpoint/index.html"><span class="tag">Shipped</span><h3>Daily Checkpoint</h3><p>5 morning checks → action queue</p></a>
-            <a class="card project-card compact" href="diagnostic-engine/index.html"><span class="tag">Shipped</span><h3>Diagnostic Engine</h3><p>4 diagnostics + Opus synthesis</p></a>
-            <a class="card project-card compact" href="naming-convention-qa/index.html"><span class="tag">Shipped</span><h3>Naming QA</h3><p>N3 naming health center</p></a>
-            <a class="card project-card compact" href="agent-memory/index.html"><span class="tag">Shipped</span><h3>Agent Memory</h3><p>Supermemory vector RAG + Ask Operator</p></a>
-            <a class="card project-card compact" href="weekly-cro/index.html"><span class="tag">Shipped</span><h3>Weekly CRO</h3><p>Profit Engineering workflow</p></a>
-            <a class="card project-card compact" href="document-intelligence/index.html"><span class="tag neutral">Pattern</span><h3>Document Intelligence</h3><p>OCR + LLM + HITL</p></a>
-          </div>
-        </div>
-      </section>
-
-      <section class="section alt" id="skills">
-        <div class="container">
-          <div class="section-head">
-            <span class="section-num">06</span>
-            <h2 class="section-title">What I bring to the table</h2>
-          </div>
-          <div class="grid-3">
-            <article class="card pad">
-              <div class="capability-icon">01</div>
-              <h3>Product &amp; workflow design</h3>
-              <p>Scoped agent workflows, QA rules, acceptance criteria, and stakeholder operating models from real creative ops pain points.</p>
-            </article>
-            <article class="card pad">
-              <div class="capability-icon">02</div>
-              <h3>AI automation delivery</h3>
-              <p>Shipped FastAPI + Next.js platform with Supermemory vector RAG, Hermes Agents + OpenRouter + Claude, Supabase Postgres, Arq workers, and Playwright e2e.</p>
-            </article>
-            <article class="card pad">
-              <div class="capability-icon">03</div>
-              <h3>Cross-functional alignment</h3>
-              <p>One campaign QA dashboard for creative, media buying, and ops, shared intelligence everyone trusts.</p>
-            </article>
-          </div>
-          <div class="skills-block">
-            <h3 class="skills-heading">Digital Transformation</h3>
-            <div class="skill-tags">
-              <span>Meta API</span><span>ClickUp API</span><span>Google Sheets API</span><span>Discord</span>
-              <span>Ecom Profits</span><span>Supabase Postgres</span>
-            </div>
-          </div>
-          <div class="skills-block">
-            <h3 class="skills-heading">AI Engineering</h3>
-            <div class="skill-tags">
-              <span>Hermes Agents</span><span>OpenRouter</span><span>Claude</span><span>Supermemory (vector RAG)</span>
-              <span>FastAPI</span><span>Pydantic</span><span>Arq + Redis</span><span>Supabase Postgres</span>
-              <span>Docker</span><span>Playwright</span><span>pytest</span>
-            </div>
-          </div>
-          <div class="skills-block">
-            <h3 class="skills-heading">Strategy &amp; Product Build</h3>
-            <div class="skill-tags">
-              <span>Cursor</span><span>Next.js 15</span><span>TypeScript</span><span>TanStack Query</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section contact-cta" id="contact">
-        <div class="container">
-          <div class="card pad contact-card">
-            <h2>Let's connect</h2>
-            <p>Open to AI Product, Technical PM, and AI Automation roles.</p>
-            <div class="contact-cta-row">
-              <a class="btn btn-primary" data-contact="email" href="mailto:rajeevkmba2025@gmail.com">Email</a>
-              <a class="btn btn-secondary" data-contact="linkedin" href="#" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-              <a class="btn btn-secondary" href="https://github.com/rajeevcode" target="_blank" rel="noopener noreferrer">GitHub</a>
-              <a class="btn btn-secondary" href="https://medium.com/@rajeev25" target="_blank" rel="noopener noreferrer">Medium</a>
-            </div>
-            <div class="role-tags contact-roles-row" data-contact="roles" aria-label="Target roles"></div>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <div class="container inner">
-        <span>© Rajeev Kumar, AI Product &amp; Automation Portfolio</span>
-        <span class="footer-links">
-          <a data-contact="email" href="mailto:rajeevkmba2025@gmail.com">Email</a>
-          <a data-contact="linkedin" href="#" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-          <a href="creative-marketing-agents/index.html">Case study</a>
-        </span>
-      </div>
-    </footer>
-
-    <script src="assets/site-config.js"></script>
-    <script src="assets/contact.js"></script>
-    <script src="assets/app.js"></script>
+    <div class="wrap">
+      <h1>Rajeev Kumar, Product Portfolio</h1>
+      <p>This page has moved to the portfolio home. If you are not redirected automatically, use the link below.</p>
+      <a class="btn" href="../index.html">Go to portfolio home →</a>
+    </div>
   </body>
 </html>

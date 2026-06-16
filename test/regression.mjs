@@ -56,8 +56,9 @@ const MODULE_PAGES = [
 ].map((m) => `rescale-operator/${m}/index.html`);
 
 // Case-study pages that MUST be on the new design system (Geist + theme css).
+// (rescale-operator/index.html is now a redirect page, not a themed content page.)
 const THEMED_PAGES = [
-  "rescale-operator/index.html",
+  "index.html",
   "Pulsara-Portfolio/index.html",
   "rescale-operator/creative-marketing-agents/index.html",
   "Profile-rescale-os/index.html",
@@ -76,7 +77,8 @@ const CONTENT = {
   "lazada-alibaba-growth/index.html": ["5.3%", "12.2%", "$5M", "18%", "confidential; public URL unavailable", "https://www.lazada.com/"],
   "Pulsara-Portfolio/index.html": ["2,000+", "70%", "pulsara.rescale.media"],
   "education-mba/index.html": ["17/20", "60 ECTS", "3.22", "AMBA", "Detailed capstone content to be added by Rajeev"],
-  "rescale-operator/index.html": [
+  // The hub now lives at the repo ROOT (rescale-operator/index.html is a redirect).
+  "index.html": [
     "github.com/rajeevcode", "medium.com/@rajeev25",
     "Digital Transformation", "AI Engineer", "Strategy",
     "Featured AI systems", "Work experience", "Education",
@@ -84,6 +86,12 @@ const CONTENT = {
     "Rescale Media", "Jan 2024 - Present",
     "Sep 2023 - Jul 2024", "Aug 2021 - Aug 2023",
     "Nov 2019 - Oct 2020", "Jan 2017 - Nov 2019",
+    // Business impact: real attributed metrics (not generic labels)
+    "2,000+/day", "$2.1M", "$185K", "$5M+", "17/20",
+    // skills regrouped by outcome
+    "AI Product &amp; Agents", "Platform &amp; APIs", "Marketplace &amp; Payments",
+    // project-visibility lines present
+    "Internal product / confidential. Public URL unavailable.",
   ],
 };
 
@@ -186,7 +194,7 @@ function checkDesignSystem() {
 
 function checkInternalLinks() {
   section("7. Internal links resolve on disk");
-  const hub = "rescale-operator/index.html";
+  const hub = "index.html";
   const html = readPage(hub);
   const pageDir = dirname(join(ROOT, hub));
   for (const ref of refs(html)) {
@@ -205,8 +213,11 @@ function checkDeployConfig() {
     check(/path:\s*\.\s*$/m.test(y), "pages.yml must ship repo root (path: .)");
   } else bad("missing .github/workflows/pages.yml");
   check(existsSync(join(ROOT, ".nojekyll")), "missing root .nojekyll");
+  // root index.html IS the hub now; the old rescale-operator route redirects to it
   const rootIdx = readPage("index.html");
-  check(/url=rescale-operator\/index\.html/.test(rootIdx), "root index.html should forward to homepage hub");
+  check(/id="featured"/.test(rootIdx) && /Work experience/.test(rootIdx), "root index.html should be the portfolio hub");
+  const oldRoute = readPage("rescale-operator/index.html");
+  check(/http-equiv="refresh"[^>]*url=\.\.\/index\.html/.test(oldRoute), "rescale-operator/index.html should redirect to root hub");
 }
 
 // helper: text nodes only (strip tags so attributes/URLs/code don't count)
@@ -223,8 +234,8 @@ function checkNoVisibleEmail() {
     check(!txt.includes(EMAIL), `raw email visible as text in ${p}`);
     // mailto must still be present somewhere with a contact entry
   }
-  // mailto links preserved on the contact pages
-  for (const p of ["rescale-operator/index.html", "Profile-rescale-os/index.html"]) {
+  // mailto links preserved on the contact pages (hub is now root index.html)
+  for (const p of ["index.html", "Profile-rescale-os/index.html"]) {
     check(readPage(p).includes("mailto:" + EMAIL), `mailto link missing in ${p}`);
   }
   // contact.js must not assign email to textContent except the email-label opt-in
@@ -242,7 +253,7 @@ function checkNoVisibleEmail() {
 function checkNoProseDashes() {
   section("10. Prose cleanup — no em/en dashes in visible text");
   const CLEANED = [
-    "rescale-operator/index.html", "Profile-rescale-os/index.html",
+    "index.html", "Profile-rescale-os/index.html",
     "Pulsara-Portfolio/index.html", "hafh-kabuk-style/index.html",
     "mumzworld-tamer-group/index.html", "jumia-marketplace-ops/index.html",
     "lazada-alibaba-growth/index.html", "education-mba/index.html",
