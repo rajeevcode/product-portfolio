@@ -4,8 +4,11 @@
 
   // Email: wire the mailto href but NEVER expose the raw address as visible text.
   // The button keeps whatever label is authored in HTML (e.g. "Email").
+  // Open in a new tab so webmail (Gmail, etc.) doesn't navigate away from the portfolio.
   document.querySelectorAll("[data-contact='email']").forEach((el) => {
     el.href = "mailto:" + site.email;
+    el.target = "_blank";
+    el.rel = "noopener noreferrer";
   });
 
   // Opt-in only: an element that explicitly wants the address shown as text.
