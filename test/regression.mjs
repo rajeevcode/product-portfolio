@@ -76,22 +76,26 @@ const CONTENT = {
   "jumia-marketplace-ops/index.html": ["$185K", "11 African", "60%", "confidential; public URL unavailable", "https://group.jumia.com/"],
   "lazada-alibaba-growth/index.html": ["5.3%", "12.2%", "$5M", "18%", "confidential; public URL unavailable", "https://www.lazada.com/"],
   "Pulsara-Portfolio/index.html": ["2,000+", "70%", "pulsara.rescale.media"],
-  "education-mba/index.html": ["17/20", "60 ECTS", "3.22", "AMBA", "Detailed capstone content to be added by Rajeev"],
+  "education-mba/index.html": ["17/20", "60 ECTS", "3.22", "AMBA", "Detailed capstone content to be added by Rajeev",
+    // FT ranking + public references (added)
+    "#21", "Financial Times Global MBA Ranking 2026", "rankings.ft.com", "pbs.up.pt", "up.pt", "ie.edu", "associationofmbas.com"],
   // The hub now lives at the repo ROOT (rescale-operator/index.html is a redirect).
   "index.html": [
     "github.com/rajeevcode", "medium.com/@rajeev25",
     "Digital Transformation", "AI Engineer", "Strategy",
     "Featured AI systems", "Work experience", "Education",
-    // CV timeline: Rescale Media current role leads, all roles dated
+    // CV timeline: Rescale Media current role leads, all 7 roles dated incl. Foodspring + AJIO
     "Rescale Media", "Jan 2024 - Present",
     "Sep 2023 - Jul 2024", "Aug 2021 - Aug 2023",
+    "Foodspring", "Mar 2021 - Jul 2021",
     "Nov 2019 - Oct 2020", "Jan 2017 - Nov 2019",
+    "AJIO", "Jul 2011 - Dec 2016",
     // Business impact: real attributed metrics (not generic labels)
     "2,000+/day", "$2.1M", "$185K", "$5M+", "17/20",
     // skills regrouped by outcome
     "AI Product &amp; Agents", "Platform &amp; APIs", "Marketplace &amp; Payments",
-    // project-visibility lines present
-    "Internal product / confidential. Public URL unavailable.",
+    // project-visibility lines present (readable, no slash-heavy formatting)
+    "Internal product and confidential. Public URL unavailable.",
   ],
 };
 
@@ -179,6 +183,22 @@ function checkContent() {
     const html = readPage(p);
     for (const n of needles) check(html.includes(n), `content missing in ${p}: "${n}"`);
   }
+}
+
+function checkWorkOrder() {
+  section("5b. Work-experience chronology order (newest first)");
+  // Within the #work section only, the 7 companies must appear in this exact order.
+  const html = readPage("index.html");
+  const work = html.slice(html.indexOf('id="work"'), html.indexOf('id="education"'));
+  const ORDER = ["Rescale Media", "HafH", "Mumzworld", "Foodspring", "Jumia Group", "Lazada", "AJIO"];
+  let last = -1, ok2 = true;
+  for (const name of ORDER) {
+    const idx = work.indexOf(">" + name) >= 0 ? work.indexOf(">" + name) : work.indexOf(name);
+    if (idx < 0) { bad(`work order: "${name}" not found in #work`); ok2 = false; continue; }
+    if (idx < last) { bad(`work order: "${name}" appears out of sequence`); ok2 = false; }
+    last = idx;
+  }
+  check(ok2, "work experience order is Rescale, HafH, Mumzworld, Foodspring, Jumia, Lazada, AJIO");
 }
 
 function checkDesignSystem() {
@@ -315,6 +335,7 @@ async function main() {
   checkAssetRefsResolve();
   checkPortability();
   checkContent();
+  checkWorkOrder();
   checkDesignSystem();
   checkInternalLinks();
   checkDeployConfig();

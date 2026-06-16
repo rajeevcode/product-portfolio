@@ -408,24 +408,31 @@ img { max-width: 100%; }
   line-height: 1.18;
 }
 .title-sep { color: #c3bcb2; font-weight: 400; }
-/* CV-style role · company · dates line on work-experience cards */
+/* CV-style role · company · dates line on work-experience cards (readable body font) */
 .cv-meta {
-  font-family: var(--mono);
-  font-size: 0.78rem;
-  letter-spacing: 0.02em;
-  color: var(--muted-2);
+  font-family: var(--font);
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--muted);
   margin: 0 0 12px;
-  line-height: 1.45;
+  line-height: 1.5;
 }
-/* small project-visibility line on case-study cards */
+/* project-visibility line on case-study cards (readable body font) */
 .visibility-meta {
-  font-family: var(--mono);
-  font-size: 0.72rem;
-  letter-spacing: 0.02em;
+  font-family: var(--font);
+  font-size: 0.85rem;
   color: var(--muted-2);
   margin: 0 0 14px;
-  line-height: 1.4;
+  line-height: 1.5;
 }
+/* readable "Metrics: ..." line replacing dash-bullet highlights on work cards */
+.card-metrics {
+  font-size: 0.9rem;
+  color: var(--ink-2);
+  line-height: 1.5;
+  margin: 0 0 18px;
+}
+.card-metrics strong { color: var(--ink); font-weight: 600; }
 .featured-subtitle {
   font-size: 0.92rem;
   color: var(--accent);
