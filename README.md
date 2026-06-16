@@ -1,6 +1,6 @@
 # AI Automation Portfolio
 
-Static portfolio for hiring managers. **Live:** https://rajeevcode.github.io/ai-automation-portfolio/
+Static portfolio for hiring managers. **Live:** https://rajeevcode.github.io/product-portfolio/
 
 **Featured AI systems:**
 - [Rescale OS](Profile-rescale-os/index.html) — AI Creative & Campaign Operations Platform

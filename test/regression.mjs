@@ -80,6 +80,10 @@ const CONTENT = {
     "github.com/rajeevcode", "medium.com/@rajeev25",
     "Digital Transformation", "AI Engineer", "Strategy",
     "Featured AI systems", "Work experience", "Education",
+    // CV timeline: Rescale Media current role leads, all roles dated
+    "Rescale Media", "Jan 2024 - Present",
+    "Sep 2023 - Jul 2024", "Aug 2021 - Aug 2023",
+    "Nov 2019 - Oct 2020", "Jan 2017 - Nov 2019",
   ],
 };
 
