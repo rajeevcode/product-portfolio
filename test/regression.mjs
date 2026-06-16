@@ -87,7 +87,7 @@ const CONTENT = {
     "Digital Transformation", "AI Engineer", "Strategy",
     "Featured AI systems", "Work experience", "Education",
     // CV timeline: Rescale Media current role leads, all 7 roles dated incl. Foodspring + AJIO
-    "Rescale Media", "Jan 2024 - Present",
+    "Rescale Media", "Jan 2026 - Present",
     "Sep 2023 - Jul 2024", "Aug 2021 - Aug 2023",
     "Foodspring", "Mar 2021 - Jul 2021",
     "Nov 2019 - Oct 2020", "Jan 2017 - Nov 2019",
