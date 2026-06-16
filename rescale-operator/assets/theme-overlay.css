@@ -1,0 +1,111 @@
+/* ============================================================================
+   Theme overlay — loaded AFTER the page's existing styles.css on content-rich
+   pages (Pulsara, Creative Marketing Agents). Re-points the existing CSS
+   variables to the "Portfolio CV Design" palette (warm off-white / burnt
+   orange / Geist) so every existing component recolors automatically, and
+   upgrades the hero to the dark premium gradient. Layout/structure untouched.
+   ============================================================================ */
+
+@import url("https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap");
+
+:root {
+  /* remap legacy token names → new design tokens */
+  --bg: #f5f3ee;
+  --bg-soft: #eeebe3;
+  --bg-muted: #eeebe3;
+  --text: #1b1815;
+  --text-muted: #56514b;
+  --text-soft: #76706a;
+  --accent: #c2491d;
+  --accent-dark: #a63d18;
+  --accent-soft: rgba(194, 73, 29, 0.1);
+  --border: rgba(27, 24, 21, 0.1);
+  --shadow: 0 1px 2px rgba(27, 24, 21, 0.04), 0 24px 50px -28px rgba(27, 24, 21, 0.22);
+  --radius: 18px;
+  --radius-sm: 10px;
+  --font: "Geist", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+}
+
+body {
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+}
+::selection { background: #1b1815; color: #f5f3ee; }
+
+/* glass header to match the design system */
+.site-header {
+  background: rgba(245, 243, 238, 0.78) !important;
+  backdrop-filter: saturate(180%) blur(14px);
+  -webkit-backdrop-filter: saturate(180%) blur(14px);
+  border-bottom: 1px solid var(--border) !important;
+}
+.brand span { color: #9a938b; }
+
+/* dark premium hero (overrides the light gradient hero) */
+.hero {
+  position: relative;
+  overflow: hidden;
+  background: radial-gradient(120% 90% at 15% -10%, rgba(194, 73, 29, 0.22), transparent 55%), #16130f !important;
+  color: #f5f3ee;
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(245, 243, 238, 0.1) 1px, transparent 1px);
+  background-size: 28px 28px;
+  -webkit-mask-image: linear-gradient(to bottom, #000 0%, transparent 80%);
+  mask-image: linear-gradient(to bottom, #000 0%, transparent 80%);
+  pointer-events: none;
+}
+.hero > .container { position: relative; z-index: 1; }
+.hero h1 { color: #f5f3ee; letter-spacing: -0.03em; }
+.hero .lead { color: #b8b2aa; }
+.hero .eyebrow { color: #e07a4f; }
+.hero .hero-subtitle, .hero .featured-subtitle { color: #e07a4f; }
+.hero .lead strong { color: #f5f3ee; }
+/* keep hero indigo variant (Pulsara) on the new dark base too */
+.hero-indigo { background: radial-gradient(120% 90% at 15% -10%, rgba(79, 70, 229, 0.28), transparent 55%), #16130f !important; }
+
+/* primary buttons → burnt orange with glow; on hero keep readable secondary */
+.btn-primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  box-shadow: 0 8px 24px -10px rgba(194, 73, 29, 0.7);
+}
+.btn-primary:hover { box-shadow: 0 14px 34px -10px rgba(194, 73, 29, 0.85); }
+.hero .btn-secondary {
+  color: #f5f3ee;
+  border-color: rgba(245, 243, 238, 0.24);
+  background: transparent;
+}
+.hero .btn-secondary:hover { border-color: rgba(245, 243, 238, 0.55); background: rgba(245, 243, 238, 0.06); }
+
+/* dark sections already use dark bg; ensure dotted/cards stay legible */
+.dark-showcase { background: #16130f; }
+
+/* page-specific elements that sit on the dark hero need light text */
+.hero .insight-quote,
+.hero .chip,
+.hero blockquote { color: #f5f3ee; border-color: rgba(245, 243, 238, 0.24); }
+.hero .insight-quote { color: #d8d2c8; }
+
+/* tag pills → mono accent style */
+.tag {
+  font-family: "Geist Mono", ui-monospace, monospace;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* mobile header: stack brand over a wrapping nav so links never overlap */
+@media (max-width: 760px) {
+  .site-header .inner,
+  .site-header .container.inner {
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+    gap: 10px;
+  }
+}

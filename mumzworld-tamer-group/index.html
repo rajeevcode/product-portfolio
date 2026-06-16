@@ -2,7 +2,6 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <base href="/mumzworld-tamer-group/" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mumzworld / Tamer Group — B2B Commerce, Payments &amp; Automation Platform</title>
     <meta
@@ -14,29 +13,8 @@
     <meta property="og:type" content="website" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="/mumzworld-tamer-group/assets/styles.css" />
-    <style>
-      /* Clean placeholder boxes for not-yet-available screenshots/videos (no broken media icons). */
-      .media-frame--placeholder {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        color: var(--text-muted, #94a3b8);
-        font-size: 0.95rem;
-        font-weight: 600;
-        letter-spacing: 0.01em;
-        background: var(--bg-muted, #0f172a0d);
-        border: 1px dashed var(--border, #334155);
-      }
-      .media-frame--placeholder.media-frame--video {
-        background: #0b1220;
-        color: #94a3b8;
-        height: auto;
-        aspect-ratio: 16 / 9;
-      }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/theme.css" />
   </head>
   <body>
     <header class="site-header">
@@ -390,7 +368,7 @@
       </div>
     </div>
 
-    <script src="/mumzworld-tamer-group/assets/site-config.js"></script>
+    <script src="assets/site-config.js"></script>
     <script>
       if (window.SITE) {
         document.querySelectorAll('[data-portfolio-home]').forEach((a) => { a.href = window.SITE.portfolioHome; });
@@ -399,7 +377,7 @@
         document.querySelectorAll('[data-contact-email-btn]').forEach((a) => { a.href = 'mailto:' + window.SITE.email; });
       }
     </script>
-    <script src="/mumzworld-tamer-group/assets/contact.js"></script>
-    <script src="/mumzworld-tamer-group/assets/app.js"></script>
+    <script src="assets/contact.js"></script>
+    <script src="assets/app.js"></script>
   </body>
 </html>

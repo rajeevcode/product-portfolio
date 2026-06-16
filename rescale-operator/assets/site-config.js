@@ -8,5 +8,8 @@ window.SITE = {
     "Technical Product Manager",
     "AI Automation Engineer",
     "AI Operations Lead",
+    "Digital Transformation",
+    "AI Engineer",
+    "Strategy",
   ],
 };
