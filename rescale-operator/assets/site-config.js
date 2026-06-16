@@ -3,6 +3,8 @@ window.SITE = {
   title: "AI Product & Automation Builder",
   email: "rajeevkmba2025@gmail.com",
   linkedin: "https://www.linkedin.com/in/rajeevkumar9/",
+  github: "https://github.com/rajeevcode",
+  portfolio: "https://rajeevcode.github.io/ai-automation-portfolio/",
   roles: [
     "AI Product Manager",
     "Technical Product Manager",

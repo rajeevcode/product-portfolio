@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Creative Marketing Agents / Rescale Operator — AI Automation OS for Creative & Campaign Operations</title>
+    <title>Creative Marketing Agents / Rescale Operator, AI Automation OS for Creative & Campaign Operations</title>
     <meta
       name="description"
       content="Case study: AI-powered operating system for campaign intelligence, creative signals, naming QA, winner detection, launch readiness, and daily decision workflows."
@@ -43,7 +43,7 @@
           <p class="lead">
             An AI-powered operating system that helps creative, media buying, and operations teams
             manage campaign intelligence, creative signals, naming QA, winner detection, launch
-            readiness, and daily decision workflows from one structured platform — combining AI
+            readiness, and daily decision workflows from one structured platform, combining AI
             agents, rules-based QA, dashboards, workflow automation, and human-in-the-loop review.
           </p>
           <div class="hero-actions">
@@ -76,10 +76,10 @@
                   <span><strong>Build:</strong> Cursor, Docker Compose, feature flags (<code>NEXT_PUBLIC_*</code>)</span>
                   <span><strong>Frontend:</strong> Next.js 15, React, TypeScript, TanStack Query, Tailwind, Framer Motion</span>
                   <span><strong>Backend:</strong> FastAPI, Pydantic v2, Arq + Redis workers, cron fan-out (06:30 UTC)</span>
-                  <span><strong>Data:</strong> Supabase Postgres — operator DB (runs, snapshots, events, approvals); Ecom Profits read-only Meta view; Redis SSE + task registry</span>
-                  <span><strong>RAG &amp; vector memory:</strong> Supermemory (managed vector search via <code>/v3/search</code>) — ingest pipeline, semantic retrieval, citations + confidence scoring; gated by <code>AGENT_RAG_ENABLED</code></span>
+                  <span><strong>Data:</strong> Supabase Postgres, operator DB (runs, snapshots, events, approvals); Ecom Profits read-only Meta view; Redis SSE + task registry</span>
+                  <span><strong>RAG &amp; vector memory:</strong> Supermemory (managed vector search via <code>/v3/search</code>), ingest pipeline, semantic retrieval, citations + confidence scoring; gated by <code>AGENT_RAG_ENABLED</code></span>
                   <span><strong>AI &amp; agents:</strong> Hermes Agents, OpenRouter, Claude provider, Ask Operator orchestrator (<code>/api/agents/query</code>), Creative Agents, diagnostic Opus synthesis</span>
-                  <span><strong>Integrations:</strong> Meta API, ClickUp API, Google Sheets API, Discord notifications — registry CRUD, OAuth, idempotent writes, System Pulse health</span>
+                  <span><strong>Integrations:</strong> Meta API, ClickUp API, Google Sheets API, Discord notifications, registry CRUD, OAuth, idempotent writes, System Pulse health</span>
                   <span><strong>Quality:</strong> pytest, Vitest, Playwright e2e</span>
                 </dd>
               </div>
@@ -89,7 +89,7 @@
               </div>
               <div class="snapshot-item">
                 <dt>Status</dt>
-                <dd>Shipped — production modules, Docker full stack, multi-brand UAT</dd>
+                <dd>Shipped, production modules, Docker full stack, multi-brand UAT</dd>
               </div>
             </dl>
           </div>
@@ -104,7 +104,7 @@
               Creative and campaign operations were fragmented across multiple tools, dashboards,
               naming conventions, creative assets, and team workflows. Teams manually reviewed
               campaign setup, naming errors, performance signals, launch readiness, and winner/loser
-              decisions — creating delays, inconsistent QA, and missed opportunities to scale
+              decisions, creating delays, inconsistent QA, and missed opportunities to scale
               winning creatives.
             </p>
           </div>
@@ -116,7 +116,7 @@
           <h2 class="section-title">Solution</h2>
           <div class="prose">
             <p>
-              Built Creative Marketing Agents / Rescale Operator — a workflow-driven AI automation
+              Built Creative Marketing Agents / Rescale Operator, a workflow-driven AI automation
               platform that combines campaign QA, creative signal filtering, winner detection,
               launch checklists, intelligence screens, dashboards, and human-in-the-loop review.
               One agentic workflow layer instead of disconnected spreadsheets and ad-hoc checks.
@@ -146,7 +146,7 @@
             <div class="flow-step">
               <div class="flow-num">1</div>
               <div>
-                <strong>Ingest — Meta API, creative metadata, naming fields</strong>
+                <strong>Ingest, Meta API, creative metadata, naming fields</strong>
                 <p style="margin: 0.35rem 0 0; color: var(--text-muted); font-size: 0.92rem">
                   Ad-level metrics via Meta API + Ecom Profits read-only view, N3 naming tags,
                   explore/expand labels, role assignments (strategist, editor, avatar, media buyer).
@@ -157,7 +157,7 @@
             <div class="flow-step">
               <div class="flow-num">2</div>
               <div>
-                <strong>Automate — AI agents + rules-based QA</strong>
+                <strong>Automate, AI agents + rules-based QA</strong>
                 <p style="margin: 0.35rem 0 0; color: var(--text-muted); font-size: 0.92rem">
                   Daily checkpoint fan-out, winner/loser classification, naming validation,
                   launch readiness, creative intelligence ranking.
@@ -168,10 +168,10 @@
             <div class="flow-step">
               <div class="flow-num">3</div>
               <div>
-                <strong>Review — human-in-the-loop</strong>
+                <strong>Review, human-in-the-loop</strong>
                 <p style="margin: 0.35rem 0 0; color: var(--text-muted); font-size: 0.92rem">
                   Operator queue for urgent actions. Recommendations flow pending → accepted → shipped.
-                  Creative agents output read-only drafts — buyer publishes manually.
+                  Creative agents output read-only drafts, buyer publishes manually.
                 </p>
               </div>
             </div>
@@ -179,7 +179,7 @@
             <div class="flow-step">
               <div class="flow-num">4</div>
               <div>
-                <strong>Act — campaign QA dashboard + API integrations</strong>
+                <strong>Act, campaign QA dashboard + API integrations</strong>
                 <p style="margin: 0.35rem 0 0; color: var(--text-muted); font-size: 0.92rem">
                   Single decision layer with audit logs, ClickUp API tickets (URGENT/HIGH),
                   Google Sheets API export for stakeholders, Discord winner notifications,
@@ -195,7 +195,7 @@
         <div class="container">
           <h2 class="section-title">External API integrations</h2>
           <p class="section-intro">
-            First-class adapters — not one-off scripts. Each integration has registry rows,
+            First-class adapters, not one-off scripts. Each integration has registry rows,
             credential pointers, test/sync endpoints, and live health in the System Pulse graph.
             Built for idempotent writes, audit trails, and safe partial rollout via feature flags.
           </p>
@@ -213,7 +213,7 @@
               </ul>
               <p>
                 Campaign intelligence pipeline reads ad-level spend, ROAS, and health signals
-                from the Ecom Profits Meta view — with a dedicated OAuth flow for account linking.
+                from the Ecom Profits Meta view, with a dedicated OAuth flow for account linking.
               </p>
               <ul>
                 <li><code>GET /api/integrations/meta/oauth/start</code> + callback handler</li>
@@ -234,7 +234,7 @@
                 <li>Engine tags</li>
               </ul>
               <p>
-                The ClickUp Bridge is the only code path that creates tasks — idempotent hashes
+                The ClickUp Bridge is the only code path that creates tasks, idempotent hashes
                 prevent duplicate tickets when daily checkpoint or diagnostic runs retry.
               </p>
               <ul>
@@ -257,7 +257,7 @@
               </ul>
               <p>
                 Leadership and ops review winner signals, checkpoint outcomes, and QA results
-                outside the dashboard — synced through the integrations registry.
+                outside the dashboard, synced through the integrations registry.
               </p>
               <ul>
                 <li>Live System Pulse spoke for Google Sheets connectivity</li>
@@ -278,13 +278,12 @@
                 <li>Feature-flagged</li>
               </ul>
               <p>
-                Operational alerts when new winners emerge or high-spend ads need attention —
-                structured notification payloads built in the winner notifier pipeline.
+                Operational alerts when new winners emerge or high-spend ads need attention, structured notification payloads built in the winner notifier pipeline.
               </p>
               <ul>
                 <li><code>WINNER_NOTIFIER_DISCORD_ENABLED</code> gate for safe rollout</li>
-                <li><code>WinnerNotificationPayload</code> — new winners, emerging, high-spend non-winners</li>
-                <li>Async worker path — no blocking on dashboard API responses</li>
+                <li><code>WinnerNotificationPayload</code>, new winners, emerging, high-spend non-winners</li>
+                <li>Async worker path, no blocking on dashboard API responses</li>
                 <li>Complements in-app live activity feed and operator queue</li>
               </ul>
             </article>
@@ -311,7 +310,7 @@
               <figcaption class="caption">
                 <h3>Integrations registry</h3>
                 <p>
-                  <code>/daily/d/settings/integrations</code> — connected providers, health probes,
+                  <code>/daily/d/settings/integrations</code>, connected providers, health probes,
                   LLM selector, and Meta Ads dashboard link. Same data powers the dashboard System Pulse.
                 </p>
               </figcaption>
@@ -338,7 +337,7 @@
               loading="lazy"
             />
             <figcaption class="caption">
-              <h3>Meta API — linked dashboard</h3>
+              <h3>Meta API, linked dashboard</h3>
               <p>
                 From Integrations → <strong>Open Meta Ads dashboard</strong>. Read-only EUR spend,
                 revenue, and ROAS via Ecom Profits Supabase view (<code>/api/meta-ads/dashboard</code>).
@@ -353,9 +352,9 @@
               loading="lazy"
             />
             <figcaption class="caption">
-              <h3>API keys — programmatic access</h3>
+              <h3>API keys, programmatic access</h3>
               <p>
-                <code>/daily/d/settings/api-keys</code> — generate, reveal-once, and revoke personal
+                <code>/daily/d/settings/api-keys</code>, generate, reveal-once, and revoke personal
                 keys for the read-only API. Prefix + last-used tracking; full secret shown only at creation.
               </p>
             </figcaption>
@@ -365,10 +364,9 @@
 
       <section class="section dark-showcase" id="dark-dashboard">
         <div class="container">
-          <h2 class="section-title">Deployed build — full dashboard (dark mode)</h2>
+          <h2 class="section-title">Deployed build, full dashboard (dark mode)</h2>
           <p class="section-intro">
-            Full-page capture and top-to-bottom scroll recording from the production UI —
-            today's checkpoint through funnel metrics, creative heatmaps, live activity, and
+            Full-page capture and top-to-bottom scroll recording from the production UI, today's checkpoint through funnel metrics, creative heatmaps, live activity, and
             integrations. Captured from the deployed Rescale Operator dashboard (<code>/daily/d</code>).
           </p>
 
@@ -394,7 +392,7 @@
                 loading="lazy"
               />
               <figcaption class="caption">
-                <h3>Complete dashboard home — dark theme</h3>
+                <h3>Complete dashboard home, dark theme</h3>
                 <p>
                   Single full-height PNG: €283K spend, 1.41× ROAS, gross profit +€111,784, 3 campaigns
                   need attention, product breakdown, AI co-pilot cards, funnel micro-charts, brand
@@ -410,12 +408,12 @@
       <section class="section alt" id="screenshots">
         <div class="container">
           <h2 class="section-title">Product screenshots</h2>
-          <p class="section-intro">From the shipped platform — daily checkpoint, intelligence, operator workspace, and creative agents.</p>
+          <p class="section-intro">From the shipped platform, daily checkpoint, intelligence, operator workspace, and creative agents.</p>
           <div class="gallery">
             <figure class="card shot-card">
               <img src="../rescale-operator/screenshots/01-dashboard-home.png" alt="Today's checkpoint dashboard" loading="lazy" />
               <figcaption class="caption">
-                <h3>Campaign QA Dashboard — Today's Checkpoint</h3>
+                <h3>Campaign QA Dashboard, Today's Checkpoint</h3>
                 <p>Portfolio KPIs (€280K spend, 2.66× ROAS), critical alerts, product breakdown, creative angle heatmap, funnel metrics, and live activity feed.</p>
               </figcaption>
             </figure>
@@ -424,7 +422,7 @@
               <img src="../rescale-operator/screenshots/05-operator.png" alt="Operator workspace action queue" loading="lazy" />
               <figcaption class="caption">
                 <h3>Operator Workspace</h3>
-                <p>12 open actions (9 urgent) — Meta account health, billing, pixel checks across VetSonic, PelviEase, SunGlow with due dates.</p>
+                <p>12 open actions (9 urgent), Meta account health, billing, pixel checks across VetSonic, PelviEase, SunGlow with due dates.</p>
               </figcaption>
             </figure>
 
@@ -432,7 +430,7 @@
               <img src="../rescale-operator/screenshots/08-intelligence-creative.png" alt="Creative intelligence ROAS ranking" loading="lazy" />
               <figcaption class="caption">
                 <h3>Creative Intelligence</h3>
-                <p>Top/bottom ROAS by avatar, strategist, editor, tool, media buyer — urban-pro at €4.50 ROAS.</p>
+                <p>Top/bottom ROAS by avatar, strategist, editor, tool, media buyer, urban-pro at €4.50 ROAS.</p>
               </figcaption>
             </figure>
 
@@ -440,7 +438,7 @@
               <img src="../rescale-operator/screenshots/09-intelligence-explore-expand.png" alt="Explore vs expand spend analysis" loading="lazy" />
               <figcaption class="caption">
                 <h3>Explore vs Expand</h3>
-                <p>EXPAND at 4.50× ROAS vs EXPLORE at 2.35× — spend ratio 1.41 flagged against healthy band 0.4–0.7.</p>
+                <p>EXPAND at 4.50× ROAS vs EXPLORE at 2.35×, spend ratio 1.41 flagged against healthy band 0.4, 0.7.</p>
               </figcaption>
             </figure>
 
@@ -448,7 +446,7 @@
               <img src="../rescale-operator/screenshots/07-intelligence-naming.png" alt="Naming health center N3 compliance" loading="lazy" />
               <figcaption class="caption">
                 <h3>Naming Convention QA</h3>
-                <p>N3 naming health center — ads inspected, compliance %, violations, and suggested repairs.</p>
+                <p>N3 naming health center, ads inspected, compliance %, violations, and suggested repairs.</p>
               </figcaption>
             </figure>
 
@@ -456,7 +454,7 @@
               <img src="../rescale-operator/screenshots/14-creative-agents.png" alt="Creative agents draft generation" loading="lazy" />
               <figcaption class="caption">
                 <h3>Creative Marketing Agents</h3>
-                <p>Read-only draft concepts for image ads, video ads, audience research — no Meta write API.</p>
+                <p>Read-only draft concepts for image ads, video ads, audience research, no Meta write API.</p>
               </figcaption>
             </figure>
 
@@ -464,7 +462,7 @@
               <img src="../rescale-operator/screenshots/02-runs.png" alt="Daily and diagnostic run history" loading="lazy" />
               <figcaption class="caption">
                 <h3>Run History</h3>
-                <p>Daily + diagnostic runs per brand — queued, partial, completed with urgent flags.</p>
+                <p>Daily + diagnostic runs per brand, queued, partial, completed with urgent flags.</p>
               </figcaption>
             </figure>
 
@@ -472,7 +470,7 @@
               <img src="../rescale-operator/screenshots/03-recommendations.png" alt="Recommendations action queue" loading="lazy" />
               <figcaption class="caption">
                 <h3>Recommendations &amp; Launch Readiness</h3>
-                <p>Action queue — pending, accepted, shipped with high/med/low priority filters.</p>
+                <p>Action queue, pending, accepted, shipped with high/med/low priority filters.</p>
               </figcaption>
             </figure>
           </div>
@@ -483,7 +481,7 @@
         <div class="container">
           <h2 class="section-title">Module walkthrough</h2>
           <p class="section-intro">
-            ~80-second tour across dashboard modules — runs → recommendations → operator →
+            ~80-second tour across dashboard modules, runs → recommendations → operator →
             intelligence → settings. Complements the full dark dashboard scroll above.
           </p>
           <div class="card video-wrap">
@@ -508,7 +506,7 @@
             <article class="card pad">
               <div class="capability-icon">W</div>
               <h3>Winner notifier</h3>
-              <p>Daily ad classification — winner, emerging, needs watch, loser — with async worker pipeline.</p>
+              <p>Daily ad classification, winner, emerging, needs watch, loser, with async worker pipeline.</p>
             </article>
             <article class="card pad">
               <div class="capability-icon">CI</div>
@@ -518,7 +516,7 @@
             <article class="card pad">
               <div class="capability-icon">Agents</div>
               <h3>Creative marketing agents</h3>
-              <p>Image, video, and research draft generation — read-only, HITL publish.</p>
+              <p>Image, video, and research draft generation, read-only, HITL publish.</p>
             </article>
             <article class="card pad">
               <div class="capability-icon">Q</div>
@@ -537,7 +535,7 @@
       <section class="section" id="impact">
         <div class="container">
           <h2 class="section-title">Business impact</h2>
-          <p class="section-intro">Outcomes from dashboard adoption, UAT, and stakeholder review — metrics visible in the platform UI and verified in production runs.</p>
+          <p class="section-intro">Outcomes from dashboard adoption, UAT, and stakeholder review, metrics visible in the platform UI and verified in production runs.</p>
 
           <h3 class="skills-heading">Platform outcomes</h3>
           <div class="metric-grid">
@@ -606,7 +604,7 @@
           <h2 class="section-title">My role</h2>
           <div class="card role-box prose">
             <p>
-              <strong>AI Product &amp; Automation Builder</strong> — designed workflows, automation
+              <strong>AI Product &amp; Automation Builder</strong>, designed workflows, automation
               logic, QA rules, dashboard requirements, human review model, acceptance criteria,
               and stakeholder operating process. Shipped the full stack: FastAPI + Next.js platform,
               Hermes Agents + OpenRouter + Claude routing, Supermemory RAG (Ask Operator), Supabase Postgres schema,
@@ -640,16 +638,16 @@
               <summary>RAG &amp; vector memory (Supermemory)</summary>
               <div class="content">
                 <p>
-                  Vector search is <strong>not</strong> stored in Supabase — it runs on
+                  Vector search is <strong>not</strong> stored in Supabase, it runs on
                   <strong>Supermemory</strong>, a managed semantic memory service. Supabase holds
                   relational operator data only.
                 </p>
                 <ul>
-                  <li><strong>Ingest</strong> — <code>supermemory_ingest.py</code> scrubs secrets, attaches metadata (SOP, technical_doc, decision, metric_rule), idempotent <code>custom_id</code> → <code>POST /v3/documents</code></li>
-                  <li><strong>Search</strong> — <code>MemorySearchService</code> builds query + filters (<code>project: rescale_operator</code>, optional module) → <code>POST /v3/search</code> → top-k chunks with similarity scores</li>
-                  <li><strong>RAG assembly</strong> — <code>RagContextProvider</code> returns context blocks, citations, confidence; degrades gracefully if Supermemory is disabled/timeout/error</li>
-                  <li><strong>Ask Operator</strong> — <code>AgentOrchestrator</code> merges live dashboard context + RAG prompt block → Hermes Agents / Claude → evidence + warnings (read-only, no writes)</li>
-                  <li><strong>Config gates</strong> — <code>SUPERMEMORY_ENABLED</code>, <code>SUPERMEMORY_API_KEY</code>, <code>AGENT_RAG_ENABLED</code>; Redis-backed task registry for multi-worker <code>/api/agents/query</code></li>
+                  <li><strong>Ingest</strong>, <code>supermemory_ingest.py</code> scrubs secrets, attaches metadata (SOP, technical_doc, decision, metric_rule), idempotent <code>custom_id</code> → <code>POST /v3/documents</code></li>
+                  <li><strong>Search</strong>, <code>MemorySearchService</code> builds query + filters (<code>project: rescale_operator</code>, optional module) → <code>POST /v3/search</code> → top-k chunks with similarity scores</li>
+                  <li><strong>RAG assembly</strong>, <code>RagContextProvider</code> returns context blocks, citations, confidence; degrades gracefully if Supermemory is disabled/timeout/error</li>
+                  <li><strong>Ask Operator</strong>, <code>AgentOrchestrator</code> merges live dashboard context + RAG prompt block → Hermes Agents / Claude → evidence + warnings (read-only, no writes)</li>
+                  <li><strong>Config gates</strong>, <code>SUPERMEMORY_ENABLED</code>, <code>SUPERMEMORY_API_KEY</code>, <code>AGENT_RAG_ENABLED</code>; Redis-backed task registry for multi-worker <code>/api/agents/query</code></li>
                 </ul>
               </div>
             </details>
@@ -657,9 +655,9 @@
               <summary>Data &amp; persistence (Supabase)</summary>
               <div class="content">
                 <ul>
-                  <li>Supabase Postgres via asyncpg — tenant-scoped reads, batch upserts, migrations (e.g. <code>0026_winner_notifier</code>)</li>
+                  <li>Supabase Postgres via asyncpg, tenant-scoped reads, batch upserts, migrations (e.g. <code>0026_winner_notifier</code>)</li>
                   <li>Tables: <code>ad_launch_tracking</code>, <code>ad_winner_snapshots</code>, <code>ad_winner_events</code>, operator runs, publish approvals</li>
-                  <li>Ecom Profits read-only pool — <code>default_transaction_read_only = on</code></li>
+                  <li>Ecom Profits read-only pool, <code>default_transaction_read_only = on</code></li>
                   <li>Brand rules in <code>config/brands.yaml</code></li>
                 </ul>
               </div>
@@ -668,12 +666,12 @@
               <summary>AI &amp; agent layer</summary>
               <div class="content">
                 <ul>
-                  <li><strong>Hermes Agents</strong> — agent runtime provider for orchestrated tool use</li>
-                  <li><strong>OpenRouter</strong> — multi-model LLM routing layer</li>
-                  <li><strong>Claude provider</strong> — Ask Operator, Creative Agents, diagnostic Opus synthesis</li>
-                  <li><strong>Creative Agents</strong> — read-only image/video/research draft generation</li>
-                  <li><strong>Diagnostic engine</strong> — 4 diagnostics + Claude Opus synthesis</li>
-                  <li><strong>Winner notifier</strong> — rules classifier + Supabase event/snapshot schema</li>
+                  <li><strong>Hermes Agents</strong>, agent runtime provider for orchestrated tool use</li>
+                  <li><strong>OpenRouter</strong>, multi-model LLM routing layer</li>
+                  <li><strong>Claude provider</strong>, Ask Operator, Creative Agents, diagnostic Opus synthesis</li>
+                  <li><strong>Creative Agents</strong>, read-only image/video/research draft generation</li>
+                  <li><strong>Diagnostic engine</strong>, 4 diagnostics + Claude Opus synthesis</li>
+                  <li><strong>Winner notifier</strong>, rules classifier + Supabase event/snapshot schema</li>
                 </ul>
               </div>
             </details>
@@ -681,12 +679,12 @@
               <summary>External API integrations</summary>
               <div class="content">
                 <ul>
-                  <li><strong>Meta API</strong> — OAuth (<code>/api/integrations/meta/oauth/*</code>), Ecom Profits read-only metrics, inbound webhooks</li>
-                  <li><strong>ClickUp API</strong> — <code>ClickUpBridge</code> idempotent <code>create_task</code>; URGENT daily + HIGH diagnostic tickets; <code>clickup_task_id</code> on action rows</li>
-                  <li><strong>Google Sheets API</strong> — stakeholder export via registry sync jobs; System Pulse health monitoring</li>
-                  <li><strong>Discord notifications</strong> — winner notifier structured payloads; <code>WINNER_NOTIFIER_DISCORD_ENABLED</code></li>
-                  <li><strong>API keys</strong> — personal read-only API tokens; generate / reveal-once / revoke at <code>/daily/d/settings/api-keys</code></li>
-                  <li><strong>Registry</strong> — <code>GET/POST/PATCH /api/integrations/registry</code>, test + sync per provider</li>
+                  <li><strong>Meta API</strong>, OAuth (<code>/api/integrations/meta/oauth/*</code>), Ecom Profits read-only metrics, inbound webhooks</li>
+                  <li><strong>ClickUp API</strong>, <code>ClickUpBridge</code> idempotent <code>create_task</code>; URGENT daily + HIGH diagnostic tickets; <code>clickup_task_id</code> on action rows</li>
+                  <li><strong>Google Sheets API</strong>, stakeholder export via registry sync jobs; System Pulse health monitoring</li>
+                  <li><strong>Discord notifications</strong>, winner notifier structured payloads; <code>WINNER_NOTIFIER_DISCORD_ENABLED</code></li>
+                  <li><strong>API keys</strong>, personal read-only API tokens; generate / reveal-once / revoke at <code>/daily/d/settings/api-keys</code></li>
+                  <li><strong>Registry</strong>, <code>GET/POST/PATCH /api/integrations/registry</code>, test + sync per provider</li>
                 </ul>
               </div>
             </details>
@@ -696,7 +694,7 @@
                 <ul>
                   <li>Daily checkpoint cron + per-brand fan-out</li>
                   <li>Creative intelligence ranking by role dimension</li>
-                  <li>Recommendations pipeline — pending → accepted → shipped</li>
+                  <li>Recommendations pipeline, pending → accepted → shipped</li>
                   <li>ClickUp API bridge for diagnostic + action tasks</li>
                 </ul>
               </div>
@@ -738,9 +736,9 @@
         <div class="container">
           <div class="card pad contact-card">
             <h2>Interested in this work?</h2>
-            <p>I design and ship AI automation platforms end to end — agent workflows, QA rules, dashboards, and stakeholder adoption.</p>
+            <p>I design and ship AI automation platforms end to end, agent workflows, QA rules, dashboards, and stakeholder adoption.</p>
             <div class="contact-links">
-              <a class="btn btn-primary" data-contact="email" href="mailto:rajeevkmba2025@gmail.com">rajeevkmba2025@gmail.com</a>
+              <a class="btn btn-primary" data-contact="email" href="mailto:rajeevkmba2025@gmail.com">Email</a>
               <a class="btn btn-secondary" data-contact="linkedin" href="#" target="_blank" rel="noopener noreferrer">LinkedIn</a>
             </div>
           </div>

@@ -205,6 +205,64 @@ function checkDeployConfig() {
   check(/url=rescale-operator\/index\.html/.test(rootIdx), "root index.html should forward to homepage hub");
 }
 
+// helper: text nodes only (strip tags so attributes/URLs/code don't count)
+function textOnly(html) {
+  return html.replace(/<[^>]*>/g, " ");
+}
+
+function checkNoVisibleEmail() {
+  section("9. Email privacy — raw address never appears as visible text");
+  const EMAIL = "rajeevkmba2025@gmail.com";
+  for (const p of [...PAGES, ...MODULE_PAGES]) {
+    if (!existsSync(join(ROOT, p))) continue;
+    const txt = textOnly(readPage(p));
+    check(!txt.includes(EMAIL), `raw email visible as text in ${p}`);
+    // mailto must still be present somewhere with a contact entry
+  }
+  // mailto links preserved on the contact pages
+  for (const p of ["rescale-operator/index.html", "Profile-rescale-os/index.html"]) {
+    check(readPage(p).includes("mailto:" + EMAIL), `mailto link missing in ${p}`);
+  }
+  // contact.js must not assign email to textContent except the email-label opt-in
+  for (const p of PAGES) {
+    const jsPath = join(dirname(join(ROOT, p)), "assets/contact.js");
+    if (!existsSync(jsPath)) continue;
+    const js = readFileSync(jsPath, "utf8");
+    // the only allowed textContent=site.email is inside the email-label block
+    const emailBlock = js.split("email-label")[0]; // text before the opt-in block
+    check(!/textContent\s*=\s*["']?\s*\+?\s*site\.email|textContent\s*=\s*site\.email/.test(emailBlock),
+      `contact.js (${p}) sets email as textContent on data-contact='email'`);
+  }
+}
+
+function checkNoProseDashes() {
+  section("10. Prose cleanup — no em/en dashes in visible text");
+  const CLEANED = [
+    "rescale-operator/index.html", "Profile-rescale-os/index.html",
+    "Pulsara-Portfolio/index.html", "hafh-kabuk-style/index.html",
+    "mumzworld-tamer-group/index.html", "jumia-marketplace-ops/index.html",
+    "lazada-alibaba-growth/index.html", "education-mba/index.html",
+    "rescale-operator/creative-marketing-agents/index.html",
+  ];
+  for (const p of CLEANED) {
+    if (!existsSync(join(ROOT, p))) continue;
+    const txt = textOnly(readPage(p));
+    check(!txt.includes("—"), `em dash (—) in visible text of ${p}`);
+    check(!txt.includes("–"), `en dash (–) in visible text of ${p}`);
+  }
+  // flagged AI phrases removed from visible prose (word-boundary so "real screens"
+  // does not match the legitimate word "screenshots")
+  const PHRASES = [
+    /not a gimmick/i, /not aspiration/i, /real bottleneck/i,
+    /real product flow/i, /real screens\b/i, /interview-ready/i,
+  ];
+  for (const p of CLEANED) {
+    if (!existsSync(join(ROOT, p))) continue;
+    const txt = textOnly(readPage(p));
+    for (const re of PHRASES) check(!re.test(txt), `flagged phrase ${re} still visible in ${p}`);
+  }
+}
+
 async function checkHttp() {
   section("2. HTTP — pages & key assets serve 200");
   for (const p of [...PAGES, ...MODULE_PAGES]) {
@@ -245,6 +303,8 @@ async function main() {
   checkDesignSystem();
   checkInternalLinks();
   checkDeployConfig();
+  checkNoVisibleEmail();
+  checkNoProseDashes();
   // http checks
   await checkHttp();
 
