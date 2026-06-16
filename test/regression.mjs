@@ -243,6 +243,7 @@ function checkDeployConfig() {
     }
   } else bad("missing .github/workflows/pages.yml");
   check(existsSync(join(ROOT, ".nojekyll")), "missing root .nojekyll");
+  check(existsSync(join(ROOT, "favicon.svg")), "missing root favicon.svg");
   // root index.html IS the hub now; the old rescale-operator route redirects to it
   const rootIdx = readPage("index.html");
   check(/id="featured"/.test(rootIdx) && /Work experience/.test(rootIdx), "root index.html should be the portfolio hub");
