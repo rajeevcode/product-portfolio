@@ -3,7 +3,7 @@ window.SITE = {
   title: "AI Product & Automation Builder",
   email: "rajeevkmba2025@gmail.com",
   linkedin: "https://www.linkedin.com/in/rajeevkumar9/",
-  portfolioHome: "../rescale-operator/index.html",
+  portfolioHome: "../index.html",
   rescaleOperatorCaseStudy: "../rescale-operator/creative-marketing-agents/index.html",
   rescaleOsCaseStudy: "../Profile-rescale-os/index.html",
   pulsaraCaseStudy: "../Pulsara-Portfolio/index.html",

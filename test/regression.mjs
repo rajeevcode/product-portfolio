@@ -37,8 +37,9 @@ const SERVE_PORT = 8092;
 
 // Top-level pages served from repo root.
 const PAGES = [
-  "index.html",                                   // root forwarder
-  "rescale-operator/index.html",                  // homepage hub
+  "index.html",                                   // portfolio hub
+  "rescale-operator/index.html",                  // legacy route, redirects to hub
+  "404.html",                                     // custom GitHub Pages 404 page
   "Pulsara-Portfolio/index.html",
   "rescale-operator/creative-marketing-agents/index.html",
   "Profile-rescale-os/index.html",

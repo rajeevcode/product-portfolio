@@ -21,14 +21,16 @@ Author: Rajeev Kumar · Last updated: June 2026 · License: [MIT](LICENSE)
 ## Run locally
 
 ```bash
-cd /Users/rajeevkumar/Desktop/ai-automation-portfolio
+cd /Users/rajeevkumar/Documents/product-portfolio-main
 npm run serve          # static server on :8092
 ```
 
-- Portfolio home: http://localhost:8092/rescale-operator/index.html
+- Portfolio home: http://localhost:8092/index.html
+- Rescale OS case study: http://localhost:8092/Profile-rescale-os/index.html
+- Creative Marketing Agents / Rescale Operator: http://localhost:8092/rescale-operator/creative-marketing-agents/index.html
 - Pulsara case study: http://localhost:8092/Pulsara-Portfolio/index.html
 
-Use the `index.html` URL (or hard-refresh if you previously hit a cached redirect).
+The legacy route `rescale-operator/index.html` redirects to the root hub. Use the root `index.html` URL (or hard-refresh if you previously hit a cached redirect).
 
 ## Regression test — run before every change
 

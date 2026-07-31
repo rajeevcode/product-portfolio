@@ -46,8 +46,7 @@ I built **Rescale Operator** — an AI-assisted media-buying operations platform
 
 - Backend: Supermemory client, ingest pipeline, RAG context provider, `/api/agents/query` with Redis-backed task registry (multi-worker safe).
 - Frontend: **Agent Memory** panel (`/daily/d/agents/memory`) — ask questions, view proposals (HITL promote behind separate flag).
-- Hermes Agents, OpenRouter, and Claude providers for LLM routing.
-- Meta API, ClickUp API, Google Sheets API, and Discord notification integrations.
+- Hermes / Claude providers for LLM routing.
 
 **Screenshot:** enable `NEXT_PUBLIC_AGENT_MEMORY=true` and re-capture (flag off in default Docker build).
 

@@ -24,8 +24,7 @@ FastAPI (:8001) ──enqueue──▶ Redis ──▶ Arq worker
 | API | FastAPI, Pydantic v2, feature-flagged routers |
 | Workers | Arq + Redis, cron schedules in `arq_settings.py` |
 | Data | Supabase Postgres (asyncpg), Ecom Profits read-only pool |
-| AI | Hermes Agents, OpenRouter, Claude provider, Supermemory RAG |
-| Integrations | Meta API, ClickUp API, Google Sheets API, Discord notifications |
+| AI | Hermes/OpenRouter, Claude provider, Supermemory RAG |
 | Infra | Docker Compose full stack, env-driven feature flags |
 | Testing | pytest (unit + contract), Vitest, Playwright e2e |
 

@@ -1,7 +1,7 @@
 .DS_Store
 *.log
 
-# Design mockup source (internal — not part of the published site)
+# Design mockup source (internal, not part of the published site)
 Portfolio CV Design/
 Portfolio CV Design*.zip
 
@@ -10,3 +10,15 @@ Portfolio CV Design*.zip
 
 # Heavy original photo source (not for deploy; resized copy lives in Rajeev_Pic.jpg)
 **/final-image*.jpg
+
+# Editor and OS junk
+.idea/
+.vscode/
+Thumbs.db
+
+# Local build/serve artifacts (never commit; regenerate on demand)
+.cache/
+dist/
+build/
+tmp/
+.tmp/
