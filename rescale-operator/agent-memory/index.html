@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self';base-uri 'self'; form-action 'self'" />
+    <link rel="icon" type="image/svg+xml" href="../../favicon.svg" />
+    <title>Agent Memory &amp; RAG — Portfolio</title>
+    <meta name="description" content="Supermemory vector RAG plus Ask Operator: durable memory across dashboards, human-in-the-loop promotion, and citation-backed answers." />
+    <link rel="canonical" href="https://rajeevcode.github.io/product-portfolio/rescale-operator/agent-memory/" />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:title" content="Agent Memory (Supermemory RAG)" />
+    <meta property="og:description" content="Supermemory vector RAG plus Ask Operator: durable memory across dashboards, human-in-the-loop promotion, and citation-backed answers." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://rajeevcode.github.io/product-portfolio/rescale-operator/agent-memory/" />
+    <meta property="og:image" content="https://rajeevcode.github.io/product-portfolio/assets/rajeev-kumar-profile.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://rajeevcode.github.io/product-portfolio/assets/rajeev-kumar-profile.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../assets/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container inner">
+        <a class="brand" href="../index.html">Rajeev <span>Kumar</span></a>
+        <nav class="nav"><a href="../index.html">Portfolio home</a><a href="../creative-marketing-agents/index.html">Case study</a></nav>
+      </div>
+    </header>
+    <main>
+      <section class="mini-page-hero">
+        <div class="container">
+          <p class="eyebrow">Creative Marketing Agents / Rescale Operator — shipped</p>
+          <h1>Agent Memory &amp; RAG</h1>
+          <p class="lead">
+            Read-only Ask Operator layer — Supermemory vector search for semantic retrieval,
+            RagContextProvider for grounded prompt assembly, Hermes Agents + OpenRouter + Claude generation, and
+            citation-backed evidence. Supabase stores operator runs; vectors live in Supermemory.
+          </p>
+        </div>
+      </section>
+
+      <section class="section alt">
+        <div class="container">
+          <h2 class="section-title">Architecture</h2>
+          <div class="card flow">
+            <div class="flow-step">
+              <div class="flow-num">1</div>
+              <div>
+                <strong>Ingest → Supermemory vector store</strong>
+                <p style="margin: 0.35rem 0 0; color: var(--text-muted); font-size: 0.92rem">
+                  SOPs, technical docs, decisions, metric rules → scrubbed → <code>POST /v3/documents</code> with metadata (<code>project: rescale_operator</code>).
+                </p>
+              </div>
+            </div>
+            <div class="flow-arrow" aria-hidden="true">↓</div>
+            <div class="flow-step">
+              <div class="flow-num">2</div>
+              <div>
+                <strong>Query → semantic search</strong>
+                <p style="margin: 0.35rem 0 0; color: var(--text-muted); font-size: 0.92rem">
+                  <code>MemorySearchService</code> → <code>POST /v3/search</code> → top-k chunks + similarity scores + citations.
+                </p>
+              </div>
+            </div>
+            <div class="flow-arrow" aria-hidden="true">↓</div>
+            <div class="flow-step">
+              <div class="flow-num">3</div>
+              <div>
+                <strong>RAG context → orchestrator</strong>
+                <p style="margin: 0.35rem 0 0; color: var(--text-muted); font-size: 0.92rem">
+                  <code>RagContextProvider</code> merges live dashboard context + retrieved blocks → Hermes Agents / Claude → evidence + confidence warnings.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container grid-2">
+          <article class="card pad">
+            <h3>Vector database</h3>
+            <p>
+              <strong>Supermemory</strong> (managed service) — not pgvector in Supabase.
+              Embeddings and vector search are handled by Supermemory's API. Operator DB
+              (Supabase Postgres) stores runs, snapshots, and approvals separately.
+            </p>
+          </article>
+          <article class="card pad">
+            <h3>What shipped</h3>
+            <p>
+              <code>supermemory_client.py</code>, <code>supermemory_ingest.py</code>,
+              <code>supermemory_search.py</code>, <code>rag_context_provider.py</code>,
+              <code>agent_orchestrator.py</code>, <code>/api/agents/query</code>,
+              Redis task registry, Agent Memory UI (<code>NEXT_PUBLIC_AGENT_MEMORY</code>).
+            </p>
+          </article>
+          <article class="card pad">
+            <h3>Safety &amp; degradation</h3>
+            <p>
+              Read-only Phase 1 — no Meta/DB writes. Supermemory outage returns empty RAG
+              context + warning (never 500s). Low confidence (&lt;0.4) flagged to user.
+              Secret scrubbing on ingest.
+            </p>
+          </article>
+          <article class="card pad">
+            <h3>Config gates</h3>
+            <p>
+              <code>SUPERMEMORY_ENABLED</code>, <code>SUPERMEMORY_API_KEY</code>,
+              <code>SUPERMEMORY_BASE_URL</code>, <code>AGENT_RAG_ENABLED</code>,
+              <code>HERMES_AGENT_ENABLED</code>, <code>AGENT_WRITE_ACTIONS_ENABLED=false</code>.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section alt">
+        <div class="container">
+          <h2 class="section-title">Related screenshots</h2>
+          <div class="gallery">
+            <figure class="card shot-card">
+              <img src="../screenshots/05-operator.png" alt="Operator workspace with Ask Operator" loading="lazy" />
+              <figcaption class="caption"><h3>Ask Operator</h3><p>Grounded chat in operator workspace — live context + retrieved memory.</p></figcaption>
+            </figure>
+            <figure class="card shot-card">
+              <img src="../screenshots/14-creative-agents.png" alt="Creative agents workspace" loading="lazy" />
+              <figcaption class="caption"><h3>Creative Agents</h3><p>Separate read-only agent surface for concept generation.</p></figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="container inner"><span><a href="../creative-marketing-agents/index.html">← Case study</a></span></div>
+    </footer>
+  </body>
+</html>

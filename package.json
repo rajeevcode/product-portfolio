@@ -1,0 +1,10 @@
+{
+  "name": "product-portfolio",
+  "private": true,
+  "description": "Rajeev Kumar — AI Product, Platform & Marketplace portfolio (static site).",
+  "scripts": {
+    "serve": "npx --yes serve . -p 8092",
+    "test": "node test/regression.mjs",
+    "test:ci": "node test/regression.mjs --no-serve"
+  }
+}

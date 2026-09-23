@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self';base-uri 'self'; form-action 'self'" />
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+    <title>Rajeev Kumar, Rescale OS AI Product Case Study</title>
+    <meta
+      name="description"
+      content="AI product case study: how Rajeev Kumar built Rescale OS, a creative task and ad-lifecycle operating system with a parent/child creative state machine, auto-promotion rules, an ad launcher, workspace RLS, and AI-assisted German translation and creative analysis."
+    />
+    <meta property="og:title" content="Rajeev Kumar — Rescale OS AI Product Case Study" />
+    <meta
+      property="og:description"
+      content="Rescale OS — a TypeScript monorepo operating system for the creative lifecycle: parent/child task state machine, auto-promotion, ad launcher, workspace RLS, and AI-assisted translation + creative analysis."
+    />
+    <meta property="og:type" content="website" />
+    <link rel="canonical" href="https://rajeevcode.github.io/product-portfolio/Profile-rescale-os/" />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:url" content="https://rajeevcode.github.io/product-portfolio/Profile-rescale-os/" />
+    <meta property="og:image" content="https://rajeevcode.github.io/product-portfolio/assets/rajeev-kumar-profile.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Rajeev Kumar, Rescale OS AI Product Case Study" />
+    <meta name="twitter:description" content="Rescale OS: a TypeScript monorepo operating system for the creative lifecycle, parent/child task state machine, auto-promotion, ad launcher, workspace RLS, and AI-assisted translation and creative analysis." />
+    <meta name="twitter:image" content="https://rajeevcode.github.io/product-portfolio/assets/rajeev-kumar-profile.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/styles.css" />
+    <link rel="stylesheet" href="assets/theme-overlay.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container inner">
+        <a class="brand" href="../index.html">Rajeev <span>Kumar</span></a>
+        <nav class="nav nav-compact" aria-label="Primary">
+          <a href="../index.html">Portfolio</a>
+          <a href="#snapshot" data-scroll>Snapshot</a>
+          <a href="#problem" data-scroll>Problem</a>
+          <a href="#solution" data-scroll>Solution</a>
+          <a href="#screenshots" data-scroll>Screenshots</a>
+          <a href="#modules" data-scroll>Modules</a>
+          <a href="#architecture" data-scroll>Architecture</a>
+          <a href="#impact" data-scroll>Impact</a>
+          <a href="#role" data-scroll>Role</a>
+          <a href="#contact" data-scroll class="nav-contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- 1. HERO -->
+      <section class="hero compact hero-indigo" id="top">
+        <div class="container hero-grid">
+          <div class="hero-main">
+            <p class="eyebrow">AI Product Case Study</p>
+            <h1>Rescale OS</h1>
+            <p class="featured-subtitle hero-subtitle">
+              An Operating System for the Creative Lifecycle and Ad Launch Workflow
+            </p>
+            <p class="lead">
+              Rescale OS is a TypeScript monorepo with a React 19 control surface, an Express and PostgreSQL
+              API, and shared Zod contracts. It connects creative production, task automation, launch
+              tracking, workspace security, German translation, and creative analysis in one workflow,
+              built on a parent/child creative state machine with rule-driven automation, an ad launcher,
+              and workspace-level row-level security.
+            </p>
+            <p class="hero-headline">
+              “I built Rescale OS to bring fragmented creative and campaign operations into one structured,
+              rule-governed system.”
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#full-video" data-scroll>Watch Full Product Walkthrough</a>
+              <a class="btn btn-secondary" href="#modules" data-scroll>Explore Modules</a>
+              <a class="btn btn-secondary" href="#impact" data-scroll>See Business Impact</a>
+              <a class="btn btn-secondary" href="#architecture" data-scroll>View Technical Architecture</a>
+              <a class="btn btn-secondary" href="#journey" data-scroll>View End-to-End Journey</a>
+            </div>
+            <div class="role-tags" style="justify-content: flex-start; margin-top: 1.5rem">
+              <span class="role-tag">AI Product Builder</span>
+              <span class="role-tag">Senior PM</span>
+              <span class="role-tag">Technical PM</span>
+              <span class="role-tag">Workflow Automation</span>
+              <span class="role-tag">Lifecycle State Machines</span>
+              <span class="role-tag">Creative Ops</span>
+              <span class="role-tag">Product Automation</span>
+            </div>
+          </div>
+          <aside class="profile-card">
+            <img class="profile-photo" src="../assets/rajeev-kumar-profile.png" alt="Rajeev Kumar — Senior AI Product Manager" loading="lazy"
+                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+            <div class="profile-photo-fallback" style="display:none">Profile photo coming soon</div>
+            <div class="profile-name">Rajeev Kumar</div>
+            <div class="role-tags" style="justify-content:center">
+              <span class="role-tag">AI Product</span>
+              <span class="role-tag">Strategy</span>
+            </div>
+            <div class="profile-links">
+              <a data-contact="email" href="mailto:rajeevkmba2025@gmail.com">Email</a>
+              <a data-contact="linkedin" href="https://www.linkedin.com/in/rajeevkumar9/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+              <a data-contact="github" href="https://github.com/rajeevcode" target="_blank" rel="noopener noreferrer">GitHub</a>
+              <a data-contact="portfolio" href="https://rajeevcode.github.io/product-portfolio/" target="_blank" rel="noopener noreferrer">Portfolio</a>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <!-- 2. INTERVIEW SNAPSHOT -->
+      <section class="section alt" id="snapshot">
+        <div class="container">
+          <h2 class="section-title">Interview snapshot</h2>
+          <p class="section-intro">The 30-second framing of what Rescale OS is, who it serves, and how it is built.</p>
+          <div class="card pad">
+            <dl class="snapshot-grid">
+              <div class="snapshot-item"><dt>Role</dt><dd>Senior AI Product Manager, Platform &amp; Agent Systems / Product owner &amp; implementer</dd></div>
+              <div class="snapshot-item"><dt>Company</dt><dd>Rescale Media LLC</dd></div>
+              <div class="snapshot-item"><dt>Timeline</dt><dd>Jan 2026 - Present</dd></div>
+              <div class="snapshot-item"><dt>Product</dt><dd>Rescale OS, creative lifecycle &amp; ad-launch operating system</dd></div>
+              <div class="snapshot-item"><dt>System type</dt><dd>Internal operating system for creative production &amp; ad launch</dd></div>
+              <div class="snapshot-item"><dt>Stage</dt><dd>Shipped internal production workflows (v1.0 release branch)</dd></div>
+              <div class="snapshot-item"><dt>Stack</dt><dd>React 19 · Vite · TypeScript · Express · PostgreSQL · Zod contracts · Supabase · Docker / k8s</dd></div>
+              <div class="snapshot-item"><dt>Users &amp; roles</dt><dd>Operators and admins today; team model includes creative strategists, video/image editors, funnel builders, ad launchers, pod directors, ops, leadership</dd></div>
+              <div class="snapshot-item"><dt>AI used for</dt><dd>German script/ad-copy translation (Claude → Gemini → LibreTranslate) and Gemini creative analysis (27 structured signals from video)</dd></div>
+              <div class="snapshot-item snapshot-wide">
+                <dt>Business problem</dt>
+                <dd class="snapshot-stack">
+                  <span>Creative production and ad launch were fragmented across manual workflows, inconsistent task tracking, ad-hoc naming, and subjective hand-offs between strategists, editors, and launchers.</span>
+                </dd>
+              </div>
+              <div class="snapshot-item snapshot-wide">
+                <dt>Product outcome</dt>
+                <dd class="snapshot-stack">
+                  <span>A governed lifecycle: collision-proof creative codes, a parent/child task state machine with auto-promotion, rule-driven child generation, an ad launcher, and workspace-isolated, fail-closed data access.</span>
+                </dd>
+              </div>
+              <div class="snapshot-item snapshot-wide">
+                <dt>Interview positioning</dt>
+                <dd class="snapshot-stack">
+                  <span>Demonstrates product ownership of a real lifecycle system, technical depth (state machine, RLS, optimistic locking, durable automation queue), pragmatic use of AI, and production-readiness (e2e regression coverage).</span>
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. BUSINESS PROBLEM -->
+      <section class="section" id="problem">
+        <div class="container">
+          <h2 class="section-title">The problem: creative operations were scaling faster than process discipline</h2>
+          <div class="prose">
+            <p>
+              As creative output grew, production tracking, naming, hand-offs, and ad launches became
+              inconsistent. Different people followed different workflows, and the link between a script, its
+              hooks and image variants, and the ad that finally went live was hard to see.
+            </p>
+          </div>
+          <ul class="bullet-list">
+            <li>Manual creative lifecycle tracking with no shared source of truth</li>
+            <li>Loose parent-child relationships between scripts and their hook / image variants</li>
+            <li>Inconsistent creative-code naming, causing collisions and ambiguity</li>
+            <li>Weak visibility from script → hook/image → launched ad</li>
+            <li>Hand-offs (strategist → editor → launcher) coordinated manually</li>
+            <li>No automatic promotion of a parent when its children were launched or paused</li>
+            <li>Naming-compliance and QA gaps surfaced late, if at all</li>
+            <li>German translation of scripts/ad copy done ad-hoc per person</li>
+            <li>No durable, retriable automation when a status change should trigger downstream work</li>
+            <li>No workspace-level isolation guaranteeing one team couldn’t see another’s data</li>
+          </ul>
+          <p class="insight-quote">The core issue was a lack of shared workflow visibility across creative production, review, and launch.</p>
+        </div>
+      </section>
+
+      <!-- 4. PRODUCT SOLUTION -->
+      <section class="section alt" id="solution">
+        <div class="container">
+          <h2 class="section-title">The solution: a rule-governed operating layer for creative execution</h2>
+          <p class="section-intro">
+            Rescale OS models creative work as a lifecycle, not a list of tasks, from concept and script,
+            through rule-generated hook/image child tasks and editing, to launch readiness and the ad launcher.
+          </p>
+          <div class="card journey-flow">
+            <div class="journey-node accent">Product / Concept Input</div>
+            <div class="journey-node">Script Parent Task (VSL / UGC / REEL / STK)</div>
+            <div class="journey-node">Script Approved → rule-driven child generation</div>
+            <div class="journey-node">Hook (_HK) &amp; Image (_IMG) child tasks</div>
+            <div class="journey-node">Video / Image editing &amp; creative review</div>
+            <div class="journey-node">Upload to Drive + German translation</div>
+            <div class="journey-node">Ready for Launch → auto-creates ad</div>
+            <div class="journey-node">Ad Launcher Hub (live status &amp; category)</div>
+            <div class="journey-node">Children Launched → parent auto-promotes to Learning</div>
+            <div class="journey-node accent">All ads paused → parent auto-promotes to Done</div>
+          </div>
+
+          <div id="journey" style="margin-top: 3rem">
+            <h3 style="font-size: clamp(1.2rem, 2.5vw, 1.5rem); letter-spacing: -0.02em; margin: 0">
+              Complete end-to-end application journey
+            </h3>
+            <p class="section-intro" style="margin-top: 0.5rem">The product flow, as verified by the e2e regression suite.</p>
+            <ol class="journey-steps">
+              <li>Operator / admin signs in (workspace-scoped session)</li>
+              <li>A script parent task is created (type VSL / UGC / REEL / STK)</li>
+              <li>System generates a collision-proof creative code (e.g. <code>VSL1-A</code>)</li>
+              <li>On Script Approved, rules auto-create hook (<code>_HK</code>) or image (<code>_IMG</code>) child tasks</li>
+              <li>Child tasks move through editing and creative-review states</li>
+              <li>Scripts / ad copy translated to German (Claude → Gemini → LibreTranslate)</li>
+              <li>Creatives uploaded to Google Drive</li>
+              <li>Child reaches <code>READY_FOR_LAUNCH</code> → an ad is auto-created at <code>gandalf_approval</code></li>
+              <li>Ad Launcher Hub tracks live status and ad category; launch is manual (FB API stubbed)</li>
+              <li>When all children are <code>LAUNCHED</code>, the parent auto-promotes to <code>LEARNING</code></li>
+              <li>When all child ads are paused, the parent auto-promotes to <code>DONE</code></li>
+              <li>Ops Center surfaces QA, naming-compliance, and bottleneck events along the way</li>
+              <li>Dashboards roll up sprint, product, strategist, and editor views</li>
+              <li>Optimistic locking (revision tokens) keeps multi-user edits safe</li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. SCREENSHOTS & WALKTHROUGHS -->
+      <section class="section dark-showcase" id="screenshots">
+        <div class="container">
+          <h2 class="section-title">Screenshots &amp; product walkthroughs</h2>
+          <p class="section-intro">
+            Screens from the current Rescale OS build. Click any screenshot to open it full-size.
+          </p>
+
+          <!-- Full walkthrough video -->
+          <div class="card video-wrap" id="full-video" style="margin-bottom: 2.5rem">
+            <p class="demo-label" style="padding: 1rem 1.15rem 0">Full Rescale OS walkthrough</p>
+            <video controls preload="metadata" playsinline poster="assets/screenshots/01-dashboard-overview.png">
+              <source src="assets/video/01-full-rescale-os-walkthrough.mp4" type="video/mp4" />
+              <source src="assets/video/01-full-rescale-os-walkthrough.webm" type="video/webm" />
+              <a href="assets/video/01-full-rescale-os-walkthrough.mp4">Full walkthrough, 01-full-rescale-os-walkthrough.mp4</a>
+            </video>
+            <div class="video-meta">
+              Dashboard → Fulfillment board → Ad Launcher → NPTL Pipeline → Winner Lifecycle → Ops Center → Settings
+            </div>
+          </div>
+
+          <!-- Screenshot gallery -->
+          <div class="gallery" id="screenshot-gallery"></div>
+
+          <!-- Video library -->
+          <h3 style="color: #f8fafc; margin: 3rem 0 0.5rem; font-size: 1.4rem">Video walkthroughs</h3>
+          <p class="section-intro">Module-level demos and the complete end-to-end journey.</p>
+          <div class="video-library-grid" id="video-gallery"></div>
+        </div>
+      </section>
+
+      <!-- 6. CORE MODULES -->
+      <section class="section" id="modules">
+        <div class="container">
+          <h2 class="section-title">Core modules</h2>
+          <p class="section-intro">Core modules in the current Rescale OS build.</p>
+          <div class="module-grid">
+            <article class="card module-card">
+              <div class="module-letter">A</div>
+              <h3>Creative Lifecycle &amp; State Machine</h3>
+              <p>Parent scripts and their hook/image child tasks move through a multi-state lifecycle with validated transitions and auto-promotion.</p>
+              <ul>
+                <li>Parent types <code>VSL</code> / <code>UGC</code> / <code>REEL</code> → video hooks; <code>STK</code> → image ads</li>
+                <li>Status chain: Research → Idea/Script approval → Approved → Learning → Done</li>
+                <li>Parent auto-promotes <code>SCRIPT_APPROVED → LEARNING</code> when all children launched</li>
+                <li>Parent auto-promotes <code>LEARNING → DONE</code> when all child ads paused</li>
+                <li>Drag-and-drop fulfillment boards (Scripts / Videos / Images)</li>
+                <li>Optimistic locking via revision tokens (stale edit → 409)</li>
+              </ul>
+            </article>
+
+            <article class="card module-card">
+              <div class="module-letter">B</div>
+              <h3>Creative Code Generation</h3>
+              <p>Collision-proof, database-sequenced creative codes that encode type, concept, iteration, and child relationship.</p>
+              <ul>
+                <li>Script codes: <code>{TYPE}{CONCEPT}-{ITERATION}</code> (e.g. <code>VSL1-A</code>, <code>STK2-C</code>)</li>
+                <li>Excel-style iteration letters (A, B … Z, AA, AB …)</li>
+                <li>Child codes: <code>{PARENT}_{HK|IMG}{N}</code> (e.g. <code>VSL1-A_HK1</code>)</li>
+                <li>Sequence never resets; re-approval continues <code>_HK4</code>, <code>_HK5</code> …</li>
+                <li>Per-workspace concept / iteration / child counters</li>
+              </ul>
+            </article>
+
+            <article class="card module-card">
+              <div class="module-letter">C</div>
+              <h3>Rule-Driven Task Automation</h3>
+              <p>Status changes trigger downstream work through a durable, retriable automation queue.</p>
+              <ul>
+                <li>Rules match on event, target status, and task type</li>
+                <li>Seeded rules auto-create video hooks (VSL) / image variants (STK) on Script Approved</li>
+                <li>Durable queue (<code>task_automations</code>): PENDING → PROCESSING → DONE / ERROR / DEAD_LETTER</li>
+                <li>Exponential backoff, up to 10 attempts, dead-letter on exhaustion</li>
+                <li>Ops worker drains the queue every 5 minutes</li>
+              </ul>
+            </article>
+
+            <article class="card module-card">
+              <div class="module-letter">D</div>
+              <h3>Ad Launcher Hub</h3>
+              <p>Bridges ready creatives to ad launch, tracking live status and ad category. Launch is manual (Facebook API stubbed / mock).</p>
+              <div class="chip-row">
+                <span class="chip">Creative Code</span><span class="chip">Product</span><span class="chip">Market</span>
+                <span class="chip">Channel</span><span class="chip">Headline</span><span class="chip">Ad Copy</span>
+                <span class="chip">Funnel URL</span><span class="chip">Campaign</span><span class="chip">Ad Set</span>
+                <span class="chip">NC_AdsManager</span><span class="chip">Launcher Selection</span>
+              </div>
+              <ul>
+                <li>Live status: <code>gandalf_approval</code> · <code>new_test</code> · <code>live</code> · <code>paused</code> · <code>scheduled</code></li>
+                <li>Ad category: <code>testing</code> · <code>potential</code> · <code>winning</code> · <code>super_winner</code> · <code>losing</code> (manual)</li>
+                <li><code>READY_FOR_LAUNCH</code> auto-creates the ad at <code>gandalf_approval</code></li>
+                <li>Ad-account → campaign → ad-set selection; manual launch flow</li>
+              </ul>
+            </article>
+
+            <article class="card module-card">
+              <div class="module-letter">E</div>
+              <h3>Production &amp; Winner Dashboards</h3>
+              <p>Roll-up views for sprint and product health, and a winner-lifecycle workspace.</p>
+              <ul>
+                <li>Production Dashboard: Overview / By Product / By Strategist / By Editor</li>
+                <li>Sprint health, velocity, revision leaderboard, NC-compliance chart</li>
+                <li>Winner Lifecycle: dashboard, pre-learnings, learnings library, capacity planning, fulfillment</li>
+                <li>Product scorecard (rank, live ads, hit rate, fulfillment, avg video length)</li>
+                <li>Charts via Recharts</li>
+              </ul>
+            </article>
+
+            <article class="card module-card">
+              <div class="module-letter">F</div>
+              <h3>Ops Center</h3>
+              <p>Operations monitoring that surfaces QA and process events for action, the real “what needs attention” layer.</p>
+              <ul>
+                <li>Event types: QA failure, bottleneck, revision pressure, NC gap, missing drive link, naming convention</li>
+                <li>Severity: critical / warning / info</li>
+                <li>Status: unresolved / resolved / dismissed / auto-fixed</li>
+                <li>Coaching text, how-to-fix, expected vs actual value</li>
+              </ul>
+            </article>
+
+            <article class="card module-card">
+              <div class="module-letter">G</div>
+              <h3>AI-Assisted Translation &amp; Creative Analysis</h3>
+              <p>AI supports German translation and creative analysis tasks that were previously manual.</p>
+              <ul>
+                <li>German translation chain: cache → Claude (Sonnet) → Gemini (2.5 Flash) → LibreTranslate</li>
+                <li>Auto-fills translated metadata on task edit</li>
+                <li>Gemini creative analysis extracts 27 structured signals (CR_* fields) from video</li>
+                <li>Sync + async analysis jobs with pollable status</li>
+                <li>Filename-only fallback when file upload fails</li>
+              </ul>
+            </article>
+
+            <article class="card module-card">
+              <div class="module-letter">H</div>
+              <h3>Workspace Isolation (RLS)</h3>
+              <p>Fail-closed, workspace-scoped data access enforced at the database.</p>
+              <ul>
+                <li>RLS on creative_tasks, counters, rules, automations, launched_ads, idempotency keys</li>
+                <li>Fail-closed policy: access denied unless workspace matches or caller is admin</li>
+                <li>Session sets <code>app.workspace_id</code> / <code>app.is_admin</code></li>
+                <li>Roles today: <code>operator</code> and <code>admin</code></li>
+                <li>Workspaces: <code>nptl</code> and <code>winner</code></li>
+              </ul>
+            </article>
+
+            <article class="card module-card">
+              <div class="module-letter">I</div>
+              <h3>API &amp; Contracts Platform</h3>
+              <p>A typed, shared contract layer keeps request/response shapes aligned across the stack.</p>
+              <ul>
+                <li>Shared Zod schemas + TS types in <code>packages/contracts</code></li>
+                <li>v2 task &amp; ads APIs with HMAC-secured cursor pagination</li>
+                <li>Activity log per task (status-change history)</li>
+                <li>Helmet security headers; health checks with DB probe</li>
+                <li>Idempotency keys for safe retries</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- 7. PRODUCT ARCHITECTURE -->
+      <section class="section alt" id="architecture">
+        <div class="container">
+          <h2 class="section-title">Product architecture</h2>
+          <p class="section-intro">A TypeScript monorepo, frontend control surface, typed API, PostgreSQL, AI providers, an ops worker, and database-enforced governance.</p>
+          <div class="arch-stack">
+            <div class="arch-layer">
+              <h3><span class="layer-tag">Frontend</span> Control surface (apps/web)</h3>
+              <div class="arch-items">
+                <span>React 19</span><span>Vite</span><span>React Router 7</span><span>Zustand</span>
+                <span>TanStack React Query</span><span>Tailwind + Radix + shadcn/ui</span>
+                <span>Recharts</span><span>dnd-kit Kanban</span><span>Served behind Nginx</span>
+              </div>
+            </div>
+            <div class="arch-layer">
+              <h3><span class="layer-tag">API</span> Express service (apps/api)</h3>
+              <div class="arch-items">
+                <span>v2 Tasks API</span><span>v2 Ads API</span><span>Auth / sign-in</span>
+                <span>German translation</span><span>Creative analysis jobs</span><span>Health checks</span>
+                <span>Cursor pagination (HMAC)</span>
+              </div>
+            </div>
+            <div class="arch-layer">
+              <h3><span class="layer-tag">Data</span> PostgreSQL</h3>
+              <div class="arch-items">
+                <span>creative_tasks (parent/child)</span><span>launched_ads</span><span>creative_rules</span>
+                <span>task_automations queue</span><span>concept / iteration / child counters</span>
+                <span>idempotency_keys</span><span>auth_users</span><span>dashboard_products</span>
+              </div>
+            </div>
+            <div class="arch-layer">
+              <h3><span class="layer-tag">AI</span> Providers</h3>
+              <div class="arch-items">
+                <span>Claude Sonnet (translation)</span><span>Gemini 2.5 Flash (translation + analysis)</span>
+                <span>OpenRouter routing</span><span>LibreTranslate fallback</span><span>27-field creative analysis</span>
+              </div>
+            </div>
+            <div class="arch-layer">
+              <h3><span class="layer-tag">Workflow</span> Ops worker</h3>
+              <div class="arch-items">
+                <span>5-minute cycle</span><span>Drain task_automations</span><span>Retry + backoff + dead-letter</span>
+                <span>Auth rate-limit cleanup</span><span>Ops alert sync</span><span>Automation health checks</span>
+              </div>
+            </div>
+            <div class="arch-layer">
+              <h3><span class="layer-tag">Governance</span> Security &amp; reliability</h3>
+              <div class="arch-items">
+                <span>Workspace RLS (fail-closed)</span><span>admin / operator roles</span><span>Helmet headers</span>
+                <span>Optimistic locking (revision tokens)</span><span>e2e regression suite</span>
+                <span>Docker / k8s deploy</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 8. IMPACT (honest) -->
+      <section class="section" id="impact">
+        <div class="container">
+          <h2 class="section-title">What it does &amp; business impact</h2>
+          <p class="section-intro">
+            Rescale OS does not track ad-performance metrics (spend/ROAS) inside the product, so the impact
+            here is stated as factual product capability plus clearly labeled value estimates, with no invented
+            performance numbers.
+          </p>
+
+          <h3 style="margin: 0 0 0.75rem; font-size: 1.1rem">Factual product capabilities</h3>
+          <div class="metric-grid">
+            <article class="card metric-card"><div class="value">22+</div><div class="label">lifecycle statuses in the creative state machine</div></article>
+            <article class="card metric-card"><div class="value">2</div><div class="label">auto-promotion rules (→ Learning, → Done)</div></article>
+            <article class="card metric-card"><div class="value">5 min</div><div class="label">ops-worker automation cycle</div></article>
+            <article class="card metric-card"><div class="value">27</div><div class="label">structured signals from Gemini creative analysis</div></article>
+            <article class="card metric-card"><div class="value">3-tier</div><div class="label">German translation fallback chain</div></article>
+            <article class="card metric-card"><div class="value">RLS</div><div class="label">fail-closed workspace isolation</div></article>
+          </div>
+
+          <div class="grid-3" style="margin-top: 1.5rem">
+            <article class="card pad"><h3>Naming consistency</h3><p>Collision-proof, database-sequenced creative codes remove ambiguity between scripts, hooks, and image variants.</p></article>
+            <article class="card pad"><h3>Workflow governance</h3><p>A validated state machine with auto-promotion replaces manual status hand-offs between strategists, editors, and launchers.</p></article>
+            <article class="card pad"><h3>Launch traceability</h3><p>Ready creatives auto-create ads, giving a clear line from script → hook/image → launched ad.</p></article>
+            <article class="card pad"><h3>Operational visibility</h3><p>Ops Center surfaces QA, naming, and bottleneck events so issues are caught in-flow, not after.</p></article>
+            <article class="card pad"><h3>AI leverage</h3><p>German translation and 27-field creative analysis remove repetitive manual work from the pipeline.</p></article>
+            <article class="card pad"><h3>Reliability</h3><p>Optimistic locking, a durable automation queue, and an e2e regression suite keep multi-user behavior safe.</p></article>
+          </div>
+
+          <div class="value-block">
+            <h3>Estimated business value</h3>
+            <p>
+              Rescale OS creates operational value by reducing manual coordination, removing naming errors,
+              automating child-task creation, and speeding up translation. Each of these is being measured,
+              and results will be published once validated rather than estimated.
+            </p>
+            <div class="value-rows">
+              <div class="value-row"><span class="value-label">Manual coordination hours saved per week</span><span class="value-input">Being measured</span></div>
+              <div class="value-row"><span class="value-label">Creative throughput change (scripts/hooks per sprint)</span><span class="value-input">Being measured</span></div>
+              <div class="value-row"><span class="value-label">Naming / QA errors avoided per month</span><span class="value-input">Being measured</span></div>
+              <div class="value-row"><span class="value-label">Translation time saved per week</span><span class="value-input">Being measured</span></div>
+              <div class="value-row"><span class="value-label">Estimated monthly operational cost saved</span><span class="value-input">Being measured</span></div>
+            </div>
+            <p class="estimate-note">
+              The product does not capture ad spend or ROAS, so ad-performance results are intentionally
+              not claimed here.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 9. MY ROLE -->
+      <section class="section alt" id="role">
+        <div class="container">
+          <h2 class="section-title">My role</h2>
+          <div class="card role-box">
+            <p>
+              I owned the product thinking, lifecycle design, and implementation direction for Rescale OS. I
+              translated messy creative operations into a concrete data model, a validated state machine,
+              rule-driven automation, an ad launcher, AI-assisted translation/analysis, and a workspace-isolated,
+              production-ready system.
+            </p>
+          </div>
+          <ul class="bullet-list">
+            <li>Defined the end-to-end creative lifecycle and its status state machine</li>
+            <li>Designed parent-child script / hook / image relationships and collision-proof creative codes</li>
+            <li>Specified the auto-promotion rules (children launched → Learning; ads paused → Done)</li>
+            <li>Designed rule-driven child-task generation and the durable automation queue</li>
+            <li>Shaped the Ad Launcher data model (live status, ad category, launcher selection)</li>
+            <li>Defined Ops Center event types and dashboard roll-ups</li>
+            <li>Chose where AI adds leverage (German translation, 27-field creative analysis) and where humans stay in control</li>
+            <li>Set workspace RLS, roles, and fail-closed security requirements</li>
+            <li>Drove production-readiness: e2e regression coverage, optimistic locking, idempotency, security headers</li>
+            <li>Used AI tooling to accelerate implementation, testing, and iteration</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- 10. INTERVIEW STORY -->
+      <section class="section" id="story">
+        <div class="container">
+          <h2 class="section-title">How I explain this in interviews</h2>
+          <div class="accordion">
+            <details open>
+              <summary>A. Product problem</summary>
+              <div class="content"><p>“Rescale had many creative workflows, but they were fragmented. As output grew, people interpreted SOPs differently and the link from a script to the ad that finally launched was hard to trace.”</p></div>
+            </details>
+            <details>
+              <summary>B. Product decision</summary>
+              <div class="content"><p>“I treated creative operations as a lifecycle system, not a list of tasks, defining entities, parent-child relationships, a validated state machine, naming rules, and auto-promotion so the system advanced work, not people.”</p></div>
+            </details>
+            <details>
+              <summary>C. AI decision</summary>
+              <div class="content"><p>AI supports two tasks that were previously manual: German translation with a provider fallback chain, and structured creative analysis from video. People stay in control of decisions.</p></div>
+            </details>
+            <details>
+              <summary>D. Business outcome</summary>
+              <div class="content"><p>“The result was consistent naming, a traceable script-to-ad path, automated child-task creation, and a workspace-isolated system, replacing manual hand-offs with governed workflow.”</p></div>
+            </details>
+            <details>
+              <summary>E. Technical judgment</summary>
+              <div class="content"><p>“The hardest part wasn’t building screens. It was keeping the lifecycle, backend state, RLS, optimistic locking, and a durable automation queue reliable as the workflow grew, which is why it’s covered by an e2e regression suite.”</p></div>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- 11. TECHNICAL BREAKDOWN -->
+      <section class="section alt" id="technical">
+        <div class="container">
+          <h2 class="section-title">Technical breakdown</h2>
+          <div class="grid-3">
+            <article class="card pad"><h3>Data modeling</h3><p>creative_tasks with parent/child links and per-workspace counters, launched_ads, creative_rules, task_automations, idempotency_keys, typed end to end via shared Zod contracts.</p></article>
+            <article class="card pad"><h3>State machine</h3><p>Multi-status creative lifecycle with validated transitions; parent auto-promotion to Learning (children launched) and Done (ads paused).</p></article>
+            <article class="card pad"><h3>Automation queue</h3><p>Durable task_automations queue: PENDING→PROCESSING→DONE/ERROR/DEAD_LETTER, exponential backoff, drained by a 5-minute ops worker.</p></article>
+            <article class="card pad"><h3>State &amp; concurrency</h3><p>React Query + Zustand on the client; optimistic locking via revision tokens (stale edit → 409) on the server.</p></article>
+            <article class="card pad"><h3>Security</h3><p>Workspace RLS (fail-closed), admin/operator roles, Helmet headers, HMAC-secured pagination cursors.</p></article>
+            <article class="card pad"><h3>AI integration</h3><p>Provider fallback chain (Claude → Gemini → LibreTranslate) for translation; Gemini 27-field creative analysis with sync/async jobs.</p></article>
+            <article class="card pad"><h3>Reliability &amp; deploy</h3><p>e2e Playwright regression suite, health checks with DB probe, Docker Compose + Kubernetes manifests.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <!-- 12. CHALLENGES & LESSONS -->
+      <section class="section" id="lessons">
+        <div class="container">
+          <h2 class="section-title">Challenges &amp; lessons</h2>
+          <div class="lesson-grid">
+            <div class="lesson-card">Modeling messy real-world creative workflows as a state machine</div>
+            <div class="lesson-card">Designing auto-promotion without surprising users</div>
+            <div class="lesson-card">Keeping the backend the single source of truth</div>
+            <div class="lesson-card">Handling parent-child lifecycle complexity and sequence integrity</div>
+            <div class="lesson-card">Preventing stale-edit and cache bugs with revision tokens</div>
+            <div class="lesson-card">Enforcing workspace isolation at the database, fail-closed</div>
+            <div class="lesson-card">Making automation durable and retriable, not fire-and-forget</div>
+            <div class="lesson-card">Using AI where it removes grunt work, not for show</div>
+            <div class="lesson-card">Balancing fast shipping with e2e regression safety</div>
+            <div class="lesson-card">Scoping honestly, shipping the lifecycle, not over-promising analytics</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 13. WHY THIS MATTERS -->
+      <section class="section alt" id="why">
+        <div class="container">
+          <h2 class="section-title">Why this project matters</h2>
+          <p class="section-intro">Rescale OS demonstrates that Rajeev can:</p>
+          <ul class="bullet-list">
+            <li>Turn an ambiguous operations problem into a concrete lifecycle system</li>
+            <li>Design data models, state machines, and automation rules</li>
+            <li>Decide where AI adds leverage and where humans stay in control</li>
+            <li>Own backend/frontend/data/security tradeoffs in a real monorepo</li>
+            <li>Ship production workflows with e2e regression coverage, not just prototypes</li>
+            <li>Reason about concurrency, isolation, and reliability</li>
+            <li>Communicate technical complexity in business language</li>
+            <li>Scope honestly and state impact without inflating numbers</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- 14. TARGET ROLE FIT -->
+      <section class="section" id="rolefit">
+        <div class="container">
+          <h2 class="section-title">Target role fit</h2>
+          <div class="grid-2">
+            <article class="card rolefit-card"><h3>AI Product Manager</h3><p>Pragmatic AI integration (translation fallback chain, structured creative analysis), lifecycle design, and human-in-the-loop judgment.</p></article>
+            <article class="card rolefit-card"><h3>Senior Product Manager, AI / Platform</h3><p>Platform thinking: shared contracts, a typed API, multi-view dashboards, workspace isolation, and operating workflows.</p></article>
+            <article class="card rolefit-card"><h3>Technical Product Manager</h3><p>State machine, RLS, optimistic locking, durable automation queue, migrations, and e2e tests, genuine technical depth.</p></article>
+            <article class="card rolefit-card"><h3>AI Automation Lead</h3><p>Rule-driven automation, a retriable queue, a scheduled ops worker, and AI-assisted steps inside a real pipeline.</p></article>
+            <article class="card rolefit-card"><h3>Product Owner</h3><p>Broke a complex workflow into entities, statuses, rules, acceptance criteria, and release-ready, test-covered modules.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <!-- 15. FINAL CTA -->
+      <section class="section contact-cta" id="contact">
+        <div class="container">
+          <div class="card pad contact-card">
+            <h2>Want to discuss how I built Rescale OS?</h2>
+            <p>Open to AI Product, Senior PM, Technical PM, AI Automation, and Product Owner roles.</p>
+            <div class="contact-links">
+              <a class="btn btn-primary" data-contact="email" href="mailto:rajeevkmba2025@gmail.com">Contact Rajeev</a>
+              <a class="btn btn-secondary" href="../index.html">Back to Portfolio</a>
+              <a class="btn btn-secondary" data-contact="linkedin" href="https://www.linkedin.com/in/rajeevkumar9/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+              <a class="btn btn-secondary" data-contact="github" href="https://github.com/rajeevcode" target="_blank" rel="noopener noreferrer">GitHub</a>
+              <a class="btn btn-secondary" data-contact="portfolio" href="https://rajeevcode.github.io/product-portfolio/" target="_blank" rel="noopener noreferrer">Portfolio</a>
+            </div>
+            <div class="role-tags" data-contact="roles" aria-label="Target roles"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container inner">
+        <span>© 2026 Rajeev Kumar. All rights reserved.</span>
+        <span class="footer-links">
+          <a href="../index.html">Portfolio home</a>
+          <a data-contact="email" href="mailto:rajeevkmba2025@gmail.com">Email</a>
+          <a data-contact="linkedin" href="https://www.linkedin.com/in/rajeevkumar9/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a data-contact="github" href="https://github.com/rajeevcode" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://medium.com/@rajeev25" target="_blank" rel="noopener noreferrer">Medium</a>
+          <a data-contact="portfolio" href="https://rajeevcode.github.io/product-portfolio/" target="_blank" rel="noopener noreferrer">Portfolio</a>
+        </span>
+      </div>
+    </footer>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" hidden data-close-lightbox>
+      <button type="button" class="lightbox-close" data-close-lightbox aria-label="Close">×</button>
+      <div class="lightbox-inner">
+        <img id="lightbox-img" src="" alt="" />
+        <div class="lightbox-caption" id="lightbox-caption"></div>
+      </div>
+    </div>
+
+    <script src="assets/site-config.js"></script>
+    <script src="assets/gallery.js"></script>
+    <script src="assets/contact.js"></script>
+    <script src="assets/app.js"></script>
+  </body>
+</html>

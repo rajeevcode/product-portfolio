@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://rajeevcode.github.io/product-portfolio/sitemap.xml

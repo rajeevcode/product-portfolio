@@ -1,0 +1,11 @@
+{
+  "name": "pulsara-portfolio",
+  "version": "1.0.0",
+  "description": "Visual product portfolio case study for Pulsara.",
+  "scripts": {
+    "build": "PORTFOLIO_BASE=/Pulsara-Portfolio/ node build.mjs",
+    "sync-from-pulsara": "rsync -av --delete --exclude node_modules --exclude .auth-state.json ../../rescale-media/Pulsara/Pulsara-Portfolio/ ./ && node scripts/post-sync.mjs"
+  },
+  "license": "ISC",
+  "type": "module"
+}

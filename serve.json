@@ -1,0 +1,23 @@
+{
+  "cleanUrls": false,
+  "directoryListing": false,
+  "rewrites": [
+    { "source": "/", "destination": "/index.html" },
+    { "source": "/Profile-rescale-os", "destination": "/Profile-rescale-os/index.html" },
+    { "source": "/Profile-rescale-os/", "destination": "/Profile-rescale-os/index.html" },
+    { "source": "/Pulsara-Portfolio", "destination": "/Pulsara-Portfolio/index.html" },
+    { "source": "/Pulsara-Portfolio/", "destination": "/Pulsara-Portfolio/index.html" },
+    { "source": "/hafh-kabuk-style", "destination": "/hafh-kabuk-style/index.html" },
+    { "source": "/hafh-kabuk-style/", "destination": "/hafh-kabuk-style/index.html" },
+    { "source": "/mumzworld-tamer-group", "destination": "/mumzworld-tamer-group/index.html" },
+    { "source": "/mumzworld-tamer-group/", "destination": "/mumzworld-tamer-group/index.html" },
+    { "source": "/jumia-marketplace-ops", "destination": "/jumia-marketplace-ops/index.html" },
+    { "source": "/jumia-marketplace-ops/", "destination": "/jumia-marketplace-ops/index.html" },
+    { "source": "/lazada-alibaba-growth", "destination": "/lazada-alibaba-growth/index.html" },
+    { "source": "/lazada-alibaba-growth/", "destination": "/lazada-alibaba-growth/index.html" },
+    { "source": "/education-mba", "destination": "/education-mba/index.html" },
+    { "source": "/education-mba/", "destination": "/education-mba/index.html" },
+    { "source": "/rescale-operator/creative-marketing-agents", "destination": "/rescale-operator/creative-marketing-agents/index.html" },
+    { "source": "/rescale-operator/creative-marketing-agents/", "destination": "/rescale-operator/creative-marketing-agents/index.html" }
+  ]
+}
