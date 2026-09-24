@@ -8,10 +8,8 @@ window.SITE = {
   roles: [
     "AI Product Manager",
     "Technical Product Manager",
-    "AI Automation Engineer",
     "AI Operations Lead",
     "Digital Transformation",
-    "AI Engineer",
     "Strategy",
   ],
 };

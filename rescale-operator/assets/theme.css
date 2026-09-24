@@ -169,6 +169,9 @@ img { max-width: 100%; }
   font-weight: 500;
   margin: 18px 0 0;
 }
+/* homepage hero: primary role above a quieter specialization line */
+.hero-subtitle .hero-role { display: block; font-size: 1.2rem; font-weight: 600; }
+.hero-subtitle .hero-focus { display: block; margin-top: 6px; font-size: 0.98rem; color: var(--dark-soft); }
 
 /* hero with a small profile photo card on the right (desktop) */
 .hero-grid {
