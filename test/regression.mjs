@@ -144,7 +144,9 @@ function refs(html) {
 }
 
 function publicFiles(dir = ROOT) {
-  const ignored = new Set([".git", "node_modules", ".cache", "dist", "build", "tmp", ".tmp"]);
+  // Design-tool source folders are gitignored and never deploy.
+  const ignored = new Set([".git", "node_modules", ".cache", "dist", "build", "tmp", ".tmp",
+    "Portfolio CV Design", "Product portfolio homepage build"]);
   return readdirSync(dir, { withFileTypes: true }).flatMap((entry) => {
     if (ignored.has(entry.name) || entry.name.startsWith(".")) return [];
     const path = join(dir, entry.name);
@@ -239,8 +241,8 @@ function checkEmploymentFacts() {
   section("5c. Verified employment titles and dates remain attached to the correct company");
   const hub = readPage("index.html");
   const work = hub.slice(hub.indexOf('id="work"'), hub.indexOf('id="education"'));
-  const cards = [...work.matchAll(/<(a|article)\b[^>]*class="card featured-case[^>]*>([\s\S]*?)<\/\1>/g)]
-    .map((match) => match[2]);
+  const cards = [...work.matchAll(/<article\b[^>]*class="exp-card[^>]*>([\s\S]*?)<\/article>/g)]
+    .map((match) => match[1]);
   const facts = [
     ["Rescale Media", "Senior AI Product Manager, Platform &amp; Agent Systems", "Jan 2026 - Present"],
     ["HafH", "Senior Product &amp; Strategy Manager (Consultant)", "Sep 2023 - Sep 2024"],
@@ -254,7 +256,9 @@ function checkEmploymentFacts() {
     const card = cards.find((markup) => new RegExp(`<h3>[^<]*${company}`).test(markup));
     check(Boolean(card) && expected.every((value) => card.includes(value)), `employment facts mismatch for ${company}`);
   }
-  check(hub.includes("Senior Product Owner · Sep 2019 - Oct 2020"), "Jumia homepage formal title must remain Senior Product Owner");
+  const jumiaCard = cards.find((markup) => markup.includes("<h3>Jumia Group</h3>")) || "";
+  check(/<p class="exp-title">Senior Product Owner<\/p>/.test(jumiaCard) && jumiaCard.includes("Sep 2019 - Oct 2020"),
+    "Jumia homepage formal title must remain Senior Product Owner");
   const jumia = readPage("jumia-marketplace-ops/index.html");
   check(jumia.includes("<dt>Role</dt><dd>Senior Product Owner</dd>"), "Jumia case-study formal title must remain Senior Product Owner");
   const alt = hub.match(/alt="(Hand-drawn career journey[^"]+)"/)?.[1] || "";

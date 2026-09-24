@@ -31,53 +31,73 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="rescale-operator/assets/theme.css" />
+    <link rel="stylesheet" href="assets/home.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Rajeev Kumar",
+        "jobTitle": "Senior AI Product Manager",
+        "url": "https://rajeevcode.github.io/product-portfolio/",
+        "image": "https://rajeevcode.github.io/product-portfolio/assets/rajeev-kumar-profile.png",
+        "sameAs": ["https://www.linkedin.com/in/rajeevkumar9/", "https://github.com/rajeevcode", "https://medium.com/@rajeev25"],
+        "alumniOf": "Porto Business School"
+      }
+    </script>
   </head>
-  <body>
-    <header class="site-header">
-      <div class="container inner">
-        <a class="brand" href="index.html">Rajeev <span>Kumar</span></a>
-        <nav class="nav nav-compact" aria-label="Primary">
+  <body class="home">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="top" data-menu>
+      <div class="wrap top-inner">
+        <a class="wordmark" href="index.html"><span class="dot" aria-hidden="true"></span>Rajeev Kumar</a>
+        <nav class="top-nav" aria-label="Primary">
+          <a href="#featured">Work</a>
+          <a href="#work">Experience</a>
           <a href="#journey">Journey</a>
-          <a href="#featured">AI systems</a>
-          <a href="#work">Work experience</a>
+          <a href="#impact">Impact</a>
           <a href="#education">MBA</a>
-          <a href="#modules">Modules</a>
           <a href="#skills">Skills</a>
-          <a href="#contact" class="nav-contact">Contact</a>
+          <a class="top-contact" href="#contact">Contact</a>
         </nav>
+        <button class="menu-btn" type="button" aria-expanded="false" aria-controls="mobile-nav" data-menu-toggle>Menu</button>
       </div>
+      <nav class="sheet" id="mobile-nav" aria-label="Mobile" hidden>
+        <a href="#featured">Work</a>
+        <a href="#work">Experience</a>
+        <a href="#journey">Journey</a>
+        <a href="#impact">Impact</a>
+        <a href="#education">MBA</a>
+        <a href="#skills">Skills</a>
+        <a class="sheet-contact" href="#contact">Contact</a>
+      </nav>
     </header>
 
-    <main>
-      <section class="hero">
-        <div class="container hero-grid">
-          <div class="hero-main">
-            <p class="eyebrow">AI Product · Platforms · Fintech</p>
-            <h1>Rajeev Kumar</h1>
-            <p class="hero-subtitle">
-              <span class="hero-role">Senior AI Product Manager</span>
-              <span class="hero-focus">Marketplace · Payments · Automation · API&nbsp;Products</span>
-            </p>
-            <p class="lead">
+    <main id="main">
+      <section class="intro" aria-labelledby="hero-h">
+        <div class="wrap intro-grid">
+          <div class="intro-main">
+            <p class="kicker kicker-line">AI Product · Platforms · Fintech</p>
+            <h1 id="hero-h">Rajeev Kumar</h1>
+            <p class="intro-role">Senior AI Product Manager</p>
+            <p class="intro-focus">Marketplace · Payments · Automation · API&nbsp;Products</p>
+            <p class="intro-lead">
               I build and scale AI-powered products, platforms, marketplaces, and payment systems. My
               work connects product strategy, technical delivery, data, and automation to measurable
               business outcomes.
             </p>
-            <div class="hero-actions">
-              <a class="btn btn-primary" href="#featured">Explore AI Products &amp; Systems</a>
-              <a class="btn btn-secondary" href="#work">View Work Experience</a>
-              <a class="btn btn-secondary" href="#education">View MBA Portfolio</a>
-              <a class="btn btn-secondary" href="#contact">Contact Rajeev</a>
+            <div class="intro-actions">
+              <a class="pill pill-primary" href="#featured">Explore AI Products &amp; Systems</a>
+              <a class="pill pill-ghost" href="#work">View Work Experience</a>
+              <a class="pill pill-ghost" href="#education">View MBA Portfolio</a>
+              <a class="pill pill-ghost" href="#contact">Contact Rajeev</a>
             </div>
           </div>
-          <aside class="profile-card">
-            <img class="profile-photo" src="assets/rajeev-kumar-profile.png" alt="Rajeev Kumar — Senior AI Product Manager" loading="lazy"
-                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
-            <div class="profile-photo-fallback" style="display:none">Profile photo coming soon</div>
+          <aside class="profile" aria-label="Profile">
+            <img class="profile-img" src="assets/rajeev-kumar-profile.png" alt="Rajeev Kumar — Senior AI Product Manager" width="272" height="272" />
             <div class="profile-name">Rajeev Kumar</div>
-            <div class="role-tags" style="justify-content:center">
-              <span class="role-tag">AI Product</span>
-              <span class="role-tag">Product Strategy</span>
+            <div class="profile-chips">
+              <span>AI Product</span>
+              <span>Product Strategy</span>
             </div>
             <div class="profile-links">
               <a data-contact="email" href="mailto:rajeevkmba2025@gmail.com">Email</a>
@@ -87,405 +107,392 @@
             </div>
           </aside>
         </div>
+        <div class="proof">
+          <ul class="wrap proof-list" aria-label="Selected outcomes">
+            <li><strong>$2.1M ARR</strong><span>Year 1 · <em>Mumzworld</em></span></li>
+            <li><strong>10K to 200K+</strong><span>Properties · <em>HafH</em></span></li>
+            <li><strong>18%</strong><span>Transaction success lift · <em>Lazada</em></span></li>
+            <li><strong>70%</strong><span>Noise reduction · <em>Pulsara</em></span></li>
+          </ul>
+        </div>
       </section>
 
-      <section class="section" id="journey">
-        <style>
-          .journey-card { padding: 20px; }
-          .journey-card a { display: block; border-radius: 12px; overflow: hidden; }
-          .journey-doodle { display: block; width: 100%; height: auto; border-radius: 12px; transition: transform 200ms ease, box-shadow 200ms ease; }
-          .journey-card a:hover .journey-doodle,
-          .journey-card a:focus-visible .journey-doodle { transform: scale(1.005); box-shadow: 0 12px 40px -18px rgba(0,0,0,0.35); }
-          .journey-caption { margin: 14px 4px 2px; color: var(--muted, #6b7280); font-size: 0.9rem; }
-        </style>
-        <div class="container">
-          <div class="section-head">
-            <span class="section-num">·</span>
-            <h2 class="section-title">Career at a glance</h2>
+      <section class="band" id="featured" aria-labelledby="featured-h">
+        <div class="wrap">
+          <div class="band-head band-head-split">
+            <div>
+              <p class="kicker">01 · Featured AI systems</p>
+              <h2 id="featured-h">Three products, told as problem, decision, outcome</h2>
+            </div>
+            <nav class="jump" aria-label="Flagship stories">
+              <a href="#story-pulsara">Pulsara</a>
+              <a href="#story-rescale">Rescale OS</a>
+              <a href="#story-mumzworld">Mumzworld / Tamer Group</a>
+            </nav>
           </div>
-          <p class="section-intro">A hand-drawn one-page journey: contact details, a timeline from 2011 to today, career foundation, and verified impact. Click the image to open it full size.</p>
-          <div class="card pad journey-card">
+
+          <div class="stories">
+            <article class="story" id="story-pulsara">
+              <div class="story-body">
+                <header class="story-meta">
+                  <div class="story-tagline"><span class="story-num">01</span><span class="badge">Production AI system</span></div>
+                  <h3>Pulsara</h3>
+                  <p class="story-sub">AI Innovation Signal Intelligence System</p>
+                  <p class="mono">Senior AI Product Manager, Platform &amp; Agent Systems · Rescale Media LLC<br />Jan 2026 - Present</p>
+                  <p class="mono">Live demo and case study available</p>
+                  <a class="pill pill-dark" href="Pulsara-Portfolio/index.html">View Pulsara case study →</a>
+                </header>
+                <div class="story-detail">
+                  <dl class="pds">
+                    <div><dt>Problem</dt><dd>The problem is not lack of information. The problem is knowing which signals matter and which should influence roadmap decisions.</dd></div>
+                    <div><dt>Decision</dt><dd>I designed Pulsara as an AI signal intelligence layer that connects external innovation signals with internal product and business decision-making, with $1/day AI budget guardrails and a review step before action.</dd></div>
+                    <div><dt>Shipped</dt><dd>Pulsara ingests external and internal signals, filters noise, detects patterns, prioritizes opportunities, and converts important innovation signals into roadmap inputs, experiments, alerts, and team actions.</dd></div>
+                  </dl>
+                  <ul class="outcomes">
+                    <li><strong>2,000+/day</strong><span>Signals processed</span></li>
+                    <li><strong>70%</strong><span>Noise reduction</span></li>
+                    <li><strong>16</strong><span>Dashboard surfaces</span></li>
+                  </ul>
+                </div>
+              </div>
+              <a class="story-shot" href="Pulsara-Portfolio/index.html" aria-label="Open the Pulsara case study">
+                <img src="Pulsara-Portfolio/assets/screenshots/01-executive-overview.png" alt="Pulsara Executive Overview dashboard: signal volume, opportunity themes, competitor moves, urgent alerts and roadmap impact" loading="lazy" />
+              </a>
+            </article>
+
+            <article class="story" id="story-rescale">
+              <div class="story-body">
+                <header class="story-meta">
+                  <div class="story-tagline"><span class="story-num">02</span><span class="badge">AI product case study</span></div>
+                  <h3>Rescale OS</h3>
+                  <p class="story-sub">AI Creative &amp; Campaign Operations Platform</p>
+                  <p class="mono">Senior AI Product Manager, Platform &amp; Agent Systems · Rescale Media LLC<br />Jan 2026 - Present</p>
+                  <p class="mono">Internal platform · Case study available</p>
+                  <a class="pill pill-dark" href="Profile-rescale-os/index.html">View Rescale OS case study →</a>
+                </header>
+                <div class="story-detail">
+                  <dl class="pds">
+                    <div><dt>Problem</dt><dd>As creative output grew, production tracking, naming, hand-offs, and ad launches became inconsistent. The core issue was a lack of shared workflow visibility across creative production, review, and launch.</dd></div>
+                    <div><dt>Decision</dt><dd>Chose where AI adds leverage (German translation, 27-field creative analysis) and where humans stay in control. Specified the auto-promotion rules (children launched → Learning; ads paused → Done).</dd></div>
+                    <div><dt>Shipped</dt><dd>Rescale OS models creative work as a lifecycle, not a list of tasks, from concept and script, through rule-generated hook/image child tasks and editing, to launch readiness and the ad launcher.</dd></div>
+                  </dl>
+                  <ul class="outcomes">
+                    <li><strong>22+</strong><span>Lifecycle statuses in the creative state machine</span></li>
+                    <li><strong>27</strong><span>Structured signals from Gemini creative analysis</span></li>
+                    <li><strong>RLS</strong><span>Fail-closed workspace isolation</span></li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+
+            <article class="story" id="story-mumzworld">
+              <div class="story-body">
+                <header class="story-meta">
+                  <div class="story-tagline"><span class="story-num">03</span><span class="badge">B2B commerce &amp; payments</span></div>
+                  <h3>Mumzworld / Tamer Group</h3>
+                  <p class="story-sub">B2B Commerce, Payments &amp; Automation Platform</p>
+                  <p class="mono">Senior Manager, Product Strategy · Dubai, UAE / GCC<br />Sep 2021 - Aug 2023</p>
+                  <p class="mono">Confidential · public URL unavailable</p>
+                  <a class="pill pill-dark" href="mumzworld-tamer-group/index.html">Read full case study →</a>
+                </header>
+                <div class="story-detail">
+                  <dl class="pds">
+                    <div><dt>Problem</dt><dd>Mumzworld/Tamer needed a scalable B2B platform that could connect partner onboarding, payments, approvals, finance workflows, reconciliation, ERP/CRM data, and operating dashboards. The business challenge was reducing manual work while creating better visibility, governance, and partner workflows.</dd></div>
+                    <div><dt>Decision</dt><dd>Shipping a platform meant ruthless sequencing of integrations, payments, and governance against business value.</dd></div>
+                    <div><dt>Shipped</dt><dd>A 0-to-1 B2B SaaS commerce and payments platform across partner onboarding, ERP/CRM integrations, payment workflows, finance automation, reconciliation, dashboards, and governance in the GCC.</dd></div>
+                  </dl>
+                  <ul class="outcomes">
+                    <li><strong>$2.1M</strong><span>ARR in Year 1</span></li>
+                    <li><strong>60%</strong><span>Operating cost reduction</span></li>
+                    <li><strong>T+5 to T+1</strong><span>Processing time</span></li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="band band-tight" id="modules" aria-labelledby="modules-h">
+        <div class="wrap">
+          <p class="kicker">02 · Also shipped</p>
+          <h2 id="modules-h">Creative Marketing Agents / Rescale Operator</h2>
+          <p class="band-intro">
+            AI Automation OS for Creative &amp; Campaign Operations. Production modules, with API integrations to
+            Meta, ClickUp, Google Sheets and Discord and a review step before actions.
+            <a href="rescale-operator/creative-marketing-agents/index.html">View case study →</a>
+          </p>
+          <div class="modules">
+            <a class="module" href="rescale-operator/winner-notifier/index.html"><span class="module-head"><h3>Winner Notifier</h3><span class="badge">Shipped</span></span><p>Daily ad classification: winner, emerging, loser</p></a>
+            <a class="module" href="rescale-operator/daily-checkpoint/index.html"><span class="module-head"><h3>Daily Checkpoint</h3><span class="badge">Shipped</span></span><p>5 morning checks to an action queue</p></a>
+            <a class="module" href="rescale-operator/diagnostic-engine/index.html"><span class="module-head"><h3>Diagnostic Engine</h3><span class="badge">Shipped</span></span><p>4 diagnostics plus Opus synthesis</p></a>
+            <a class="module" href="rescale-operator/naming-convention-qa/index.html"><span class="module-head"><h3>Naming QA</h3><span class="badge">Shipped</span></span><p>N3 naming health center</p></a>
+            <a class="module" href="rescale-operator/agent-memory/index.html"><span class="module-head"><h3>Agent Memory</h3><span class="badge">Shipped</span></span><p>Supermemory vector RAG and Ask Operator</p></a>
+            <a class="module" href="rescale-operator/weekly-cro/index.html"><span class="module-head"><h3>Weekly CRO</h3><span class="badge">Shipped</span></span><p>Profit Engineering workflow</p></a>
+            <a class="module" href="rescale-operator/document-intelligence/index.html"><span class="module-head"><h3>Document Intelligence</h3><span class="badge badge-neutral">Pattern</span></span><p>OCR, LLM, and review step</p></a>
+          </div>
+        </div>
+      </section>
+
+      <section class="band band-alt" id="work" aria-labelledby="work-h">
+        <div class="wrap">
+          <p class="kicker">03 · Work experience</p>
+          <h2 id="work-h">Where the outcomes came from</h2>
+          <ol class="timeline">
+            <li>
+              <article class="exp-card">
+                <div>
+                  <p class="mono">Jan 2026 - Present</p>
+                  <h3>Rescale Media LLC</h3>
+                  <p class="exp-title">Senior AI Product Manager, Platform &amp; Agent Systems</p>
+                </div>
+                <div class="exp-right">
+                  <p class="exp-focus">AI Creative &amp; Campaign Operations: Rescale OS, Creative Marketing Agents, Pulsara</p>
+                  <div class="chips"><span>2 to 3x creative throughput</span><span>40% coordination reduction</span></div>
+                  <div class="exp-foot"><a href="Profile-rescale-os/index.html">View case study →</a><span class="mono">Internal platform. Case study available.</span></div>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class="exp-card">
+                <div>
+                  <p class="mono">Sep 2023 - Sep 2024</p>
+                  <h3>HafH / KabuK Style Inc.</h3>
+                  <p class="exp-title">Senior Product &amp; Strategy Manager (Consultant)</p>
+                </div>
+                <div class="exp-right">
+                  <p class="exp-focus">AI Pricing &amp; Travel Platform Growth</p>
+                  <div class="chips"><span>10K to 200K+ properties</span><span>65+ countries</span><span>~25% pricing accuracy improvement</span></div>
+                  <div class="exp-foot"><a href="hafh-kabuk-style/index.html">View case study →</a><span class="mono">Internal product and confidential. Public URL unavailable.</span></div>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class="exp-card">
+                <div>
+                  <p class="mono">Sep 2021 - Aug 2023</p>
+                  <h3>Mumzworld / Tamer Group</h3>
+                  <p class="exp-title">Senior Manager, Product Strategy</p>
+                </div>
+                <div class="exp-right">
+                  <p class="exp-focus">B2B Commerce, Payments &amp; Automation Platform</p>
+                  <div class="chips"><span>$2.1M ARR</span><span>60% operating cost reduction</span><span>T+5 to T+1 processing</span></div>
+                  <div class="exp-foot"><a href="mumzworld-tamer-group/index.html">View case study →</a><span class="mono">Internal product and confidential. Public URL unavailable.</span></div>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class="exp-card">
+                <div>
+                  <p class="mono">Mar 2021 - Jul 2021</p>
+                  <h3>foodspring / Mars Group</h3>
+                  <p class="exp-title">Senior Product &amp; Growth Strategy Manager</p>
+                </div>
+                <div class="exp-right">
+                  <p class="exp-focus">Multi-market Platform Migration &amp; Digital Transformation</p>
+                  <div class="chips"><span>6 EU markets</span><span>99.9% uptime on a $62M revenue base</span><span>25 to 30% faster release cycles</span></div>
+                  <div class="exp-foot"><span class="mono">Internal platform migration. Public URL unavailable.</span></div>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class="exp-card">
+                <div>
+                  <p class="mono">Sep 2019 - Oct 2020</p>
+                  <h3>Jumia Group</h3>
+                  <p class="exp-title">Senior Product Owner</p>
+                </div>
+                <div class="exp-right">
+                  <p class="exp-focus">Marketplace Data Operations &amp; Customer Workflow Automation</p>
+                  <div class="chips"><span>11 markets</span><span>$185K monthly savings</span><span>60% support workload reduction</span></div>
+                  <div class="exp-foot"><a href="jumia-marketplace-ops/index.html">View case study →</a><span class="mono">Internal product and confidential. Public URL unavailable.</span></div>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class="exp-card">
+                <div>
+                  <p class="mono">Sep 2017 - Sep 2019</p>
+                  <h3>Lazada / Alibaba Group</h3>
+                  <p class="exp-title">Technical Product Manager (Sep 2018 - Sep 2019) · QA Automation Engineer (Sep 2017 - Sep 2018)</p>
+                </div>
+                <div class="exp-right">
+                  <p class="exp-focus">Marketplace Payments, Checkout &amp; Growth Platform</p>
+                  <div class="chips"><span>7 APAC markets</span><span>18% transaction success improvement</span><span>5.3% to 12.2% conversion</span></div>
+                  <div class="exp-foot"><a href="lazada-alibaba-growth/index.html">View case study →</a><span class="mono">Internal product and confidential. Public URL unavailable.</span></div>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class="exp-card">
+                <div>
+                  <p class="mono">2015 - 2016</p>
+                  <h3>AJIO / Reliance Retail and earlier roles</h3>
+                  <p class="exp-title">Ecommerce Tech Manager</p>
+                  <p class="exp-earlier">Earlier: QA Lead, Just Eat (2014 - 2015) · Test Engineer, Indium Software (2013 - 2014) · QA Engineer I, Zynga (2011 - 2013)</p>
+                </div>
+                <div class="exp-right">
+                  <p class="exp-focus">E-commerce, OMS, QA Governance &amp; Systems Integration</p>
+                  <div class="exp-foot"><span class="mono">Internal e-commerce and QA work. Public URL unavailable.</span></div>
+                </div>
+              </article>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="band band-alt band-flush" id="journey" aria-labelledby="journey-h">
+        <div class="wrap">
+          <p class="kicker">Journey</p>
+          <h2 id="journey-h">Career at a glance</h2>
+          <p class="band-intro">A hand-drawn one-page journey: contact details, a timeline from 2011 to today, career foundation, and verified impact. Click the image to open it full size.</p>
+          <div class="doodle">
             <a href="rescale-operator/assets/career-journey-doodle.png" target="_blank" rel="noopener noreferrer" aria-label="Open the full-size career journey doodle in a new tab">
               <img
-                class="journey-doodle"
                 src="rescale-operator/assets/career-journey-doodle.png"
                 alt="Hand-drawn career journey for Rajeev Kumar, 13+ years experience: a timeline from 2011 to today covering Zynga, Indium Software, Just Eat, AJIO / Reliance, Lazada / Alibaba Group, Jumia Group, foodspring, Mumzworld.com, HafH / KabuK Style Inc., and Rescale Media, plus career foundation skills and verified impact at Rescale: 2,000+ daily signals and ~70% noise reduction."
                 loading="lazy"
               />
             </a>
-            <p class="journey-caption">One-page visual summary of the same career detailed section-by-section below.</p>
+            <p class="doodle-caption">One-page visual summary of the same career detailed section-by-section above.</p>
           </div>
         </div>
       </section>
 
-      <section class="section alt" id="profile">
-        <div class="container">
-          <div class="section-head">
-            <span class="section-num">·</span>
-            <h2 class="section-title">How I create impact</h2>
-          </div>
-          <div class="grid-3 impact-grid">
-            <article class="card pad">
-              <div class="capability-icon">PM</div>
+      <section class="band band-dark" id="impact" aria-labelledby="impact-h">
+        <div class="wrap">
+          <p class="kicker">04 · Impact</p>
+          <h2 id="impact-h">Business impact</h2>
+          <p class="band-intro">Each metric is shown with the company it came from.</p>
+          <ul class="impact">
+            <li><strong>2,000+/day</strong><span>Signals processed</span><em>Pulsara</em></li>
+            <li><strong>70%</strong><span>Noise reduction</span><em>Pulsara</em></li>
+            <li><strong>2 to 3x</strong><span>Creative throughput</span><em>Rescale</em></li>
+            <li><strong>40%</strong><span>Coordination reduction</span><em>Rescale</em></li>
+            <li><strong>10K to 200K+</strong><span>Properties</span><em>HafH</em></li>
+            <li><strong>65+</strong><span>Countries</span><em>HafH</em></li>
+            <li><strong>$2.1M</strong><span>ARR in Year 1</span><em>Mumzworld</em></li>
+            <li><strong>60%</strong><span>Operating cost reduction</span><em>Mumzworld</em></li>
+            <li><strong>T+5 to T+1</strong><span>Processing time</span><em>Mumzworld</em></li>
+            <li><strong>$185K</strong><span>Monthly savings</span><em>Jumia</em></li>
+            <li><strong>18%</strong><span>Transaction success lift</span><em>Lazada</em></li>
+            <li><strong>5.3 to 12.2%</strong><span>Conversion</span><em>Lazada</em></li>
+            <li><strong>$5M+</strong><span>NMV contribution</span><em>Lazada</em></li>
+            <li><strong>17/20</strong><span>MBA final grade</span><em>Porto Business School</em></li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="band" id="capabilities" aria-labelledby="capabilities-h">
+        <div class="wrap">
+          <p class="kicker">05 · Capabilities</p>
+          <h2 id="capabilities-h">How I create impact</h2>
+          <div class="caps">
+            <article class="cap">
+              <div class="cap-icon" aria-hidden="true">PM</div>
               <h3>Product Management</h3>
               <p>Turning customer and business problems into product strategy, roadmaps and shipped outcomes across AI, platforms, payments and marketplaces.</p>
             </article>
-            <article class="card pad">
-              <div class="capability-icon">AI</div>
+            <article class="cap">
+              <div class="cap-icon" aria-hidden="true">AI</div>
               <h3>AI Products &amp; Systems</h3>
               <p>Building AI products hands-on across agents, LLM workflows, RAG, APIs and automation, with human review, observability and cost guardrails.</p>
             </article>
-            <article class="card pad">
-              <div class="capability-icon">DX</div>
+            <article class="cap">
+              <div class="cap-icon" aria-hidden="true">DX</div>
               <h3>Digital Transformation &amp; Delivery</h3>
               <p>Leading complex transformation from fragmented processes and legacy systems to scalable platforms, coordinating cross-functional teams, dependencies and delivery.</p>
             </article>
-            <article class="card pad">
-              <div class="capability-icon">CS</div>
+            <article class="cap">
+              <div class="cap-icon" aria-hidden="true">CS</div>
               <h3>Strategy &amp; Consulting</h3>
               <p>Connecting market, customer and competitive insight to product, commercialization and investment decisions, backed by international operating experience and an MBA.</p>
             </article>
           </div>
+          <ul class="domains" aria-label="Domains">
+            <li>B2B &amp; B2C Products</li>
+            <li>AI &amp; Automation</li>
+            <li>Platforms &amp; APIs</li>
+            <li>Fintech &amp; Payments</li>
+            <li>Marketplace &amp; E-commerce</li>
+          </ul>
         </div>
       </section>
 
-      <section class="section" id="featured">
-        <div class="container">
-          <div class="section-head">
-            <span class="section-num">01</span>
-            <h2 class="section-title">Featured AI systems</h2>
-          </div>
-
-          <div class="featured-row">
-            <a class="card featured-case" href="Profile-rescale-os/index.html">
-              <span class="tag">AI product case study</span>
-              <h3>Rescale OS</h3>
-              <p class="cv-meta">Senior AI Product Manager, Platform &amp; Agent Systems · Rescale Media LLC · Jan 2026 - Present</p>
-              <p class="featured-subtitle">AI Creative &amp; Campaign Operations Platform</p>
-              <p>
-                A creative task and ad-lifecycle operating system: a parent/child creative state machine,
-                auto-promotion rules, an ad launcher, workspace row-level security, and AI-assisted German
-                translation and creative analysis across a TypeScript monorepo.
-              </p>
-              <ul class="featured-highlights">
-                <li>Creative lifecycle state machine, parent/child tasks</li>
-                <li>Auto-promotion rules and ad launcher</li>
-                <li>Workspace RLS, AI-assisted translation and creative analysis</li>
-              </ul>
-              <p class="visibility-meta">Project visibility: Internal platform. Case study available.</p>
-              <span class="featured-link">View Rescale OS case study →</span>
-            </a>
-
-            <a class="card featured-case" href="rescale-operator/creative-marketing-agents/index.html">
-              <span class="tag">Shipped platform</span>
-              <h3>Creative Marketing Agents <span class="title-sep">/</span> Rescale Operator</h3>
-              <p class="cv-meta">Senior AI Product Manager, Platform &amp; Agent Systems · Rescale Media LLC · Jan 2026 - Present</p>
-              <p class="featured-subtitle">AI Automation OS for Creative &amp; Campaign Operations</p>
-              <p>
-                An operating system for campaign intelligence, creative signals, naming QA, winner
-                detection, launch readiness, and daily decision workflows. It combines AI agents,
-                rules-based QA, dashboards, and a review step before actions are taken.
-              </p>
-              <ul class="featured-highlights">
-                <li>Full dark dashboard, scroll video and full-page screenshot</li>
-                <li>Winner notifier, daily ad classification at scale</li>
-                <li>Creative intelligence, angle ranking, explore and expand, concept agents</li>
-                <li>API integrations: Meta, ClickUp, Google Sheets, Discord</li>
-              </ul>
-              <p class="visibility-meta">Project visibility: Internal platform. Case study available.</p>
-              <span class="featured-link">Read full case study →</span>
-            </a>
-
-            <a class="card featured-case accent" href="Pulsara-Portfolio/index.html">
-              <span class="tag">Production AI system</span>
-              <h3>Pulsara</h3>
-              <p class="cv-meta">Senior AI Product Manager, Platform &amp; Agent Systems · Rescale Media LLC · Jan 2026 - Present</p>
-              <p class="featured-subtitle">AI Innovation Signal Intelligence System</p>
-              <p>
-                A signal intelligence layer that ingests competitor, market, customer, and campaign
-                signals, filters noise, detects patterns, scores opportunities, and turns insights into
-                roadmap inputs, experiments, alerts, and team actions.
-              </p>
-              <ul class="featured-highlights">
-                <li>2,000+ signals/day · 70% noise reduction</li>
-                <li>16 dashboard surfaces, screenshots and video library</li>
-                <li>AI Brief, Creative Intel, Innovation memory, Recommendations</li>
-                <li>$1/day AI budget guardrails with a review step</li>
-              </ul>
-              <p class="visibility-meta">Project visibility: Live demo and case study available.</p>
-              <span class="featured-link">View Pulsara portfolio →</span>
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <section class="section alt" id="work">
-        <div class="container">
-          <div class="section-head">
-            <span class="section-num">02</span>
-            <h2 class="section-title">Work experience</h2>
-          </div>
-          <p class="section-intro">Product roles across AI automation, travel, B2B commerce, marketplace operations, and payments, newest first. Each page separates public company references from internal, confidential product work.</p>
-
-          <div class="featured-row">
-            <a class="card featured-case" href="Profile-rescale-os/index.html">
-              <span class="tag">Current role</span>
-              <h3>Rescale Media LLC</h3>
-              <p class="cv-meta">Senior AI Product Manager, Platform &amp; Agent Systems · Jan 2026 - Present</p>
-              <p class="featured-subtitle">AI Creative &amp; Campaign Operations</p>
-              <p>
-                Building Rescale OS and Creative Marketing Agents: a creative lifecycle and ad-launch
-                operating system plus an AI automation layer for campaign QA, creative intelligence,
-                winner detection, and daily decision workflows.
-              </p>
-              <p class="card-metrics"><strong>Highlights:</strong> Rescale OS, Creative Marketing Agents, Pulsara (see Featured AI systems above).</p>
-              <p class="visibility-meta">Project visibility: Internal platform. Case study available.</p>
-              <span class="featured-link">View Rescale OS case study →</span>
-            </a>
-
-            <a class="card featured-case accent" href="hafh-kabuk-style/index.html">
-              <span class="tag">Travel fintech and platform growth</span>
-              <h3>HafH <span class="title-sep">/</span> KabuK Style Inc.</h3>
-              <p class="cv-meta">Senior Product &amp; Strategy Manager (Consultant) · Sep 2023 - Sep 2024</p>
-              <p class="featured-subtitle">AI Pricing &amp; Travel Platform Growth</p>
-              <p>
-                Scaling a subscription travel platform through partner API integrations, supply expansion,
-                booking reliability, onboarding workflows, regional analytics, and ML-assisted pricing across APAC and EMEA.
-              </p>
-              <p class="card-metrics"><strong>Metrics:</strong> 10K to 200K+ properties, 65+ countries, ~25% pricing accuracy improvement.</p>
-              <p class="visibility-meta">Project visibility: Internal product and confidential. Public URL unavailable.</p>
-              <span class="featured-link">View case study →</span>
-            </a>
-
-            <a class="card featured-case accent" href="mumzworld-tamer-group/index.html">
-              <span class="tag">B2B commerce platform</span>
-              <h3>Mumzworld <span class="title-sep">/</span> Tamer Group</h3>
-              <p class="cv-meta">Senior Manager, Product Strategy · Sep 2021 - Aug 2023</p>
-              <p class="featured-subtitle">B2B Commerce, Payments &amp; Automation Platform</p>
-              <p>
-                A 0-to-1 B2B SaaS commerce and payments platform across partner onboarding, ERP/CRM integrations,
-                payment workflows, finance automation, reconciliation, dashboards, and governance in the GCC.
-              </p>
-              <p class="card-metrics"><strong>Metrics:</strong> $2.1M ARR, 60% operating cost reduction, T plus 5 to T plus 1 processing.</p>
-              <p class="visibility-meta">Project visibility: Internal product and confidential. Public URL unavailable.</p>
-              <span class="featured-link">View case study →</span>
-            </a>
-
-            <article class="card featured-case">
-              <span class="tag">Platform migration</span>
-              <h3>foodspring <span class="title-sep">/</span> Mars Group</h3>
-              <p class="cv-meta">Senior Product &amp; Growth Strategy Manager · Remote / Germany · Mar 2021 - Jul 2021</p>
-              <p class="featured-subtitle">Multi-market Platform Migration &amp; Digital Transformation</p>
-              <p>
-                Multi-market platform migration across 6 EU markets, leading digital transformation work
-                on a high-revenue consumer platform.
-              </p>
-              <p class="card-metrics"><strong>Metrics:</strong> maintained 99.9% uptime on a $62M revenue base, compressed release cycles by 25 to 30%.</p>
-              <p class="visibility-meta">Project visibility: Internal platform migration and digital transformation work. Public URL unavailable.</p>
-              <span class="featured-link">Detailed portfolio page to be added.</span>
-            </article>
-
-            <a class="card featured-case accent" href="jumia-marketplace-ops/index.html">
-              <span class="tag">Marketplace data operations</span>
-              <h3>Jumia Group</h3>
-              <p class="cv-meta">Senior Product Owner · Sep 2019 - Oct 2020</p>
-              <p class="featured-subtitle">Marketplace Data Operations &amp; Customer Workflow Automation</p>
-              <p>
-                Governed analytics dashboards, data lineage routines, refresh SLAs, executive reporting,
-                localized order tracking, proactive notifications, and support automation across African markets.
-              </p>
-              <p class="card-metrics"><strong>Metrics:</strong> 11 markets, $185K monthly savings, 60% support workload reduction.</p>
-              <p class="visibility-meta">Project visibility: Internal product and confidential. Public URL unavailable.</p>
-              <span class="featured-link">View case study →</span>
-            </a>
-
-            <a class="card featured-case" href="lazada-alibaba-growth/index.html">
-              <span class="tag">Marketplace payments &amp; growth</span>
-              <h3>Lazada <span class="title-sep">/</span> Alibaba Group</h3>
-              <p class="cv-meta">QA Automation Engineer (Sep 2017 - Sep 2018) · Technical Product Manager (Sep 2018 - Sep 2019)</p>
-              <p class="featured-subtitle">Marketplace Payments, Checkout &amp; Growth Platform</p>
-              <p>
-                Standardized payment APIs, wallet integrations, checkout controls, localized workflows,
-                discovery optimization, recommendations, and conversion growth across APAC markets.
-              </p>
-              <p class="card-metrics"><strong>Metrics:</strong> 7 APAC markets, 18% transaction success improvement, 5.3% to 12.2% conversion.</p>
-              <p class="visibility-meta">Project visibility: Internal product and confidential. Public URL unavailable.</p>
-              <span class="featured-link">View case study →</span>
-            </a>
-
-            <article class="card featured-case accent">
-              <span class="tag">E-commerce &amp; QA</span>
-              <h3>AJIO <span class="title-sep">/</span> Reliance Retail and Earlier Roles</h3>
-              <p class="cv-meta">Ecommerce Tech Manager · Bengaluru, India · 2015 - 2016</p>
-              <p class="cv-meta">Earlier: QA Lead, Just Eat (2014 - 2015) · Test Engineer, Indium Software (2013 - 2014) · QA Engineer I, Zynga (2011 - 2013)</p>
-              <p class="featured-subtitle">E-commerce, OMS, QA Governance &amp; Systems Integration</p>
-              <p>
-                Software delivery, QA governance, automation testing, technical requirements, release
-                validation, and systems integration across e-commerce and retail platforms.
-              </p>
-              <p class="card-metrics"><strong>Scope:</strong> e-commerce OMS, QA governance, automation testing, release validation, systems integration.</p>
-              <p class="visibility-meta">Project visibility: Internal e-commerce, OMS, QA, and systems integration work. Public URL unavailable.</p>
-              <span class="featured-link">Detailed portfolio page to be added.</span>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section" id="education">
-        <div class="container">
-          <div class="section-head">
-            <span class="section-num">03</span>
-            <h2 class="section-title">Education, strategy &amp; MBA</h2>
-          </div>
-          <div class="featured-row">
-            <a class="card featured-case" href="education-mba/index.html">
-              <span class="tag">MBA &amp; strategy</span>
-              <h3>International MBA Portfolio</h3>
-              <p class="cv-meta">Porto Business School / University of Porto · Sep 2024 - Dec 2025</p>
-              <p class="featured-subtitle">Strategy, Finance, AI Product Leadership &amp; Business Impact</p>
-              <p>
-                International MBA at Porto Business School / University of Porto with a finance-focused
-                exchange at IE Business School. Strategy, finance, and AI product leadership applied to
-                business impact.
-              </p>
-              <ul class="featured-highlights">
-                <li>17/20 final grade · 60 ECTS · IE Business School finance exchange · AMBA-accredited MBA</li>
-              </ul>
-              <span class="featured-link">View MBA portfolio →</span>
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <section class="section dark-section" id="impact">
-        <div class="container">
-          <div class="section-head">
-            <span class="section-num">04</span>
-            <h2 class="section-title">Business impact</h2>
-          </div>
-          <p class="section-intro">Selected outcomes across roles. Each metric is shown with the company it came from.</p>
-          <div class="metric-grid">
-            <article class="card metric-card"><div class="value">2,000+/day</div><div class="label">Signals processed, Pulsara</div></article>
-            <article class="card metric-card"><div class="value">70%</div><div class="label">Noise reduction, Pulsara</div></article>
-            <article class="card metric-card"><div class="value">2 to 3x</div><div class="label">Creative throughput, Rescale</div></article>
-            <article class="card metric-card"><div class="value">40%</div><div class="label">Coordination reduction, Rescale</div></article>
-            <article class="card metric-card"><div class="value">10K to 200K+</div><div class="label">Properties scaled, HafH</div></article>
-            <article class="card metric-card"><div class="value">65+</div><div class="label">Countries covered, HafH</div></article>
-            <article class="card metric-card"><div class="value">$2.1M</div><div class="label">ARR in Year 1, Mumzworld</div></article>
-            <article class="card metric-card"><div class="value">60%</div><div class="label">Operating cost reduction, Mumzworld</div></article>
-            <article class="card metric-card"><div class="value">T+5 to T+1</div><div class="label">Processing time, Mumzworld</div></article>
-            <article class="card metric-card"><div class="value">$185K</div><div class="label">Monthly savings, Jumia</div></article>
-            <article class="card metric-card"><div class="value">18%</div><div class="label">Transaction success lift, Lazada</div></article>
-            <article class="card metric-card"><div class="value">5.3 to 12.2%</div><div class="label">Conversion, Lazada</div></article>
-            <article class="card metric-card"><div class="value">$5M+</div><div class="label">NMV contribution, Lazada</div></article>
-            <article class="card metric-card"><div class="value">17/20</div><div class="label">MBA final grade, Porto / IE</div></article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section" id="modules">
-        <div class="container">
-          <div class="section-head">
-            <span class="section-num">05</span>
-            <h2 class="section-title">Shipped platform modules</h2>
-          </div>
-          <p class="section-intro">Production modules within Creative Marketing Agents / Rescale Operator.</p>
-          <div class="module-grid">
-            <a class="card project-card compact" href="rescale-operator/winner-notifier/index.html"><span class="tag">Shipped</span><h3>Winner Notifier</h3><p>Daily ad classification: winner, emerging, loser</p></a>
-            <a class="card project-card compact" href="rescale-operator/daily-checkpoint/index.html"><span class="tag">Shipped</span><h3>Daily Checkpoint</h3><p>5 morning checks to an action queue</p></a>
-            <a class="card project-card compact" href="rescale-operator/diagnostic-engine/index.html"><span class="tag">Shipped</span><h3>Diagnostic Engine</h3><p>4 diagnostics plus Opus synthesis</p></a>
-            <a class="card project-card compact" href="rescale-operator/naming-convention-qa/index.html"><span class="tag">Shipped</span><h3>Naming QA</h3><p>N3 naming health center</p></a>
-            <a class="card project-card compact" href="rescale-operator/agent-memory/index.html"><span class="tag">Shipped</span><h3>Agent Memory</h3><p>Supermemory vector RAG and Ask Operator</p></a>
-            <a class="card project-card compact" href="rescale-operator/weekly-cro/index.html"><span class="tag">Shipped</span><h3>Weekly CRO</h3><p>Profit Engineering workflow</p></a>
-            <a class="card project-card compact" href="rescale-operator/document-intelligence/index.html"><span class="tag neutral">Pattern</span><h3>Document Intelligence</h3><p>OCR, LLM, and review step</p></a>
-          </div>
-        </div>
-      </section>
-
-      <section class="section alt" id="skills">
-        <div class="container">
-          <div class="section-head">
-            <span class="section-num">06</span>
-            <h2 class="section-title">Skills &amp; stack</h2>
-          </div>
-          <div class="grid-3">
-            <article class="card pad">
-              <div class="capability-icon">01</div>
-              <h3>Product &amp; workflow design</h3>
-              <p>Agent workflows, QA rules, acceptance criteria, and stakeholder operating models drawn from real creative operations.</p>
-            </article>
-            <article class="card pad">
-              <div class="capability-icon">02</div>
-              <h3>AI automation delivery</h3>
-              <p>Shipped a FastAPI and Next.js platform with Supermemory vector RAG, Hermes Agents, OpenRouter, Claude, Supabase Postgres, Arq workers, and Playwright e2e tests.</p>
-            </article>
-            <article class="card pad">
-              <div class="capability-icon">03</div>
-              <h3>Cross-functional alignment</h3>
-              <p>One shared QA view for creative, media buying, and operations, so teams work from the same data.</p>
-            </article>
-          </div>
-          <div class="skills-block">
-            <h3 class="skills-heading">AI Product &amp; Agents</h3>
-            <div class="skill-tags">
-              <span>OpenAI GPT models</span><span>Anthropic Claude</span><span>Google Gemini</span><span>Ollama</span><span>OpenRouter</span><span>Hermes Agents</span><span>LangChain</span><span>Agentic workflows</span><span>LLM orchestration</span><span>Prompt evaluation</span><span>Human review workflows</span>
+      <section class="band band-alt" id="education" aria-labelledby="education-h">
+        <div class="wrap">
+          <p class="kicker">06 · Education</p>
+          <h2 id="education-h">International MBA</h2>
+          <a class="mba" href="education-mba/index.html">
+            <div class="mba-main">
+              <p class="mono">International MBA · Sep 2024 - Dec 2025</p>
+              <h3>Porto Business School / University of Porto</h3>
+              <p class="mba-focus">Focus: Strategy, Finance, AI Product Leadership &amp; Business Impact.</p>
+              <span class="mba-cta">View MBA portfolio →</span>
             </div>
-          </div>
-          <div class="skills-block">
-            <h3 class="skills-heading">RAG &amp; AI Memory</h3>
-            <div class="skill-tags">
-              <span>Supermemory (vector RAG)</span><span>Vector databases</span><span>Embeddings</span><span>Semantic search</span><span>RAG pipelines</span><span>Knowledge retrieval</span><span>Context engineering</span><span>pgvector</span>
+            <dl class="mba-facts">
+              <div><dt>Final grade</dt><dd><strong>17/20</strong></dd></div>
+              <div><dt>Credits</dt><dd><strong>60 ECTS</strong></dd></div>
+              <div><dt>Exchange</dt><dd><strong>IE Business School</strong><span>Finance concentration</span><span class="mono">Mar 2025 - May 2025</span></dd></div>
+              <div><dt>Accreditation</dt><dd><strong>AMBA-accredited</strong><span>International MBA</span></dd></div>
+            </dl>
+          </a>
+        </div>
+      </section>
+
+      <section class="band" id="skills" aria-labelledby="skills-h">
+        <div class="wrap">
+          <p class="kicker">07 · Skills</p>
+          <h2 id="skills-h" class="h2-sm">Skills &amp; stack</h2>
+          <div class="skills">
+            <div class="skill-group">
+              <h3>AI Product &amp; Agents</h3>
+              <ul><li>OpenAI GPT models</li><li>Anthropic Claude</li><li>Google Gemini</li><li>Ollama</li><li>OpenRouter</li><li>Hermes Agents</li><li>LangChain</li><li>Agentic workflows</li><li>LLM orchestration</li><li>Prompt evaluation</li><li>Human review workflows</li></ul>
             </div>
-          </div>
-          <div class="skills-block">
-            <h3 class="skills-heading">Platform &amp; APIs</h3>
-            <div class="skill-tags">
-              <span>Python</span><span>FastAPI</span><span>Pydantic</span><span>REST APIs</span><span>Webhooks</span><span>Arq</span><span>Redis</span><span>Next.js 15</span><span>TypeScript</span><span>TanStack Query</span>
+            <div class="skill-group">
+              <h3>RAG &amp; AI Memory</h3>
+              <ul><li>Supermemory (vector RAG)</li><li>Vector databases</li><li>Embeddings</li><li>Semantic search</li><li>RAG pipelines</li><li>Knowledge retrieval</li><li>Context engineering</li><li>pgvector</li></ul>
             </div>
-          </div>
-          <div class="skills-block">
-            <h3 class="skills-heading">Data &amp; Metrics</h3>
-            <div class="skill-tags">
-              <span>Supabase Postgres</span><span>PostgreSQL</span><span>SQL</span><span>BigQuery</span><span>Analytics dashboards</span><span>Data quality checks</span><span>KPI tracking</span><span>Telemetry</span>
+            <div class="skill-group">
+              <h3>Platform &amp; APIs</h3>
+              <ul><li>Python</li><li>FastAPI</li><li>Pydantic</li><li>REST APIs</li><li>Webhooks</li><li>Arq</li><li>Redis</li><li>Next.js 15</li><li>TypeScript</li><li>TanStack Query</li></ul>
             </div>
-          </div>
-          <div class="skills-block">
-            <h3 class="skills-heading">Marketplace, Payments &amp; Integrations</h3>
-            <div class="skill-tags">
-              <span>Meta API</span><span>ClickUp API</span><span>Google Sheets API</span><span>Discord webhooks</span><span>Ecom Profits</span><span>Payment integrations</span><span>ERP and CRM integrations</span><span>Partner APIs</span>
+            <div class="skill-group">
+              <h3>Data &amp; Metrics</h3>
+              <ul><li>Supabase Postgres</li><li>PostgreSQL</li><li>SQL</li><li>BigQuery</li><li>Analytics dashboards</li><li>Data quality checks</li><li>KPI tracking</li><li>Telemetry</li></ul>
             </div>
-          </div>
-          <div class="skills-block">
-            <h3 class="skills-heading">Development &amp; Delivery</h3>
-            <div class="skill-tags">
-              <span>Cursor</span><span>Visual Studio Code</span><span>Google Antigravity</span><span>Docker</span><span>Playwright</span><span>pytest</span><span>GitHub</span><span>CI checks</span><span>UAT</span><span>Release validation</span><span>QA automation</span>
+            <div class="skill-group">
+              <h3>Marketplace, Payments &amp; Integrations</h3>
+              <ul><li>Meta API</li><li>ClickUp API</li><li>Google Sheets API</li><li>Discord webhooks</li><li>Ecom Profits</li><li>Payment integrations</li><li>ERP and CRM integrations</li><li>Partner APIs</li></ul>
+            </div>
+            <div class="skill-group">
+              <h3>Development &amp; Delivery</h3>
+              <ul><li>Cursor</li><li>Visual Studio Code</li><li>Google Antigravity</li><li>Docker</li><li>Playwright</li><li>pytest</li><li>GitHub</li><li>CI checks</li><li>UAT</li><li>Release validation</li><li>QA automation</li></ul>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="section contact-cta" id="contact">
-        <div class="container">
-          <div class="card pad contact-card">
-            <h2>Let's connect</h2>
-            <p>Open to AI Product, Technical PM, Platform, and AI Automation roles.</p>
-            <div class="contact-cta-row">
-              <a class="btn btn-primary" data-contact="email" href="mailto:rajeevkmba2025@gmail.com">Email</a>
-              <a class="btn btn-secondary" data-contact="linkedin" href="https://www.linkedin.com/in/rajeevkumar9/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-              <a class="btn btn-secondary" href="https://github.com/rajeevcode" target="_blank" rel="noopener noreferrer">GitHub</a>
-              <a class="btn btn-secondary" href="https://medium.com/@rajeev25" target="_blank" rel="noopener noreferrer">Medium</a>
-              <a class="btn btn-secondary" data-contact="portfolio" href="https://rajeevcode.github.io/product-portfolio/" target="_blank" rel="noopener noreferrer">Portfolio</a>
-            </div>
-            <div class="role-tags contact-roles-row" data-contact="roles" aria-label="Target roles"></div>
+      <section class="band band-dark band-dots" id="contact" aria-labelledby="contact-h">
+        <div class="wrap">
+          <p class="kicker kicker-line">Contact</p>
+          <h2 id="contact-h" class="h2-xl">Let's connect</h2>
+          <p class="band-intro">Open to AI Product, Technical PM, Platform, and AI Automation roles.</p>
+          <div class="intro-actions">
+            <a class="pill pill-primary" data-contact="email" href="mailto:rajeevkmba2025@gmail.com">Email</a>
+            <a class="pill pill-ghost" data-contact="linkedin" href="https://www.linkedin.com/in/rajeevkumar9/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a class="pill pill-ghost" href="https://github.com/rajeevcode" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a class="pill pill-ghost" href="https://medium.com/@rajeev25" target="_blank" rel="noopener noreferrer">Medium</a>
           </div>
+          <div class="roles" data-contact="roles" aria-label="Target roles"></div>
         </div>
       </section>
     </main>
 
-    <footer class="site-footer">
-      <div class="container inner">
-        <span>© 2026 Rajeev Kumar. All rights reserved.</span>
-        <span class="footer-links">
+    <footer class="foot">
+      <div class="wrap foot-inner">
+        <span>© 2026 Rajeev Kumar</span>
+        <span class="foot-links">
           <a data-contact="email" href="mailto:rajeevkmba2025@gmail.com">Email</a>
           <a data-contact="linkedin" href="https://www.linkedin.com/in/rajeevkumar9/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
           <a href="https://github.com/rajeevcode" target="_blank" rel="noopener noreferrer">GitHub</a>

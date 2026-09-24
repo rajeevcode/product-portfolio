@@ -22,3 +22,6 @@ dist/
 build/
 tmp/
 .tmp/
+
+# Claude Design export (design source, not part of the published site)
+Product portfolio homepage build/
