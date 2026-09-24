@@ -1,53 +1,119 @@
 # Product Portfolio
 
-Static portfolio for hiring managers. **Live:** https://rajeevcode.github.io/product-portfolio/
+Rajeev Kumar's portfolio of AI product, platform, and marketplace work, written for hiring managers. It's a static site with no build step and no framework: plain HTML, CSS, and JavaScript.
 
-Author: Rajeev Kumar · Last updated: June 2026 · License: [MIT](LICENSE)
+**Live:** https://rajeevcode.github.io/product-portfolio/
 
-**Featured AI systems:**
-- [Rescale OS](Profile-rescale-os/index.html) — AI Creative & Campaign Operations Platform
-- [Creative Marketing Agents / Rescale Operator](rescale-operator/creative-marketing-agents/index.html) — AI Automation OS for Creative & Campaign Operations
-- [Pulsara](Pulsara-Portfolio/index.html) — AI Innovation Signal Intelligence System
+Author: Rajeev Kumar · Last updated: September 2026 · License: [MIT](LICENSE)
 
-**Product Manager case studies:**
-- [HafH / KabuK Style](hafh-kabuk-style/index.html) — AI Pricing & Travel Platform Growth
-- [Mumzworld / Tamer Group](mumzworld-tamer-group/index.html) — B2B Commerce, Payments & Automation Platform
-- [Jumia Group](jumia-marketplace-ops/index.html) — Marketplace Data Operations & Customer Workflow Automation
-- [Lazada / Alibaba Group](lazada-alibaba-growth/index.html) — Marketplace Payments, Checkout & Growth Platform
+## Contents
 
-**Education:**
-- [International MBA Portfolio](education-mba/index.html) — Strategy, Finance & AI Product Leadership
+**Featured AI systems**
+- [Rescale OS](Profile-rescale-os/index.html): AI Creative & Campaign Operations Platform
+- [Creative Marketing Agents / Rescale Operator](rescale-operator/creative-marketing-agents/index.html): AI Automation OS for Creative & Campaign Operations
+- [Pulsara](Pulsara-Portfolio/index.html): AI Innovation Signal Intelligence System
 
-## Run locally
+**Product Manager case studies**
+- [HafH / KabuK Style](hafh-kabuk-style/index.html): AI Pricing & Travel Platform Growth
+- [Mumzworld / Tamer Group](mumzworld-tamer-group/index.html): B2B Commerce, Payments & Automation Platform
+- [Jumia Group](jumia-marketplace-ops/index.html): Marketplace Data Operations & Customer Workflow Automation
+- [Lazada / Alibaba Group](lazada-alibaba-growth/index.html): Marketplace Payments, Checkout & Growth Platform
 
-```bash
-cd /Users/rajeevkumar/Documents/product-portfolio-main
-npm run serve          # static server on :8092
-```
+**Education**
+- [International MBA Portfolio](education-mba/index.html): Strategy, Finance & AI Product Leadership
 
-- Portfolio home: http://localhost:8092/index.html
-- Rescale OS case study: http://localhost:8092/Profile-rescale-os/index.html
-- Creative Marketing Agents / Rescale Operator: http://localhost:8092/rescale-operator/creative-marketing-agents/index.html
-- Pulsara case study: http://localhost:8092/Pulsara-Portfolio/index.html
+## Quick start
 
-The legacy route `rescale-operator/index.html` redirects to the root hub. Use the root `index.html` URL (or hard-refresh if you previously hit a cached redirect).
-
-## Regression test — run before every change
-
-End-to-end check of structure, links, assets (no broken media), path portability
-(no absolute `/Folder/` paths that break on GitHub Pages), content/metric
-preservation, design-system integrity, and deploy config. Read-only — never edits files.
+You need Node.js 18 or newer. Nothing needs installing: `npx` fetches the static server when you first run it.
 
 ```bash
-npm test               # starts its own server, runs all checks, exits 0/1
-npm run test:ci        # if a server is already running on :8092
+git clone https://github.com/rajeevcode/product-portfolio.git
+cd product-portfolio
+npm run serve          # static server on http://localhost:8092
 ```
 
-When you intentionally add a page or change a metric, update the expectation lists
-at the top of [`test/regression.mjs`](test/regression.mjs).
+| Page | Local URL |
+| --- | --- |
+| Portfolio home | http://localhost:8092/index.html |
+| Rescale OS | http://localhost:8092/Profile-rescale-os/index.html |
+| Creative Marketing Agents | http://localhost:8092/rescale-operator/creative-marketing-agents/index.html |
+| Pulsara | http://localhost:8092/Pulsara-Portfolio/index.html |
+
+`rescale-operator/index.html` is a legacy route that redirects to the home page. If you visited it before and your browser cached the redirect, hard-refresh.
+
+## Project structure
+
+```
+.
+├── index.html                  Portfolio home page, which links to every case study
+├── 404.html                    Custom GitHub Pages 404 page
+├── assets/                     Shared theme (theme.css, theme-overlay.css), contact.js, images
+├── Profile-rescale-os/         Rescale OS case study
+├── rescale-operator/           Creative Marketing Agents case study and its module demo pages
+│   ├── creative-marketing-agents/
+│   └── winner-notifier/, daily-checkpoint/, diagnostic-engine/, naming-convention-qa/,
+│       agent-memory/, weekly-cro/, document-intelligence/
+├── Pulsara-Portfolio/          Pulsara case study (has its own capture/build scripts)
+├── hafh-kabuk-style/           ┐
+├── mumzworld-tamer-group/      │ PM case studies
+├── jumia-marketplace-ops/      │
+├── lazada-alibaba-growth/      ┘
+├── education-mba/              MBA portfolio
+├── test/regression.mjs         End-to-end regression suite
+├── .github/workflows/pages.yml GitHub Pages deploy
+├── serve.json                  Local server rewrites (clean folder URLs)
+├── netlify.toml                Optional Netlify config (security headers)
+└── sitemap.xml, robots.txt     SEO
+```
+
+Each case-study folder is self-contained and follows the same layout:
+
+```
+<case-study>/
+├── index.html
+└── assets/
+    ├── site-config.js    Contact details and cross-links (window.SITE)
+    ├── app.js            Page behaviour
+    ├── contact.js        Contact links (the email address is obfuscated)
+    ├── theme.css         Shared design system (Geist font plus theme tokens)
+    ├── styles.css        Page-specific styles
+    ├── screenshots/
+    └── video/
+```
+
+## Regression tests: run before every change
+
+`npm test` checks the whole site from end to end: structure, HTTP responses, broken media, path portability, content and metric preservation, design-system integrity, internal links, deploy config, email privacy, prose cleanup, and security hardening. It only reads files and never changes them.
+
+```bash
+npm test               # starts its own server on :8092, runs all checks, exits 0 or 1
+npm run test:ci        # use this if a server is already running on :8092
+BASE=http://localhost:9000 node test/regression.mjs --no-serve   # use a different server
+```
+
+### Conventions the tests enforce
+
+- **Relative paths only.** Absolute paths like `/Folder/...` break under the GitHub Pages sub-path `/product-portfolio/`. Use `../assets/...` and similar.
+- **Metrics are protected.** The key numbers on each case study (for example `$2.1M` and `753K`) must stay verbatim.
+- **No raw email address** in visible text. Contact links are generated by `contact.js`.
+- **No em or en dashes** in visible prose.
+
+### Adding a new case study
+
+1. Copy an existing case-study folder, such as `jumia-marketplace-ops/`, and edit `index.html` and `assets/site-config.js`.
+2. Add a card for it to the root [`index.html`](index.html).
+3. Add it to [`sitemap.xml`](sitemap.xml) and add its rewrites to [`serve.json`](serve.json).
+4. Add it to the expectation lists at the top of [`test/regression.mjs`](test/regression.mjs) (`PAGES`, `THEMED_PAGES`, `CONTENT`).
+5. Run `npm test`.
 
 ## Deployment
 
-GitHub Pages deploys from `main` via `.github/workflows/pages.yml` (ships the repo
-root). The repo must be **public** for Pages on the free plan. `Profile-rescale-os/`
-content is published; `Portfolio CV Design/` (mockup) and `node_modules/` are gitignored.
+Every push to `main` deploys to GitHub Pages through [`.github/workflows/pages.yml`](.github/workflows/pages.yml), which publishes the repo root as-is. On the free plan, Pages only works if the repo is **public**. `.nojekyll` stops Jekyll from processing the site.
+
+`netlify.toml` is there if you'd rather host on Netlify: it publishes `.` with security headers.
+
+Anything listed in `.gitignore` never ships, including `Portfolio CV Design/` (the design mockup source), `node_modules/`, and the full-size photo originals.
+
+## License
+
+[MIT](LICENSE) © Rajeev Kumar
