@@ -146,9 +146,10 @@ function refs(html) {
 function publicFiles(dir = ROOT) {
   // Design-tool source folders are gitignored and never deploy.
   const ignored = new Set([".git", "node_modules", ".cache", "dist", "build", "tmp", ".tmp",
-    "Portfolio CV Design", "Product portfolio homepage build"]);
+    "Portfolio CV Design"]);
   return readdirSync(dir, { withFileTypes: true }).flatMap((entry) => {
     if (ignored.has(entry.name) || entry.name.startsWith(".")) return [];
+    if (entry.name.startsWith("Product portfolio homepage build")) return [];
     const path = join(dir, entry.name);
     return entry.isDirectory() ? publicFiles(path) : [path];
   });
